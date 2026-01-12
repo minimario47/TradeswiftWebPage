@@ -1,0 +1,60 @@
+:root {
+  --color-background: #FFFFFF;
+  --color-surface: #F9FAFB;
+  --color-surface-alt: #F3F4F6;
+  --color-primary: #000000;
+  --color-primary-text: #FFFFFF;
+  --color-text-primary: #000000;
+  --color-text-secondary: #6B7280;
+  --color-text-muted: #9CA3AF;
+  --color-money-accent: #10B981;
+  --color-danger: #EF4444;
+  --color-divider: #000000;
+  --color-border: #E5E7EB;
+  --color-input-border: #000000;
+
+  --font-family-primary: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Segoe UI', system-ui, sans-serif;
+  --font-family-mono: 'SF Mono', SFMono-Regular, ui-monospace, monospace;
+
+  --font-size-xs: 12px;
+  --font-size-sm: 13px;
+  --font-size-base: 15px;
+  --font-size-md: 16px;
+  --font-size-lg: 20px;
+  --font-size-xl: 28px;
+  --font-size-xxl: 36px;
+
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 12px;
+  --spacing-base: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+  --spacing-xxl: 48px;
+
+  --radius-none: 0;
+  --radius-sm: 4px;
+
+  --max-width: 1000px;
+  --header-height: 64px;
+
+  --transition-fast: 100ms ease;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-background: #000000;
+    --color-surface: #121212;
+    --color-surface-alt: #1E1E1E;
+    --color-primary: #FFFFFF;
+    --color-primary-text: #000000;
+    --color-text-primary: #FFFFFF;
+    --color-text-secondary: #A1A1AA;
+    --color-text-muted: #52525B;
+    --color-money-accent: #34D399;
+    --color-danger: #F87171;
+    --color-divider: #333333;
+    --color-border: #333333;
+    --color-input-border: #FFFFFF;
+  }
+}
