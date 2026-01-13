@@ -1,0 +1,59 @@
+Vanliga frågor om företagswebbplats vid kontoaktivering
+Konto
+Verifiering
+Varför behöver Stripe min företagswebbplats?
+Om du använder en webbplats, profil på sociala medier eller mobilapp för att marknadsföra företaget eller sälja produkter behöver Stripe granska den för att förstå din verksamhet och verifiera vad du säljer så att vi kan uppfylla kraven i lagstiftningen för finansbranschen. Se Krav på kundkännedom.
+
+Du måste se till att alltid ha en fungerande webbplats med lämplig information. Stripe kontrollerar regelbundet om den angivna webbplatsen följer kraven. Om vi upptäcker ett problem måste du uppdatera den eller ange en ny webbplats som uppfyller kraven.
+
+Vilka uppgifter efterfrågas?
+Från och med nu måste ditt företags webbplats, profil på sociala medier eller mobilapp innehålla följande uppgifter.
+
+Ditt företagsnamn
+En beskrivning av produkterna eller tjänsterna som erbjuds
+Dessa uppgifter måste stämma överens med uppgifterna som du har lämnat till Stripe.
+
+Stripe och våra finansiella partner kräver följande kompletterande information på din webbplats, i din profil på sociala medier eller mobilapp när du börjar sälja dina varor eller tjänster. Lägg till informationen så snart som möjligt för att undvika avbrott i verksamheten. Dessa krav kan träda i kraft snabbare om du är verksam i en bransch med förhöjd finansiell risk.
+
+Kontaktuppgifter till kundtjänst (t.ex. telefonnummer, e-post, adress, kontaktformulär eller en chattservice)
+Policy och instruktioner för returer (om du säljer fysiska varor) 
+Återbetalningspolicy och tvistpolicy
+Avbeställningspolicy (i förekommande fall)
+Juridiska eller exportrelaterade restriktioner (i förekommande fall)
+Villkor för eventuella kampanjer
+Vanliga orsaker till att företagswebbplatsen eller profilen på sociala medier som du hänvisade till inte var tillräcklig för att ditt Stripe-konto ska kunna aktiveras:
+
+Webbsidan måste kunna läsas in och vara tillgänglig
+Webbsidan måste vara tillgänglig utan lösenord.
+
+Stripe kan ställa krav på att du bekräftar att du äger webbplatsen. Du kommer att få ett e-postmeddelande och en avisering i Stripe Dashboard om detta krävs. Läs mer i Domänverifiering under ansökan om Stripe-konto.
+
+Webbplatsen är under konstruktion eller inte fullständig
+Ditt konto kan eventuellt inte aktiveras förrän din webbplats innehåller nödvändiga uppgifter om ditt företag. När din webbplats är komplett och alla produkter du säljer är listade uppdaterar du webbadressen i Dashboard.
+
+Ofullständig profil i sociala medier
+Du måste ange en fullständig webbadress till din särskilda profil, exempelvis facebook.com/profile/yourbusiness. Det räcker inte att enbart ange ditt användarnamn i sociala medier eller bara facebook.com .
+
+Jag blockerar åtkomsten till min webbplats i vissa regioner
+Ta tillfälligt bort blockeringen tills din webbplats har verifierats.
+
+Mer information
+Måste mitt företag ha en webbplats för att jag ska kunna registrera mig för Stripe?
+
+Svarade det på din fråga?
+
+Ja
+
+Nej
+Relaterade artiklar
+Do I have to have a business website to sign up for Stripe?
+To start using Stripe, you must provide a URL for any website, social media profile, or mobile application you use to promote your business or sell…
+Konto
+·
+Verifiering
+How can I open a Stripe account in India?
+Starting in May 2024, Stripe services will be invite only in India. This means that businesses from India will not be able to sign-up for a new Stripe…
+Konto
+Stripe Atlas restricted business categories
+Atlas does not permit businesses that sell illegal products or services, promote violence, or otherwise violate our Terms of Service. By submitting an…
+Atlas

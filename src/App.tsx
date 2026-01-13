@@ -6,6 +6,7 @@ import { Privacy } from './pages/Privacy';
 import { Terms } from './pages/Terms';
 import { Refund } from './pages/Refund';
 import { Cancellation } from './pages/Cancellation';
+import { About } from './pages/About';
 
 export default function App() {
   return (
@@ -18,6 +19,7 @@ export default function App() {
           <Route path="/villkor" element={<Terms />} />
           <Route path="/aterbetalning" element={<Refund />} />
           <Route path="/avbestallning" element={<Cancellation />} />
+          <Route path="/om-oss" element={<About />} />
         </Route>
       </Routes>
     </BrowserRouter>

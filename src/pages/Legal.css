@@ -1,28 +1,34 @@
 .legal-page {
-    padding: var(--spacing-xxl) 0;
+    padding: var(--spacing-section) 0;
+    min-height: calc(100vh - var(--header-height));
 }
 
 .legal-container {
-    max-width: 720px;
+    max-width: 800px;
     margin: 0 auto;
     padding: 0 var(--spacing-lg);
 }
 
 .legal-header {
     margin-bottom: var(--spacing-xl);
-    padding-bottom: var(--spacing-lg);
-    border-bottom: 3px solid var(--color-primary);
 }
 
 .legal-header h1 {
     margin-bottom: var(--spacing-sm);
 }
 
-.legal-header .last-updated {
-    color: var(--color-text-muted);
+.legal-meta {
     font-size: var(--font-size-xs);
+    font-family: var(--font-family-mono);
+    color: var(--color-text-muted);
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 0.5px;
+}
+
+.legal-divider {
+    height: var(--divider-thick);
+    background: var(--color-primary);
+    margin-bottom: var(--spacing-xl);
 }
 
 .legal-content {
@@ -30,7 +36,7 @@
 }
 
 .legal-content h2 {
-    font-size: var(--font-size-lg);
+    font-size: var(--font-size-md);
     margin-top: var(--spacing-xl);
     margin-bottom: var(--spacing-md);
     padding-top: var(--spacing-lg);
@@ -44,49 +50,126 @@
 }
 
 .legal-content h3 {
-    font-size: var(--font-size-md);
+    font-size: var(--font-size-sm);
     margin-top: var(--spacing-lg);
     margin-bottom: var(--spacing-sm);
+    color: var(--color-text-primary);
 }
 
 .legal-content p {
-    margin-bottom: var(--spacing-md);
+    margin-bottom: var(--spacing-base);
     color: var(--color-text-secondary);
 }
 
 .legal-content ul,
 .legal-content ol {
-    margin-bottom: var(--spacing-md);
-    padding-left: var(--spacing-lg);
+    margin-left: var(--spacing-lg);
+    margin-bottom: var(--spacing-base);
+    color: var(--color-text-secondary);
 }
 
 .legal-content li {
     margin-bottom: var(--spacing-sm);
-    color: var(--color-text-secondary);
-}
-
-.legal-content strong {
-    color: var(--color-text-primary);
-    font-weight: 600;
+    line-height: 1.6;
 }
 
 .legal-content a {
-    color: var(--color-text-primary);
-    font-weight: 600;
+    color: var(--color-primary);
+    border-bottom: 1px solid var(--color-primary);
 }
 
 .legal-content a:hover {
     opacity: 0.7;
 }
 
-.legal-highlight {
-    padding: var(--spacing-lg);
+.legal-content strong {
+    color: var(--color-text-primary);
+    font-weight: var(--font-weight-semibold);
+}
+
+.legal-info-box {
     background: var(--color-surface);
-    border-left: 3px solid var(--color-primary);
+    border: 1px dashed var(--color-text-muted);
+    padding: var(--spacing-lg);
     margin: var(--spacing-lg) 0;
 }
 
-.legal-highlight p {
+.legal-info-box h4 {
+    font-size: 10px;
+    font-weight: var(--font-weight-bold);
+    color: var(--color-text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    margin-bottom: var(--spacing-sm);
+}
+
+.legal-info-box p {
+    font-size: var(--font-size-sm);
     margin-bottom: 0;
-    color: var(--color-text-primary);
+}
+
+.legal-highlight {
+    background: var(--color-primary);
+    color: var(--color-primary-text);
+    padding: var(--spacing-lg);
+    margin: var(--spacing-lg) 0;
+}
+
+.legal-highlight h4 {
+    font-size: 10px;
+    font-weight: var(--font-weight-bold);
+    color: var(--color-primary-text);
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    margin-bottom: var(--spacing-sm);
+    opacity: 0.8;
+}
+
+.legal-highlight p {
+    color: var(--color-primary-text);
+    font-size: var(--font-size-sm);
+    margin-bottom: 0;
+}
+
+.legal-toc {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    padding: var(--spacing-lg);
+    margin-bottom: var(--spacing-xl);
+}
+
+.legal-toc h4 {
+    font-size: 10px;
+    font-weight: var(--font-weight-bold);
+    color: var(--color-text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    margin-bottom: var(--spacing-md);
+}
+
+.legal-toc ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.legal-toc li {
+    margin-bottom: var(--spacing-sm);
+    padding-left: var(--spacing-md);
+    border-left: 2px solid var(--color-border);
+    transition: border-color var(--transition-fast);
+}
+
+.legal-toc li:hover {
+    border-color: var(--color-primary);
+}
+
+.legal-toc a {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-secondary);
+    border-bottom: none;
+}
+
+.legal-toc a:hover {
+    color: var(--color-primary);
 }

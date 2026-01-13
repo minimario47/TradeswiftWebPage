@@ -12,6 +12,7 @@ html {
   font-size: 16px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -34,7 +35,7 @@ svg {
 a {
   color: var(--color-text-primary);
   text-decoration: none;
-  font-weight: 600;
+  font-weight: var(--font-weight-semibold);
   transition: opacity var(--transition-fast);
 }
 
@@ -45,6 +46,8 @@ a:hover {
 button {
   font-family: inherit;
   cursor: pointer;
+  border: none;
+  background: none;
 }
 
 h1,
@@ -54,9 +57,11 @@ h4,
 h5,
 h6 {
   font-family: var(--font-family-mono);
-  font-weight: 700;
+  font-weight: var(--font-weight-bold);
   line-height: 1.2;
   color: var(--color-text-primary);
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 h1 {
@@ -90,13 +95,18 @@ h3 {
 
 .divider {
   width: 100%;
-  height: 3px;
+  height: var(--divider-thick);
   background: var(--color-divider);
+}
+
+.divider-thin {
+  height: var(--divider-thin);
+  background: var(--color-border);
 }
 
 .section-label {
   font-size: var(--font-size-xs);
-  font-weight: 700;
+  font-weight: var(--font-weight-bold);
   color: var(--color-text-secondary);
   text-transform: uppercase;
   letter-spacing: 1.2px;
@@ -110,11 +120,12 @@ h3 {
   gap: var(--spacing-sm);
   padding: 14px var(--spacing-lg);
   font-size: 14px;
-  font-weight: 700;
+  font-weight: var(--font-weight-bold);
   text-transform: uppercase;
   letter-spacing: 0.5px;
   border: none;
   transition: all var(--transition-fast);
+  cursor: pointer;
 }
 
 .btn-primary {
@@ -129,7 +140,7 @@ h3 {
 .btn-secondary {
   background: transparent;
   color: var(--color-primary);
-  border: 2px solid var(--color-primary);
+  border: var(--border-button) solid var(--color-primary);
 }
 
 .btn-secondary:hover {
@@ -145,4 +156,53 @@ h3 {
 
 main {
   flex: 1;
+}
+
+::selection {
+  background: var(--color-primary);
+  color: var(--color-primary-text);
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes pulse {
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.animate-fade-in {
+  animation: fadeInUp 0.5s var(--transition-slow) forwards;
+}
+
+.animate-slide-in {
+  animation: slideInLeft 0.4s var(--transition-slow) forwards;
 }

@@ -9,12 +9,14 @@
   --color-text-muted: #9CA3AF;
   --color-money-accent: #10B981;
   --color-danger: #EF4444;
+  --color-warning: #F59E0B;
   --color-divider: #000000;
   --color-border: #E5E7EB;
   --color-input-border: #000000;
+  --color-disabled: #D1D5DB;
 
   --font-family-primary: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Segoe UI', system-ui, sans-serif;
-  --font-family-mono: 'SF Mono', SFMono-Regular, ui-monospace, monospace;
+  --font-family-mono: 'SF Mono', SFMono-Regular, ui-monospace, 'Courier New', monospace;
 
   --font-size-xs: 12px;
   --font-size-sm: 13px;
@@ -23,6 +25,13 @@
   --font-size-lg: 20px;
   --font-size-xl: 28px;
   --font-size-xxl: 36px;
+  --font-size-hero: clamp(32px, 5vw, 48px);
+
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-extrabold: 800;
 
   --spacing-xs: 4px;
   --spacing-sm: 8px;
@@ -31,30 +40,20 @@
   --spacing-lg: 24px;
   --spacing-xl: 32px;
   --spacing-xxl: 48px;
+  --spacing-section: 80px;
 
   --radius-none: 0;
   --radius-sm: 4px;
 
   --max-width: 1000px;
-  --header-height: 64px;
+  --header-height: 72px;
 
   --transition-fast: 100ms ease;
-}
+  --transition-base: 200ms ease;
+  --transition-slow: 300ms ease-out;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --color-background: #000000;
-    --color-surface: #121212;
-    --color-surface-alt: #1E1E1E;
-    --color-primary: #FFFFFF;
-    --color-primary-text: #000000;
-    --color-text-primary: #FFFFFF;
-    --color-text-secondary: #A1A1AA;
-    --color-text-muted: #52525B;
-    --color-money-accent: #34D399;
-    --color-danger: #F87171;
-    --color-divider: #333333;
-    --color-border: #333333;
-    --color-input-border: #FFFFFF;
-  }
+  --divider-thick: 3px;
+  --divider-thin: 1px;
+  --border-card: 1px;
+  --border-button: 2px;
 }

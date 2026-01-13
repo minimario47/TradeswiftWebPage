@@ -5,25 +5,29 @@ export function Refund() {
         <div className="legal-page">
             <div className="legal-container">
                 <div className="legal-header">
+                    <p className="section-label">DOKUMENT</p>
                     <h1>Återbetalningspolicy</h1>
-                    <p className="last-updated">Senast uppdaterad: Januari 2026</p>
+                    <p className="legal-meta">Senast uppdaterad: Januari 2026</p>
+                </div>
+
+                <div className="legal-divider" />
+
+                <div className="legal-info-box">
+                    <h4>Provperiod</h4>
+                    <p>
+                        TradeSwift Pro erbjuder en gratis provperiod så att du kan utvärdera
+                        tjänsten innan du förbinder dig till en prenumeration.
+                    </p>
                 </div>
 
                 <div className="legal-content">
-                    <h2>1. Översikt</h2>
+                    <h2>1. ÖVERSIKT</h2>
                     <p>
                         Denna policy beskriver hur TradeSwift AB hanterar återbetalningar och
                         tvister för prenumerationer och betalningar via TradeSwift Pro.
                     </p>
 
-                    <div className="legal-highlight">
-                        <p>
-                            <strong>Viktigt:</strong> TradeSwift Pro erbjuder en gratis provperiod
-                            så att du kan utvärdera tjänsten innan du förbinder dig till en prenumeration.
-                        </p>
-                    </div>
-
-                    <h2>2. Prenumerationer via App Store</h2>
+                    <h2>2. PRENUMERATIONER VIA APP STORE</h2>
                     <p>
                         Prenumerationer som köps via Apple App Store hanteras enligt Apples
                         återbetalningspolicy. För återbetalning av dessa köp:
@@ -34,7 +38,7 @@ export function Refund() {
                         <li>Återbetalningar kan godkännas vid tekniska problem eller felaktiga debiteringar</li>
                     </ul>
 
-                    <h2>3. Prenumerationer via Stripe</h2>
+                    <h2>3. PRENUMERATIONER VIA STRIPE</h2>
                     <p>
                         För prenumerationer som betalas direkt via Stripe gäller följande:
                     </p>
@@ -64,14 +68,14 @@ export function Refund() {
                         <li>Begäran görs efter prenumerationsperioden har löpt ut</li>
                     </ul>
 
-                    <h2>4. Tvisthantering</h2>
+                    <h2>4. TVISTHANTERING</h2>
                     <p>
                         Om du har frågor eller invändningar gällande debiteringar:
                     </p>
                     <ol>
                         <li>
                             <strong>Kontakta oss först:</strong> Skicka e-post till{' '}
-                            <a href="mailto:billing@tradeswift.se">billing@tradeswift.se</a> med
+                            <a href="mailto:support@tradeswift.se">support@tradeswift.se</a> med
                             detaljer om problemet.
                         </li>
                         <li>
@@ -84,29 +88,28 @@ export function Refund() {
                         </li>
                     </ol>
 
-                    <h2>5. Chargebacks</h2>
-                    <p>
-                        Om du initierar en chargeback hos din bank utan att först kontakta oss,
-                        förbehåller vi oss rätten att:
-                    </p>
-                    <ul>
-                        <li>Stänga av ditt konto under utredningen</li>
-                        <li>Ta ut en administrationsavgift om chargebacken bedöms som ogrundad</li>
-                    </ul>
+                    <h2>5. CHARGEBACKS</h2>
+                    <div className="legal-highlight">
+                        <h4>Varning</h4>
+                        <p>
+                            Om du initierar en chargeback hos din bank utan att först kontakta oss,
+                            förbehåller vi oss rätten att stänga av ditt konto under utredningen.
+                        </p>
+                    </div>
 
-                    <h2>6. Hur du begär återbetalning</h2>
+                    <h2>6. HUR DU BEGÄR ÅTERBETALNING</h2>
                     <p>För att begära återbetalning:</p>
                     <ol>
-                        <li>Skicka e-post till <a href="mailto:billing@tradeswift.se">billing@tradeswift.se</a></li>
+                        <li>Skicka e-post till <a href="mailto:support@tradeswift.se">support@tradeswift.se</a></li>
                         <li>Ange ditt kontonamn och e-postadress</li>
                         <li>Beskriv anledningen till din begäran</li>
                         <li>Inkludera relevant transaktionsinformation om möjligt</li>
                     </ol>
 
-                    <h2>7. Kontakt</h2>
+                    <h2>7. KONTAKT</h2>
                     <p>
                         Vid frågor om denna policy, kontakta oss på{' '}
-                        <a href="mailto:billing@tradeswift.se">billing@tradeswift.se</a> eller
+                        <a href="mailto:support@tradeswift.se">support@tradeswift.se</a> eller
                         ring <a href="tel:+46812345678">08-123 456 78</a> (vardagar 09:00-17:00).
                     </p>
                 </div>
