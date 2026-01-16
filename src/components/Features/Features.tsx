@@ -1,6 +1,6 @@
 import { useEffect, useState, useRef, useCallback } from 'react';
 import { useLanguage } from '../../i18n/LanguageContext';
-import { FEATURES_CONTENT, type FeatureStep, type FeaturesContent } from './FeaturesContent';
+import { FEATURES_CONTENT, type FeatureStep } from './FeaturesContent';
 import './Features.css';
 
 interface FeaturesProps {
