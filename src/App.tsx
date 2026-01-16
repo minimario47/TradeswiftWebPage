@@ -11,7 +11,7 @@ import { FeaturesPage } from './pages/FeaturesPage';
 
 export default function App() {
   return (
-    <BrowserRouter basename="/TradeswiftWebPage">
+    <BrowserRouter>
       <Routes>
         <Route element={<Layout />}>
           <Route path="/" element={<Home />} />
