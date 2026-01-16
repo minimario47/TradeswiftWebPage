@@ -53,6 +53,12 @@
     margin-bottom: var(--spacing-lg);
 }
 
+.about-team-intro {
+    color: var(--color-text-secondary);
+    margin-bottom: var(--spacing-lg);
+    line-height: 1.6;
+}
+
 .team-member {
     margin-bottom: var(--spacing-lg);
 }

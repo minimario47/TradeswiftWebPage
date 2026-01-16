@@ -18,7 +18,8 @@
     height: var(--header-height);
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-start;
+    gap: var(--spacing-lg);
 }
 
 .header-logo {
@@ -55,6 +56,37 @@
 .header-nav {
     display: flex;
     gap: var(--spacing-xl);
+}
+
+.header-actions {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-lg);
+}
+
+.header-lang {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+}
+
+.header-lang-button {
+    border: 1px solid var(--color-border);
+    background: transparent;
+    color: var(--color-text-secondary);
+    font-size: 10px;
+    font-weight: var(--font-weight-bold);
+    letter-spacing: 1px;
+    padding: 6px 8px;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.header-lang-button.active {
+    background: var(--color-primary);
+    color: var(--color-primary-text);
+    border-color: var(--color-primary);
 }
 
 .header-nav a {

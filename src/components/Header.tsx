@@ -1,9 +1,32 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { useLanguage } from '../i18n/LanguageContext';
 import './Header.css';
 
 export function Header() {
     const [isOpen, setIsOpen] = useState(false);
+    const { language, setLanguage } = useLanguage();
+
+    const labels = {
+        en: {
+            home: 'Home',
+            features: 'Features',
+            about: 'About',
+            support: 'Support',
+            menu: 'Menu',
+            language: 'Language'
+        },
+        sv: {
+            home: 'Hem',
+            features: 'Funktioner',
+            about: 'Om oss',
+            support: 'Kundtjänst',
+            menu: 'Meny',
+            language: 'Språk'
+        }
+    };
+
+    const t = labels[language];
 
     return (
         <header className="header">
@@ -18,10 +41,44 @@ export function Header() {
                     TRADESWIFT PRO
                 </Link>
 
+                <div className="header-actions">
+                    <nav className={`header-nav ${isOpen ? 'open' : ''}`}>
+                        <Link to="/" onClick={() => setIsOpen(false)}>{t.home}</Link>
+                        <Link to="/#features" onClick={() => setIsOpen(false)}>{t.features}</Link>
+                        <Link to="/om-oss" onClick={() => setIsOpen(false)}>{t.about}</Link>
+                        <Link to="/kontakt" onClick={() => setIsOpen(false)}>{t.support}</Link>
+                    </nav>
+
+                    <div className="header-lang" role="group" aria-label={t.language}>
+                        <button
+                            type="button"
+                            className={`header-lang-button ${language === 'en' ? 'active' : ''}`}
+                            onClick={() => {
+                                setLanguage('en');
+                                setIsOpen(false);
+                            }}
+                            aria-pressed={language === 'en'}
+                        >
+                            EN
+                        </button>
+                        <button
+                            type="button"
+                            className={`header-lang-button ${language === 'sv' ? 'active' : ''}`}
+                            onClick={() => {
+                                setLanguage('sv');
+                                setIsOpen(false);
+                            }}
+                            aria-pressed={language === 'sv'}
+                        >
+                            SV
+                        </button>
+                    </div>
+                </div>
+
                 <button
                     className="header-toggle"
                     onClick={() => setIsOpen(!isOpen)}
-                    aria-label="Meny"
+                    aria-label={t.menu}
                 >
                     <svg viewBox="0 0 24 24" fill="none">
                         {isOpen ? (
@@ -31,13 +88,6 @@ export function Header() {
                         )}
                     </svg>
                 </button>
-
-                <nav className={`header-nav ${isOpen ? 'open' : ''}`}>
-                    <Link to="/" onClick={() => setIsOpen(false)}>Hem</Link>
-                    <Link to="/#funktioner" onClick={() => setIsOpen(false)}>Funktioner</Link>
-                    <Link to="/om-oss" onClick={() => setIsOpen(false)}>Om oss</Link>
-                    <Link to="/kontakt" onClick={() => setIsOpen(false)}>Kundtjänst</Link>
-                </nav>
             </div>
         </header>
     );

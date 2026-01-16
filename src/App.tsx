@@ -7,6 +7,7 @@ import { Terms } from './pages/Terms';
 import { Refund } from './pages/Refund';
 import { Cancellation } from './pages/Cancellation';
 import { About } from './pages/About';
+import { FeaturesPage } from './pages/FeaturesPage';
 
 export default function App() {
   return (
@@ -14,6 +15,7 @@ export default function App() {
       <Routes>
         <Route element={<Layout />}>
           <Route path="/" element={<Home />} />
+          <Route path="/funktioner" element={<FeaturesPage />} />
           <Route path="/kontakt" element={<Contact />} />
           <Route path="/integritetspolicy" element={<Privacy />} />
           <Route path="/villkor" element={<Terms />} />

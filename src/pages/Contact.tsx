@@ -1,11 +1,76 @@
 import { useState, type FormEvent } from 'react';
+import { useLanguage } from '../i18n/LanguageContext';
 import './Contact.css';
 
 const API_BASE = 'https://tradeswift-backend.xaco47.workers.dev';
 
 type FormStatus = 'idle' | 'submitting' | 'success' | 'error';
 
+const CONTENT = {
+    en: {
+        sectionLabel: 'SUPPORT',
+        title: 'Customer Support',
+        intro: 'Have questions or need help? Our team is here to support you.',
+        cards: {
+            email: {
+                label: 'Email',
+                description: 'Write to us for general questions or support requests.'
+            },
+            phone: {
+                label: 'Phone',
+                description: 'Available weekdays 09:00 – 17:00'
+            },
+            address: {
+                label: 'Address'
+            }
+        },
+        form: {
+            title: 'SEND A MESSAGE',
+            success: "Thanks for your message! We'll get back to you soon.",
+            error: 'Something went wrong. Please try again.',
+            name: 'Name',
+            email: 'Email',
+            subject: 'Subject',
+            message: 'Message',
+            submit: 'SEND MESSAGE',
+            submitting: 'SENDING...'
+        }
+    },
+    sv: {
+        sectionLabel: 'SUPPORT',
+        title: 'Kundtjänst',
+        intro: 'Har du frågor eller behöver hjälp? Vårt team finns här för att stötta dig.',
+        cards: {
+            email: {
+                label: 'E-post',
+                description: 'Skriv till oss för allmänna frågor eller supportärenden.'
+            },
+            phone: {
+                label: 'Telefon',
+                description: 'Tillgänglig vardagar 09:00 – 17:00'
+            },
+            address: {
+                label: 'Adress'
+            }
+        },
+        form: {
+            title: 'SKICKA ETT MEDDELANDE',
+            success: 'Tack för ditt meddelande! Vi återkommer så snart som möjligt.',
+            error: 'Något gick fel. Försök igen.',
+            name: 'Namn',
+            email: 'E-post',
+            subject: 'Ärende',
+            message: 'Meddelande',
+            submit: 'SKICKA MEDDELANDE',
+            submitting: 'SKICKAR...'
+        }
+    }
+};
+
 export function Contact() {
+    const { language } = useLanguage();
+    const content = CONTENT[language];
+
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [subject, setSubject] = useState('');
@@ -46,11 +111,9 @@ export function Contact() {
         <div className="contact-page">
             <div className="contact-container">
                 <div className="contact-header">
-                    <p className="section-label">SUPPORT</p>
-                    <h1>Kundtjänst</h1>
-                    <p>
-                        Har du frågor eller behöver hjälp? Vårt team finns här för att stötta dig.
-                    </p>
+                    <p className="section-label">{content.sectionLabel}</p>
+                    <h1>{content.title}</h1>
+                    <p>{content.intro}</p>
                 </div>
 
                 <div className="contact-divider" />
@@ -58,19 +121,19 @@ export function Contact() {
                 <div className="contact-grid">
                     <div className="contact-info">
                         <div className="contact-card">
-                            <div className="contact-card-label">E-post</div>
-                            <p>Skriv till oss för allmänna frågor eller supportärenden.</p>
+                            <div className="contact-card-label">{content.cards.email.label}</div>
+                            <p>{content.cards.email.description}</p>
                             <a href="mailto:support@tradeswift.se">support@tradeswift.se</a>
                         </div>
 
                         <div className="contact-card">
-                            <div className="contact-card-label">Telefon</div>
-                            <p>Tillgänglig vardagar 09:00 – 17:00</p>
+                            <div className="contact-card-label">{content.cards.phone.label}</div>
+                            <p>{content.cards.phone.description}</p>
                             <a href="tel:+46812345678">08-123 456 78</a>
                         </div>
 
                         <div className="contact-card">
-                            <div className="contact-card-label">Adress</div>
+                            <div className="contact-card-label">{content.cards.address.label}</div>
                             <p>
                                 TradeSwift AB<br />
                                 Exempelgatan 123<br />
@@ -82,22 +145,22 @@ export function Contact() {
 
                     <div className="contact-form-wrapper">
                         <form className="contact-form" onSubmit={handleSubmit}>
-                            <h3>SKICKA ETT MEDDELANDE</h3>
+                            <h3>{content.form.title}</h3>
 
                             {status === 'success' && (
                                 <div className="form-success">
-                                    Tack för ditt meddelande! Vi återkommer så snart som möjligt.
+                                    {content.form.success}
                                 </div>
                             )}
 
                             {status === 'error' && (
                                 <div className="form-error">
-                                    {errorMessage || 'Något gick fel. Försök igen.'}
+                                    {errorMessage || content.form.error}
                                 </div>
                             )}
 
                             <div className="form-group">
-                                <label htmlFor="name">Namn</label>
+                                <label htmlFor="name">{content.form.name}</label>
                                 <input
                                     type="text"
                                     id="name"
@@ -109,7 +172,7 @@ export function Contact() {
                             </div>
 
                             <div className="form-group">
-                                <label htmlFor="email">E-post</label>
+                                <label htmlFor="email">{content.form.email}</label>
                                 <input
                                     type="email"
                                     id="email"
@@ -121,7 +184,7 @@ export function Contact() {
                             </div>
 
                             <div className="form-group">
-                                <label htmlFor="subject">Ärende</label>
+                                <label htmlFor="subject">{content.form.subject}</label>
                                 <input
                                     type="text"
                                     id="subject"
@@ -133,7 +196,7 @@ export function Contact() {
                             </div>
 
                             <div className="form-group">
-                                <label htmlFor="message">Meddelande</label>
+                                <label htmlFor="message">{content.form.message}</label>
                                 <textarea
                                     id="message"
                                     value={message}
@@ -148,7 +211,7 @@ export function Contact() {
                                 className="btn btn-primary"
                                 disabled={status === 'submitting'}
                             >
-                                {status === 'submitting' ? 'SKICKAR...' : 'SKICKA MEDDELANDE'}
+                                {status === 'submitting' ? content.form.submitting : content.form.submit}
                             </button>
                         </form>
                     </div>
@@ -157,4 +220,3 @@ export function Contact() {
         </div>
     );
 }
-

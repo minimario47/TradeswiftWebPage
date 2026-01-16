@@ -1,8 +1,63 @@
 import { Link } from 'react-router-dom';
+import { useLanguage } from '../i18n/LanguageContext';
 import './Footer.css';
 
 export function Footer() {
     const currentYear = new Date().getFullYear();
+    const { language } = useLanguage();
+
+    const content = {
+        en: {
+            brandDescription:
+                'Professional invoicing platform for tradespeople and small businesses. Work smarter, get paid faster.',
+            companyLabel: 'TradeSwift AB',
+            product: {
+                title: 'Product',
+                features: 'Features',
+                pricing: 'Pricing',
+                download: 'Download'
+            },
+            support: {
+                title: 'Support',
+                about: 'About',
+                help: 'Support'
+            },
+            legal: {
+                title: 'Legal',
+                privacy: 'Privacy Policy',
+                terms: 'Terms of Service',
+                refund: 'Refund Policy',
+                cancellation: 'Cancellation Policy'
+            },
+            rights: `© ${currentYear} TRADESWIFT AB. ALL RIGHTS RESERVED.`
+        },
+        sv: {
+            brandDescription:
+                'Professionell faktureringslösning för hantverkare och småföretagare. Arbeta smartare, få betalt snabbare.',
+            companyLabel: 'TradeSwift AB',
+            product: {
+                title: 'Produkt',
+                features: 'Funktioner',
+                pricing: 'Priser',
+                download: 'Ladda ner'
+            },
+            support: {
+                title: 'Support',
+                about: 'Om oss',
+                help: 'Kundtjänst'
+            },
+            legal: {
+                title: 'Juridiskt',
+                privacy: 'Integritetspolicy',
+                terms: 'Användarvillkor',
+                refund: 'Återbetalning',
+                cancellation: 'Avbeställning'
+            },
+            rights: `© ${currentYear} TRADESWIFT AB. ALLA RÄTTIGHETER FÖRBEHÅLLNA.`
+        }
+    };
+
+    const t = content[language];
 
     return (
         <footer className="footer">
@@ -10,12 +65,9 @@ export function Footer() {
                 <div className="footer-grid">
                     <div className="footer-brand">
                         <div className="footer-logo">TRADESWIFT PRO</div>
-                        <p>
-                            Professionell faktureringslösning för hantverkare och småföretagare.
-                            Arbeta smartare, få betalt snabbare.
-                        </p>
+                        <p>{t.brandDescription}</p>
                         <div className="footer-company">
-                            <strong>TradeSwift AB</strong>
+                            <strong>{t.companyLabel}</strong>
                             Exempelgatan 123<br />
                             123 45 Stockholm<br />
                             Sverige<br />
@@ -24,27 +76,27 @@ export function Footer() {
                     </div>
 
                     <div className="footer-section">
-                        <h4>Produkt</h4>
+                        <h4>{t.product.title}</h4>
                         <ul>
-                            <li><Link to="/#funktioner">Funktioner</Link></li>
-                            <li><Link to="/">Priser</Link></li>
+                            <li><Link to="/#features">{t.product.features}</Link></li>
+                            <li><Link to="/">{t.product.pricing}</Link></li>
                             <li>
                                 <a
                                     href="https://apps.apple.com"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                 >
-                                    Ladda ner
+                                    {t.product.download}
                                 </a>
                             </li>
                         </ul>
                     </div>
 
                     <div className="footer-section">
-                        <h4>Support</h4>
+                        <h4>{t.support.title}</h4>
                         <ul>
-                            <li><Link to="/om-oss">Om oss</Link></li>
-                            <li><Link to="/kontakt">Kundtjänst</Link></li>
+                            <li><Link to="/om-oss">{t.support.about}</Link></li>
+                            <li><Link to="/kontakt">{t.support.help}</Link></li>
                             <li>
                                 <a href="mailto:support@tradeswift.se">
                                     support@tradeswift.se
@@ -59,18 +111,18 @@ export function Footer() {
                     </div>
 
                     <div className="footer-section">
-                        <h4>Juridiskt</h4>
+                        <h4>{t.legal.title}</h4>
                         <ul>
-                            <li><Link to="/integritetspolicy">Integritetspolicy</Link></li>
-                            <li><Link to="/villkor">Användarvillkor</Link></li>
-                            <li><Link to="/aterbetalning">Återbetalning</Link></li>
-                            <li><Link to="/avbestallning">Avbeställning</Link></li>
+                            <li><Link to="/integritetspolicy">{t.legal.privacy}</Link></li>
+                            <li><Link to="/villkor">{t.legal.terms}</Link></li>
+                            <li><Link to="/aterbetalning">{t.legal.refund}</Link></li>
+                            <li><Link to="/avbestallning">{t.legal.cancellation}</Link></li>
                         </ul>
                     </div>
                 </div>
 
                 <div className="footer-bottom">
-                    <p>© {currentYear} TRADESWIFT AB. ALLA RÄTTIGHETER FÖRBEHÅLLNA.</p>
+                    <p>{t.rights}</p>
                     <div className="footer-social">
                         <a
                             href="https://linkedin.com"
