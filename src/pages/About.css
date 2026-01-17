@@ -1,5 +1,6 @@
 .about-page {
     padding: var(--spacing-section) 0;
+    min-height: 80vh;
 }
 
 .about-container {
@@ -8,17 +9,23 @@
     padding: 0 var(--spacing-lg);
 }
 
+/* Header */
 .about-header {
     margin-bottom: var(--spacing-xl);
 }
 
 .about-header h1 {
-    margin-bottom: var(--spacing-sm);
+    margin-bottom: var(--spacing-md);
+    max-width: 900px;
+    line-height: 0.95;
+    /* Tighter leading for brutalist feel */
 }
 
-.about-header p {
+.about-intro-text {
+    font-size: var(--font-size-lg);
     color: var(--color-text-secondary);
-    max-width: 480px;
+    max-width: 600px;
+    line-height: 1.5;
 }
 
 .about-divider {
@@ -28,121 +35,469 @@
     margin-bottom: var(--spacing-xl);
 }
 
-.about-content {
+/* Main Layout */
+.about-layout {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1.2fr 0.8fr;
+    /* Content takes priority */
     gap: var(--spacing-xxl);
+    margin-bottom: var(--spacing-section);
+    align-items: start;
 }
 
-.about-mission h2 {
+/* Dynamic Content Area (Left/Top) */
+.about-dynamic-content {
+    min-height: 400px;
+    /* Prevent jumpiness */
+}
+
+.mission-container h2 {
+    margin-bottom: var(--spacing-lg);
+    font-size: var(--font-size-xl);
+}
+
+.mission-container p {
+    font-size: var(--font-size-md);
+    line-height: 1.6;
+    margin-bottom: var(--spacing-md);
+    color: var(--color-text-paragraph);
+    /* Slightly lighter than pure black if needed */
+}
+
+/* Member Bio Styles */
+.member-bio-container {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+    position: relative;
+}
+
+.btn-back-mobile {
+    display: none;
+    /* Hidden on desktop */
+}
+
+.member-bio-header {
+    display: flex;
+    align-items: flex-end;
+    /* Bottom align image and text */
+    gap: var(--spacing-lg);
+    border-bottom: 1px solid var(--color-border);
+    padding-bottom: var(--spacing-lg);
     margin-bottom: var(--spacing-md);
 }
 
-.about-mission p {
-    color: var(--color-text-secondary);
-    line-height: 1.7;
-    margin-bottom: var(--spacing-lg);
+.member-portrait {
+    width: 120px;
+    height: 140px;
+    background: var(--color-surface);
+    flex-shrink: 0;
+    overflow: hidden;
+    border: 3px solid #000;
+    /* Brutalist strong border */
 }
 
-.about-team {
-    border-left: var(--divider-thick) solid var(--color-primary);
-    padding-left: var(--spacing-lg);
+.member-portrait img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(100%) contrast(1.1);
+    /* Brutalist b&w look */
+    transition: transform var(--transition-slow);
 }
 
-.about-team h2 {
-    margin-bottom: var(--spacing-lg);
+.member-portrait:hover img {
+    transform: scale(1.05);
+    /* Subtle zoom */
 }
 
-.about-team-intro {
-    color: var(--color-text-secondary);
-    margin-bottom: var(--spacing-lg);
-    line-height: 1.6;
+.member-info-header h2 {
+    font-size: var(--font-size-xl);
+    margin-bottom: var(--spacing-xs);
+    line-height: 1;
 }
 
-.team-member {
-    margin-bottom: var(--spacing-lg);
-}
-
-.team-member:last-child {
-    margin-bottom: 0;
-}
-
-.team-member-name {
+.member-role-badge {
+    display: inline-block;
     font-family: var(--font-family-mono);
-    font-size: var(--font-size-md);
-    font-weight: var(--font-weight-bold);
-    color: var(--color-text-primary);
+    font-size: var(--font-size-xs);
+    background: var(--color-text-primary);
+    color: var(--color-background);
+    padding: 4px 8px;
     text-transform: uppercase;
-    letter-spacing: 0.5px;
+    font-weight: bold;
+}
+
+.member-bio-text p {
+    font-size: var(--font-size-md);
+    line-height: 1.6;
+    margin-bottom: var(--spacing-md);
+    max-width: 600px;
+}
+
+/* Team Navigation (Right/Bottom) */
+.about-team-nav {
+    position: sticky;
+    top: var(--spacing-xl);
+    padding-left: var(--spacing-lg);
+    border-left: var(--divider-thick) solid var(--color-border);
+}
+
+.team-nav-header {
+    margin-bottom: var(--spacing-lg);
+}
+
+.team-nav-header h3 {
     margin-bottom: var(--spacing-xs);
 }
 
-.team-member-role {
+.team-nav-header p {
+    color: var(--color-text-secondary);
     font-size: var(--font-size-sm);
-    color: var(--color-text-secondary);
 }
 
-.about-details {
-    margin-top: var(--spacing-section);
-    padding-top: var(--spacing-xl);
-    border-top: var(--divider-thick) solid var(--color-primary);
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: var(--spacing-lg);
+.team-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
 }
 
-.about-detail {
-    padding: var(--spacing-lg);
-    border: 1px dashed var(--color-text-muted);
+.team-member-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: var(--spacing-md);
+    background: transparent;
+    border: 1px solid transparent;
+    border-left: 2px solid transparent;
+    text-align: left;
+    transition: all var(--transition-fast);
+    position: relative;
+    cursor: pointer;
 }
 
-.about-detail-label {
-    font-size: var(--font-size-xs);
-    font-weight: var(--font-weight-bold);
-    color: var(--color-text-secondary);
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-bottom: var(--spacing-sm);
+.team-member-btn:hover {
+    background: rgba(0, 0, 0, 0.03);
+    /* Subtle hover bg */
+    border-left-color: var(--color-text-secondary);
 }
 
-.about-detail-value {
+.team-member-btn.active {
+    background: var(--color-text-primary);
+    color: var(--color-background);
+    border-color: var(--color-text-primary);
+    box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.1);
+    /* Hard shadow */
+}
+
+/* Nested elements in button need to handle color change on active */
+.team-member-btn.active .member-btn-name,
+.team-member-btn.active .member-btn-role {
+    color: var(--color-background);
+}
+
+.member-btn-name {
     font-family: var(--font-family-mono);
-    font-size: var(--font-size-base);
-    font-weight: var(--font-weight-semibold);
+    font-size: var(--font-size-md);
+    font-weight: var(--font-weight-bold);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 4px;
     color: var(--color-text-primary);
 }
 
-.about-philosophy {
-    margin-top: var(--spacing-section);
-    padding: var(--spacing-xl);
-    background: var(--color-primary);
+.member-btn-role {
+    font-size: var(--font-size-xs);
+    color: var(--color-text-secondary);
 }
 
-.about-philosophy h2 {
-    color: var(--color-primary-text);
+.member-indicator {
+    position: absolute;
+    right: var(--spacing-md);
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 10px;
+}
+
+/* Footer Grid */
+.about-footer-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-lg);
+    border-top: var(--divider-thin) solid var(--color-border);
+    padding-top: var(--spacing-xl);
+}
+
+.about-details {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+    justify-content: flex-start;
+}
+
+.detail-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.detail-label {
+    font-family: var(--font-family-mono);
+    font-size: 10px;
+    text-transform: uppercase;
+    color: var(--color-text-secondary);
+    letter-spacing: 1px;
+    margin-bottom: 2px;
+}
+
+.detail-value {
+    font-size: var(--font-size-md);
+    font-weight: var(--font-weight-semibold);
+}
+
+.detail-value.link {
+    text-decoration: underline;
+}
+
+/* Reality Section */
+.reality-section {
+    margin-bottom: var(--spacing-section);
+}
+
+.section-title {
+    font-size: var(--font-size-lg);
+    margin-bottom: var(--spacing-lg);
+    border-bottom: var(--divider-thick) solid var(--color-primary);
+    padding-bottom: var(--spacing-sm);
+    display: inline-block;
+}
+
+.reality-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--spacing-lg);
+}
+
+.reality-card h3 {
+    font-size: var(--font-size-md);
+    margin-bottom: var(--spacing-xs);
+    font-family: var(--font-family-mono);
+}
+
+.reality-card p {
+    font-size: var(--font-size-base);
+    color: var(--color-text-paragraph);
+    line-height: 1.6;
+}
+
+/* Design Philosophy Section (Replaces Manifesto) */
+.philosophy-section {
+    background: var(--color-text-primary);
+    /* Turn dark */
+    color: var(--color-background);
+    /* White text */
+    padding: var(--spacing-xxl) var(--spacing-xl);
+    margin: 0 calc(var(--spacing-lg) * -1);
+    /* Full bleed width relative to container padding if needed, but here we are inside container */
+    /* To make it full width inside a container, we might need negative margins, or just styled as a block. 
+       Let's keep it simple as a block inside container for now, or make it standout. */
+    border-radius: 0;
+    margin-bottom: var(--spacing-section);
+}
+
+.philosophy-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-xxl);
+    align-items: start;
+}
+
+.philosophy-text-column {
+    padding-right: var(--spacing-lg);
+}
+
+.philosophy-title {
+    color: var(--color-background);
+    margin-bottom: var(--spacing-lg);
+    font-size: var(--font-size-xl);
+    border-bottom: 2px solid var(--color-background);
+    padding-bottom: var(--spacing-sm);
+    display: inline-block;
+}
+
+.philosophy-text-column p {
+    font-size: var(--font-size-lg);
+    line-height: 1.6;
     margin-bottom: var(--spacing-md);
+    opacity: 0.9;
 }
 
-.about-philosophy p {
-    color: var(--color-primary-text);
-    opacity: 0.8;
-    line-height: 1.7;
+.philosophy-principles-column {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+    padding-top: var(--spacing-xl);
+    /* Align with text visual weight */
 }
 
+.principle-item {
+    font-family: var(--font-family-mono);
+    font-size: 13px;
+    letter-spacing: 0.5px;
+    padding: var(--spacing-sm);
+    border-left: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all var(--transition-fast);
+}
+
+.principle-item code {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.principle-item:hover {
+    border-left-color: var(--color-primary);
+    /* Pop color on hover */
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.principle-item:hover code {
+    color: var(--color-background);
+}
+
+/* ANIMATIONS */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.animate-fade-in {
+    animation: fadeIn 0.5s ease-out forwards;
+}
+
+.animate-slide-in {
+    animation: slideInRight 0.4s ease-out forwards;
+}
+
+/* MOBILE RESPONSIVENESS */
 @media (max-width: 768px) {
-    .about-content {
+    .about-header h1 {
+        font-size: var(--font-size-xl);
+    }
+
+    .about-layout {
+        display: flex;
+        flex-direction: column-reverse;
+        /* Navigation first (top), then content */
+        gap: var(--spacing-xl);
+    }
+
+    .about-team-nav {
+        border-left: none;
+        padding-left: 0;
+        position: static;
+        /* No sticky on mobile usually, or maybe top sticky? */
+        border-bottom: var(--divider-thin) solid var(--color-border);
+        padding-bottom: var(--spacing-lg);
+        width: 100%;
+    }
+
+    /* Make team list horizontal scrolling on mobile? Or simplified list? */
+    /* Let's try a stacked list, it's safer for "clickable" touch targets */
+
+    .team-list {
+        display: flex;
+        flex-direction: row;
+        /* Horizontal scroll could be nice? */
+        overflow-x: auto;
+        padding-bottom: var(--spacing-sm);
+        gap: var(--spacing-md);
+        /* Scroll snap */
+        scroll-snap-type: x mandatory;
+    }
+
+    .team-member-btn {
+        min-width: 240px;
+        scroll-snap-align: start;
+        border: 1px solid var(--color-border);
+        /* Make them look like cards */
+    }
+
+    .team-member-btn.active {
+        box-shadow: none;
+        transform: translateY(-2px);
+    }
+
+    /* When member is selected, we want to allow user to go back easily */
+    .btn-back-mobile {
+        display: block;
+        margin-bottom: var(--spacing-md);
+        background: none;
+        border: none;
+        color: var(--color-text-secondary);
+        font-family: var(--font-family-mono);
+        font-size: var(--font-size-xs);
+        text-transform: uppercase;
+        cursor: pointer;
+        padding: 0;
+    }
+
+    /* Adjust dynamic content */
+    .member-bio-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--spacing-md);
+    }
+
+    .member-portrait {
+        width: 100px;
+        height: 120px;
+    }
+
+    .about-footer-grid {
         grid-template-columns: 1fr;
         gap: var(--spacing-xl);
     }
 
-    .about-team {
-        border-left: none;
-        padding-left: 0;
-        border-top: var(--divider-thick) solid var(--color-primary);
-        padding-top: var(--spacing-lg);
+    .reality-grid {
+        grid-template-columns: 1fr;
+        /* Stack cards on mobile */
+        gap: var(--spacing-xl);
     }
 
-    .about-details {
+    .philosophy-section {
+        padding: var(--spacing-lg);
+        margin: 0 calc(var(--spacing-lg) * -1);
+        /* Mobile bleed */
+        margin-bottom: var(--spacing-section);
+    }
+
+    .philosophy-content {
         grid-template-columns: 1fr;
+        gap: var(--spacing-lg);
+    }
+
+    .philosophy-text-column {
+        padding-right: 0;
+    }
+
+    .philosophy-principles-column {
+        padding-top: 0;
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+        padding-top: var(--spacing-lg);
     }
 }
