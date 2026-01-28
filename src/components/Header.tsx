@@ -33,12 +33,7 @@ export function Header() {
             <div className="header-border" />
             <div className="header-container">
                 <Link to="/" className="header-logo">
-                    <div className="header-logo-mark">
-                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M13 3L4 14h7l-2 7 9-11h-7l2-7z" />
-                        </svg>
-                    </div>
-                    TRADESWIFT PRO
+                    <img src="/logo.svg" alt="TradeSwift PRO" style={{ height: '30px' }} />
                 </Link>
 
                 <div className="header-actions">

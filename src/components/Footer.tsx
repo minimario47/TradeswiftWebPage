@@ -64,7 +64,9 @@ export function Footer() {
             <div className="footer-container">
                 <div className="footer-grid">
                     <div className="footer-brand">
-                        <div className="footer-logo">TRADESWIFT PRO</div>
+                        <div className="footer-logo">
+                            <img src="/logo.svg" alt="TradeSwift PRO" style={{ height: '30px' }} />
+                        </div>
                         <p>{t.brandDescription}</p>
                         <div className="footer-company">
                             <strong>{t.companyLabel}</strong>

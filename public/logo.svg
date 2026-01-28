@@ -1,0 +1,42 @@
+<svg width="320" height="60" viewBox="0 0 310 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+  <text 
+    x="0" 
+    y="50%" 
+    dominant-baseline="central" 
+    font-family="'Courier New', Courier, monospace" 
+    font-weight="bold" 
+    font-size="32" 
+    fill="black" 
+    letter-spacing="-1.5"
+  >
+    TradeSwift
+  </text>
+  
+
+  <g transform="translate(215, 0)">
+
+    <rect 
+      x="0" 
+      y="7" 
+      width="100" 
+      height="46" 
+      rx="0" 
+      fill="black" 
+    />
+    
+    <text 
+      x="50" 
+      y="52%" 
+      dominant-baseline="central" 
+      font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" 
+      font-weight="bold" 
+      font-size="32" 
+      fill="white" 
+      text-anchor="middle"
+      letter-spacing="2"
+    >
+      PRO
+    </text>
+  </g>
+</svg>
