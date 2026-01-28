@@ -283,24 +283,26 @@ export function Home() {
                 <div className="trust-container" ref={setRevealRef(4)}>
                     <div className="trust-badge">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                            <rect x="1" y="4" width="22" height="16" rx="2" ry="2" />
-                            <line x1="1" y1="10" x2="23" y2="10" />
+                            <rect x="2" y="6" width="20" height="4" fill="currentColor" />
+                            <rect x="2" y="14" width="20" height="4" fill="currentColor" />
                         </svg>
                         <span>{content.trust[0].label}</span>
                         <p>{content.trust[0].description}</p>
                     </div>
                     <div className="trust-badge">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                            <rect x="4" y="4" width="16" height="16" stroke="currentColor" strokeWidth="2" />
+                            <rect x="9" y="9" width="6" height="6" fill="currentColor" />
                         </svg>
                         <span>{content.trust[1].label}</span>
                         <p>{content.trust[1].description}</p>
                     </div>
                     <div className="trust-badge">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                            <circle cx="12" cy="12" r="10" />
-                            <line x1="2" y1="12" x2="22" y2="12" />
-                            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+                            <rect x="3" y="3" width="8" height="8" stroke="currentColor" strokeWidth="2" />
+                            <rect x="13" y="3" width="8" height="8" stroke="currentColor" strokeWidth="2" />
+                            <rect x="3" y="13" width="8" height="8" stroke="currentColor" strokeWidth="2" />
+                            <rect x="13" y="13" width="8" height="8" stroke="currentColor" strokeWidth="2" />
                         </svg>
                         <span>{content.trust[2].label}</span>
                         <p>{content.trust[2].description}</p>
