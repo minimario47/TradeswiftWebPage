@@ -11,7 +11,7 @@ const CONTENT = {
     en: {
         sectionLabel: 'ABOUT',
         title: 'TradeSwift is built by Mikail, with help from friends',
-        intro: 'I built TradeSwift to help tradespeople spend less time on admin and more time on paid work. Hien and Wael help me run and improve the app.',
+        intro: 'I built TradeSwift to help tradespeople spend less time on admin and more time on paid work. Hien and Wael are my childhood friends and both mechanical engineers, and they help me run and improve the app.',
         missionTitle: 'WHY I BUILT THIS',
         missionParagraphs: [
             'I watched friends lose time and money because generic invoicing tools did not fit how real trade work happens day to day.',
@@ -19,7 +19,7 @@ const CONTENT = {
             'No bloated workflows. No feature clutter. Just the tools that actually help independent professionals move faster.'
         ],
         teamTitle: 'THE CREW',
-        teamIntro: 'TradeSwift is creator-led by Mikail, with hands-on help from Hien and Wael.',
+        teamIntro: 'TradeSwift is creator-led by Mikail, with hands-on help from childhood friends Hien and Wael, both mechanical engineers.',
         members: {
             mikail: {
                 id: 'mikail',
@@ -34,20 +34,20 @@ const CONTENT = {
             hien: {
                 id: 'hien',
                 name: 'HIEN NGUYEN',
-                role: 'Helper · Support & QA',
+                role: 'Mechanical Engineer · Support & QA',
                 image: hienImg,
                 bio: [
-                    'I support TradeSwift with product feedback, testing, and support quality so real users get clear answers and stable releases.',
+                    "As one of Mikail's childhood friends and a mechanical engineer, I support TradeSwift with product feedback, testing, and support quality so real users get clear answers and stable releases.",
                     "I'm focused on practical details, workflow clarity, and catching friction points before they become problems."
                 ]
             },
             wael: {
                 id: 'wael',
                 name: 'WAEL HABOUSH',
-                role: 'Helper · Product & Ops',
+                role: 'Mechanical Engineer · Product & Ops',
                 image: waelImg,
                 bio: [
-                    'I help with day-to-day app operations, feature feedback, and release checks so TradeSwift stays useful in real work situations.',
+                    "As one of Mikail's childhood friends and a mechanical engineer, I help with day-to-day app operations, feature feedback, and release checks so TradeSwift stays useful in real work situations.",
                     'My focus is reliability, better execution, and keeping the app practical for contractors under pressure.'
                 ]
             }
@@ -91,7 +91,7 @@ const CONTENT = {
     sv: {
         sectionLabel: 'OM',
         title: 'TradeSwift byggs av Mikail, med hjälp av vänner',
-        intro: 'Jag byggde TradeSwift för att hjälpa hantverkare lägga mindre tid på administration och mer tid på betalt arbete. Hien och Wael hjälper mig att driva och förbättra appen.',
+        intro: 'Jag byggde TradeSwift för att hjälpa hantverkare lägga mindre tid på administration och mer tid på betalt arbete. Hien och Wael är mina barndomsvänner och båda är maskiningenjörer, och de hjälper mig att driva och förbättra appen.',
         missionTitle: 'VARFÖR JAG BYGGDE DETTA',
         missionParagraphs: [
             'Jag såg vänner förlora tid och pengar eftersom generiska fakturaverktyg inte passade hur hantverksjobb faktiskt fungerar i vardagen.',
@@ -99,7 +99,7 @@ const CONTENT = {
             'Ingen onödig komplexitet. Ingen funktionsstök. Bara verktyg som faktiskt hjälper egenföretagare att jobba snabbare.'
         ],
         teamTitle: 'TEAMET',
-        teamIntro: 'TradeSwift leds av Mikail som skapare, med praktisk hjälp av Hien och Wael.',
+        teamIntro: 'TradeSwift leds av Mikail som skapare, med praktisk hjälp av barndomsvännerna Hien och Wael, båda maskiningenjörer.',
         members: {
             mikail: {
                 id: 'mikail',
@@ -114,20 +114,20 @@ const CONTENT = {
             hien: {
                 id: 'hien',
                 name: 'HIEN NGUYEN',
-                role: 'Hjälper till · Support & QA',
+                role: 'Maskiningenjör · Support & QA',
                 image: hienImg,
                 bio: [
-                    'Jag hjälper TradeSwift med produktfeedback, testning och supportkvalitet så användare får tydliga svar och stabila releaser.',
+                    'Som en av Mikails barndomsvänner och maskiningenjör hjälper jag TradeSwift med produktfeedback, testning och supportkvalitet så användare får tydliga svar och stabila releaser.',
                     'Mitt fokus är praktiska detaljer, tydliga flöden och att hitta friktion innan det blir problem.'
                 ]
             },
             wael: {
                 id: 'wael',
                 name: 'WAEL HABOUSH',
-                role: 'Hjälper till · Produkt & Drift',
+                role: 'Maskiningenjör · Produkt & Drift',
                 image: waelImg,
                 bio: [
-                    'Jag hjälper till med daglig appdrift, feature-feedback och releasekontroller så TradeSwift fungerar i verkliga arbetssituationer.',
+                    'Som en av Mikails barndomsvänner och maskiningenjör hjälper jag till med daglig appdrift, feature-feedback och releasekontroller så TradeSwift fungerar i verkliga arbetssituationer.',
                     'Mitt fokus är stabilitet, bättre genomförande och att appen känns praktisk för entreprenörer under press.'
                 ]
             }
