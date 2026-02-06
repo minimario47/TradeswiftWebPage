@@ -34,6 +34,9 @@
 
 .contact-faq-section {
     margin-bottom: var(--spacing-xl);
+    padding: var(--spacing-lg);
+    border: 2px dashed var(--color-primary);
+    background: var(--color-surface);
 }
 
 .contact-faq-header {
@@ -49,42 +52,40 @@
     max-width: 720px;
 }
 
+.contact-faq-scroll {
+    max-height: 520px;
+    overflow-y: auto;
+    border: 2px dashed var(--color-primary);
+    background: var(--color-background);
+    padding: 0 var(--spacing-md);
+}
+
+.contact-faq-scroll-hint {
+    margin-top: var(--spacing-sm);
+    font-size: var(--font-size-xs);
+    color: var(--color-text-muted);
+    font-family: var(--font-family-mono);
+}
+
 .contact-faq-list {
-    border-top: var(--divider-thick) solid var(--color-primary);
+    border-top: var(--divider-thin) solid var(--color-primary);
 }
 
 .contact-faq-item {
-    border-bottom: 1px solid var(--color-border);
+    border-bottom: 1px dashed var(--color-border);
+    padding: var(--spacing-md) 0;
 }
 
 .contact-faq-question {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: var(--spacing-md);
-    text-align: left;
-    padding: var(--spacing-lg) 0;
+    margin-bottom: var(--spacing-sm);
     font-size: var(--font-size-base);
     font-weight: var(--font-weight-semibold);
     color: var(--color-text-primary);
-}
-
-.contact-faq-toggle {
-    width: 24px;
-    text-align: center;
-    font-family: var(--font-family-mono);
-    font-size: 24px;
-    color: var(--color-text-secondary);
-    flex-shrink: 0;
-}
-
-.contact-faq-item.open .contact-faq-toggle {
-    color: var(--color-primary);
+    line-height: 1.4;
 }
 
 .contact-faq-answer {
-    margin: 0 0 var(--spacing-lg) var(--spacing-sm);
+    margin: 0 0 0 var(--spacing-sm);
     padding-left: var(--spacing-md);
     border-left: 2px solid var(--color-primary);
 }
@@ -229,6 +230,10 @@
 }
 
 @media (max-width: 768px) {
+    .contact-faq-scroll {
+        max-height: 420px;
+    }
+
     .contact-grid {
         grid-template-columns: 1fr;
         gap: var(--spacing-xl);

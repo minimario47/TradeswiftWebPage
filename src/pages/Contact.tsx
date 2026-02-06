@@ -13,24 +13,56 @@ const FAQ_ITEMS = {
             a: 'TradeSwift PRO is local-first. Invoices, clients, items, and receipt records stay on your device. If you enable iCloud sync, Apple stores synced copies in your iCloud account. If you connect Stripe, Stripe processes payment and payout data for those transactions.'
         },
         {
-            q: 'Can I work without internet?',
-            a: 'Yes for core workflow. Creating and editing invoices, clients, and items works on-device. Internet is needed for connected features like AI receipt scanning, email sending/tracking, Stripe payments, and address lookup.'
+            q: 'Does TradeSwift PRO work offline?',
+            a: 'Yes for core workflow. You can create and edit invoices, clients, and items directly on your device without internet.'
+        },
+        {
+            q: 'Which features require internet?',
+            a: 'Internet is required for connected features such as AI receipt scanning, sending/tracking invoice emails, Stripe card payments, address lookup, and iCloud sync.'
+        },
+        {
+            q: 'How does iCloud sync work?',
+            a: 'If iCloud is enabled on your device, you can sync data across devices in TradeSwift PRO settings. You can sync now, and you can choose to get data from iCloud or save your current device data to iCloud.'
+        },
+        {
+            q: 'I changed iPhone. How do I keep my data?',
+            a: 'Use iCloud sync or an iOS device backup before switching. That is the safest way to bring your TradeSwift PRO data to your new phone.'
         },
         {
             q: 'How do subscriptions and billing work?',
-            a: 'TradeSwift PRO plans are managed through Apple App Store billing. You can restore purchases and manage or cancel subscriptions from TradeSwift PRO or iOS subscription settings.'
+            a: 'TradeSwift PRO subscriptions are billed and managed by Apple App Store. You can manage, cancel, or restore purchases from iOS subscription settings or through the app’s subscription management flow.'
+        },
+        {
+            q: 'What plans are available?',
+            a: 'The app supports a free tier plus TradeSwift PRO options like monthly, yearly, and lifetime plans. Credits packs may also be offered inside the subscription screen.'
+        },
+        {
+            q: 'Where can I check email and scan usage?',
+            a: 'Open the subscription screen to see monthly usage meters for invoice emails and receipt scans, including remaining quota and reset timing.'
+        },
+        {
+            q: 'What happens if I hit a monthly usage limit?',
+            a: 'The app stops that specific action until reset or until you add credits/upgrade. In-app prompts guide you to the available options.'
         },
         {
             q: 'How do client card payments work?',
-            a: 'Card payments run through Stripe Connect. Your client pays via Stripe checkout and payouts go to your connected Stripe account. The service agreement remains between you and your client.'
+            a: 'Card payments run through Stripe Connect. Your client pays in Stripe Checkout and payouts go to your connected Stripe account. The service relationship remains between you and your client.'
         },
         {
             q: 'Can I send and track invoice emails?',
-            a: 'Yes. You can send invoice emails directly in the app and view delivery/open status for sent emails.'
+            a: 'Yes. You can send invoice emails from the app and track delivery events such as sent, delivered, opened, and clicked.'
         },
         {
-            q: 'What if I reach a monthly usage limit?',
-            a: 'You can always check remaining usage in the subscription screen. When a limit is reached, the app shows options to add credits or upgrade your plan.'
+            q: 'Can I export or share invoices as PDF?',
+            a: 'Yes. TradeSwift PRO can generate invoice PDFs so you can share or print them directly from your device.'
+        },
+        {
+            q: 'Does TradeSwift PRO show ads or sell data?',
+            a: 'No third-party ads and no sale of your personal data.'
+        },
+        {
+            q: 'How do I contact support?',
+            a: 'Use the support form on this page or email support@tradeswift.se.'
         }
     ],
     sv: [
@@ -39,24 +71,56 @@ const FAQ_ITEMS = {
             a: 'TradeSwift PRO är local-first. Fakturor, kunder, artiklar och kvittodata ligger på din enhet. Om du aktiverar iCloud-synk lagras synkade kopior i ditt iCloud-konto hos Apple. Om du kopplar Stripe hanterar Stripe betalnings- och utbetalningsdata för dessa transaktioner.'
         },
         {
-            q: 'Kan jag arbeta utan internet?',
-            a: 'Ja för kärnflödet. Att skapa och redigera fakturor, kunder och artiklar fungerar lokalt på enheten. Internet krävs för anslutna funktioner som AI-kvittoskanning, e-postutskick/spårning, Stripe-betalningar och adressökning.'
+            q: 'Fungerar TradeSwift PRO offline?',
+            a: 'Ja för kärnflödet. Du kan skapa och redigera fakturor, kunder och artiklar direkt på enheten utan internet.'
+        },
+        {
+            q: 'Vilka funktioner kräver internet?',
+            a: 'Internet krävs för anslutna funktioner som AI-kvittoskanning, e-postutskick och spårning, Stripe-kortbetalningar, adressökning och iCloud-synk.'
+        },
+        {
+            q: 'Hur fungerar iCloud-synk?',
+            a: 'Om iCloud är aktiverat på enheten kan du synka mellan enheter i TradeSwift PRO:s inställningar. Du kan synka direkt och även välja att hämta data från iCloud eller spara denna enhets data till iCloud.'
+        },
+        {
+            q: 'Jag har bytt iPhone. Hur behåller jag min data?',
+            a: 'Använd iCloud-synk eller en iOS-enhetsbackup innan du byter telefon. Det är säkraste sättet att flytta TradeSwift PRO-data till ny enhet.'
         },
         {
             q: 'Hur fungerar prenumeration och debitering?',
-            a: 'TradeSwift PRO-planer hanteras via Apple App Store-debitering. Du kan återställa köp samt hantera eller avsluta prenumeration i TradeSwift PRO eller i iOS prenumerationsinställningar.'
+            a: 'TradeSwift PRO-prenumerationer hanteras och debiteras av Apple App Store. Du kan hantera, avsluta och återställa köp via iOS prenumerationsinställningar eller appens prenumerationsflöde.'
         },
         {
-            q: 'Hur fungerar kunders kortbetalningar?',
-            a: 'Kortbetalningar går via Stripe Connect. Din kund betalar via Stripe Checkout och utbetalningar går till ditt anslutna Stripe-konto. Själva tjänsteavtalet är mellan dig och din kund.'
+            q: 'Vilka planer finns?',
+            a: 'Appen har en gratisnivå samt TradeSwift PRO-alternativ som månads-, års- och livstidsplan. Kreditpaket kan också erbjudas i prenumerationsvyn.'
         },
         {
-            q: 'Kan jag skicka och spåra fakturamejl?',
-            a: 'Ja. Du kan skicka fakturamejl direkt i appen och se leverans- och öppningsstatus för skickade mejl.'
+            q: 'Var ser jag användning för mejl och skanningar?',
+            a: 'Öppna prenumerationsvyn för att se månatliga usage-mätare för fakturamejl och kvittoskanningar, inklusive kvarvarande kvot och reset-tid.'
         },
         {
             q: 'Vad händer om jag når en månadsgräns?',
-            a: 'Du kan alltid se kvarvarande användning i prenumerationsvyn. När en gräns nås visar appen alternativ för att lägga till krediter eller uppgradera planen.'
+            a: 'Appen stoppar den funktionen tills reset eller tills du lägger till krediter/uppgraderar. Du får tydliga alternativ direkt i appen.'
+        },
+        {
+            q: 'Hur fungerar kunders kortbetalningar?',
+            a: 'Kortbetalningar går via Stripe Connect. Din kund betalar i Stripe Checkout och utbetalningar går till ditt anslutna Stripe-konto. Själva kundrelationen är mellan dig och kunden.'
+        },
+        {
+            q: 'Kan jag skicka och spåra fakturamejl?',
+            a: 'Ja. Du kan skicka fakturamejl från appen och spåra status som skickad, levererad, öppnad och klickad.'
+        },
+        {
+            q: 'Kan jag exportera eller dela fakturor som PDF?',
+            a: 'Ja. TradeSwift PRO kan skapa faktura-PDF så du kan dela eller skriva ut direkt från enheten.'
+        },
+        {
+            q: 'Visar TradeSwift PRO annonser eller säljer data?',
+            a: 'Nej, inga tredjepartsannonser och ingen försäljning av personuppgifter.'
+        },
+        {
+            q: 'Hur kontaktar jag support?',
+            a: 'Använd supportformuläret på sidan eller mejla support@tradeswift.se.'
         }
     ]
 };
@@ -69,7 +133,8 @@ const CONTENT = {
         faq: {
             label: 'QUICK ANSWERS',
             title: 'Most asked questions',
-            intro: 'Updated answers based on the current TradeSwift PRO app.'
+            intro: 'Updated answers based on the current TradeSwift PRO app.',
+            scrollHint: 'Scroll inside this panel to read all questions.'
         },
         cards: {
             email: {
@@ -104,7 +169,8 @@ const CONTENT = {
         faq: {
             label: 'SNABBA SVAR',
             title: 'Vanliga frågor',
-            intro: 'Uppdaterade svar utifrån nuvarande funktioner i TradeSwift PRO.'
+            intro: 'Uppdaterade svar utifrån nuvarande funktioner i TradeSwift PRO.',
+            scrollHint: 'Skrolla i rutan för att läsa alla frågor.'
         },
         cards: {
             email: {
@@ -143,7 +209,6 @@ export function Contact() {
     const [email, setEmail] = useState('');
     const [subject, setSubject] = useState('');
     const [message, setMessage] = useState('');
-    const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null);
     const [status, setStatus] = useState<FormStatus>('idle');
     const [errorMessage, setErrorMessage] = useState('');
 
@@ -194,29 +259,19 @@ export function Contact() {
                         <p>{content.faq.intro}</p>
                     </div>
 
-                    <div className="contact-faq-list">
-                        {faqItems.map((item, index) => {
-                            const isOpen = openFaqIndex === index;
-                            return (
-                                <div key={item.q} className={`contact-faq-item ${isOpen ? 'open' : ''}`}>
-                                    <button
-                                        type="button"
-                                        className="contact-faq-question"
-                                        onClick={() => setOpenFaqIndex(isOpen ? null : index)}
-                                        aria-expanded={isOpen}
-                                    >
-                                        <span>{item.q}</span>
-                                        <span className="contact-faq-toggle">{isOpen ? '−' : '+'}</span>
-                                    </button>
-                                    {isOpen && (
-                                        <div className="contact-faq-answer">
-                                            <p>{item.a}</p>
-                                        </div>
-                                    )}
-                                </div>
-                            );
-                        })}
+                    <div className="contact-faq-scroll">
+                        <div className="contact-faq-list">
+                            {faqItems.map((item) => (
+                                <article key={item.q} className="contact-faq-item">
+                                    <h3 className="contact-faq-question">{item.q}</h3>
+                                    <div className="contact-faq-answer">
+                                        <p>{item.a}</p>
+                                    </div>
+                                </article>
+                            ))}
+                        </div>
                     </div>
+                    <p className="contact-faq-scroll-hint">{content.faq.scrollHint}</p>
                 </section>
 
                 <div className="contact-divider contact-divider-thin" />
