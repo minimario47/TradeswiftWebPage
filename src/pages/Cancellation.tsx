@@ -21,10 +21,10 @@ function CancellationEn() {
                 <div className="legal-info-box legal-tldr">
                     <h4>TL;DR</h4>
                     <p>
-                        You can cancel recurring app subscriptions anytime from TradeSwift settings
-                        or Apple subscription settings.<br />
-                        Stripe customer payments are between you and your client; you can disconnect
-                        Stripe in-app to stop new card payments through TradeSwift.<br />
+                        No lock-in: you can cancel recurring TradeSwift PRO subscriptions anytime in
+                        app settings or Apple subscription settings.<br />
+                        Stripe payments are still between you and your client, and you can disconnect
+                        Stripe in-app to stop new card payments through TradeSwift PRO.<br />
                         Your core records stay on your device, and you can delete your data whenever
                         you want.
                     </p>
@@ -53,7 +53,7 @@ function CancellationEn() {
 
                     <h2 id="app-subscriptions">2. APP SUBSCRIPTIONS AND BILLING</h2>
                     <p>
-                        TradeSwift Pro subscriptions (for example monthly or yearly plans) are billed
+                        TradeSwift PRO subscriptions (for example monthly or yearly plans) are billed
                         by Apple when purchased through iOS. Apple handles billing dates, renewals,
                         and App Store refund decisions.
                     </p>
@@ -65,8 +65,8 @@ function CancellationEn() {
                     <h2 id="how-to-cancel">3. HOW TO CANCEL SUBSCRIPTIONS</h2>
                     <p>You can cancel in either of these ways:</p>
                     <ol>
-                        <li>In TradeSwift: open Subscription settings and tap <strong>Manage Subscription</strong></li>
-                        <li>In iOS: <strong>Settings</strong> → your Apple ID → <strong>Subscriptions</strong> → <strong>TradeSwift Pro</strong> → <strong>Cancel Subscription</strong></li>
+                        <li>In TradeSwift PRO: open Subscription settings and tap <strong>Manage Subscription</strong></li>
+                        <li>In iOS: <strong>Settings</strong> → your Apple ID → <strong>Subscriptions</strong> → <strong>TradeSwift PRO</strong> → <strong>Cancel Subscription</strong></li>
                     </ol>
                     <p>
                         After cancellation, access continues until the end of the already paid period.
@@ -140,10 +140,11 @@ function CancellationSv() {
                 <div className="legal-info-box legal-tldr">
                     <h4>TL;DR</h4>
                     <p>
-                        Du kan när som helst avsluta löpande appprenumerationer via TradeSwifts
-                        inställningar eller Apples prenumerationsinställningar.<br />
-                        Stripe-betalningar är ett avtal mellan dig och din kund; du kan koppla bort
-                        Stripe i appen för att stoppa nya kortbetalningar via TradeSwift.<br />
+                        Ingen bindningstid: du kan när som helst avsluta löpande TradeSwift PRO-
+                        prenumerationer via appens inställningar eller Apples prenumerations-
+                        inställningar.<br />
+                        Stripe-betalningar är fortsatt ett avtal mellan dig och din kund; du kan
+                        koppla bort Stripe i appen för att stoppa nya kortbetalningar via TradeSwift PRO.<br />
                         Din kärndata ligger kvar på enheten, och du kan radera den när du vill.
                     </p>
                 </div>
@@ -171,7 +172,7 @@ function CancellationSv() {
 
                     <h2 id="app-subscriptions">2. APPPRENUMERATIONER OCH DEBITERING</h2>
                     <p>
-                        TradeSwift Pro-prenumerationer (till exempel månads- eller årsplaner)
+                        TradeSwift PRO-prenumerationer (till exempel månads- eller årsplaner)
                         debiteras av Apple när köpet görs i iOS. Apple hanterar faktureringsdatum,
                         förnyelser och beslut om App Store-återbetalning.
                     </p>
@@ -183,8 +184,8 @@ function CancellationSv() {
                     <h2 id="how-to-cancel">3. SÅ AVSLUTAR DU PRENUMERATION</h2>
                     <p>Du kan avsluta på något av följande sätt:</p>
                     <ol>
-                        <li>I TradeSwift: öppna prenumerationsinställningar och tryck <strong>Manage Subscription</strong></li>
-                        <li>I iOS: <strong>Inställningar</strong> → ditt Apple-ID → <strong>Prenumerationer</strong> → <strong>TradeSwift Pro</strong> → <strong>Avsluta prenumeration</strong></li>
+                        <li>I TradeSwift PRO: öppna prenumerationsinställningar och tryck <strong>Manage Subscription</strong></li>
+                        <li>I iOS: <strong>Inställningar</strong> → ditt Apple-ID → <strong>Prenumerationer</strong> → <strong>TradeSwift PRO</strong> → <strong>Avsluta prenumeration</strong></li>
                     </ol>
                     <p>
                         Efter uppsägning fortsätter åtkomsten till slutet av redan betald period.

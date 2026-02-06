@@ -21,10 +21,10 @@ function RefundEn() {
                 <div className="legal-info-box legal-tldr">
                     <h4>TL;DR</h4>
                     <p>
-                        TradeSwift does not hold customer funds and is not the seller in your
+                        TradeSwift PRO does not hold customer funds and is not the seller in your
                         transaction with your client.<br />
-                        Stripe Connect processes payments and refunds. You control customer refunds
-                        and are responsible for disputes/chargebacks on your Stripe account.<br />
+                        Stripe Connect handles card payments and refunds. You decide customer refunds,
+                        and Stripe manages the payment rails and dispute process.<br />
                         App Store purchase refunds are handled by Apple.
                     </p>
                 </div>
@@ -47,7 +47,7 @@ function RefundEn() {
                     <h2 id="overview">1. OVERVIEW</h2>
                     <p>
                         This policy describes how refunds and payment disputes are handled for
-                        TradeSwift Pro, including Stripe-powered customer payments and any
+                        TradeSwift PRO, including Stripe-powered customer payments and any
                         TradeSwift platform fees.
                     </p>
 
@@ -150,10 +150,10 @@ function RefundSv() {
                 <div className="legal-info-box legal-tldr">
                     <h4>TL;DR</h4>
                     <p>
-                        TradeSwift håller inte kundmedel och är inte säljare i transaktionen mellan
-                        dig och din kund.<br />
-                        Stripe Connect behandlar betalningar och återbetalningar. Du ansvarar för
-                        kundåterbetalningar samt tvister/chargebacks på ditt Stripe-konto.<br />
+                        TradeSwift PRO håller inte kundmedel och är inte säljare i transaktionen
+                        mellan dig och din kund.<br />
+                        Stripe Connect hanterar kortbetalningar och återbetalningar. Du beslutar om
+                        kundåterbetalningar, och Stripe hanterar betalflöden och tvistprocessen.<br />
                         App Store-återbetalningar hanteras av Apple.
                     </p>
                 </div>
@@ -176,7 +176,7 @@ function RefundSv() {
                     <h2 id="overview">1. ÖVERSIKT</h2>
                     <p>
                         Denna policy beskriver hur återbetalningar och betalningstvister hanteras i
-                        TradeSwift Pro, inklusive Stripe-baserade kundbetalningar och eventuella
+                        TradeSwift PRO, inklusive Stripe-baserade kundbetalningar och eventuella
                         TradeSwift-plattformsavgifter.
                     </p>
 

@@ -21,12 +21,12 @@ function TermsEn() {
                 <div className="legal-info-box legal-tldr">
                     <h4>TL;DR</h4>
                     <p>
-                        TradeSwift Pro helps you run your business: create invoices, send invoice
-                        emails, scan receipts, and accept card payments through Stripe Connect.<br />
-                        Your customer agreement is between you and your client, and you stay
-                        responsible for your pricing, delivery, refunds, and support.<br />
-                        If you subscribe through Apple App Store, Apple handles subscription billing,
-                        renewals, and App Store refunds.
+                        TradeSwift PRO helps you create invoices, send invoice emails, scan receipts,
+                        and accept card payments through Stripe Connect.<br />
+                        Card payments are processed by Stripe, while your service agreement stays
+                        directly between you and your client.<br />
+                        If you subscribe through Apple App Store, Apple handles billing, renewals,
+                        and App Store refunds.
                     </p>
                 </div>
 
@@ -48,7 +48,7 @@ function TermsEn() {
                 <div className="legal-content">
                     <h2 id="allmant">1. GENERAL</h2>
                     <p>
-                        These terms of service ("Terms") govern your use of the TradeSwift Pro app
+                        These terms of service ("Terms") govern your use of the TradeSwift PRO app
                         and related services provided by Mikail Yenigün, the independent developer
                         and operator of TradeSwift ("TradeSwift", "I", "me").
                     </p>
@@ -57,7 +57,7 @@ function TermsEn() {
                     </p>
 
                     <h2 id="tjanst">2. SERVICE DESCRIPTION</h2>
-                    <p>TradeSwift Pro is an invoicing and workflow app that includes:</p>
+                    <p>TradeSwift PRO is an invoicing and workflow app that includes:</p>
                     <ul>
                         <li>Invoice creation and management</li>
                         <li>Client and item management</li>
@@ -70,7 +70,7 @@ function TermsEn() {
                     <h2 id="licens">3. LICENSE AND ACCEPTABLE USE (EULA)</h2>
                     <p>
                         Mikail Yenigün grants you a limited, non-exclusive, non-transferable,
-                        revocable license to use the TradeSwift Pro app on devices you own or
+                        revocable license to use the TradeSwift PRO app on devices you own or
                         control, in accordance with these Terms.
                     </p>
                     <p>You may not:</p>
@@ -88,7 +88,7 @@ function TermsEn() {
 
                     <h2 id="konto">4. ACCOUNT AND REGISTRATION</h2>
                     <p>
-                        To use TradeSwift Pro, you need an account. You are responsible for:
+                        To use TradeSwift PRO, you need an account. You are responsible for:
                     </p>
                     <ul>
                         <li>Providing accurate and current information</li>
@@ -287,10 +287,10 @@ function TermsSv() {
                 <div className="legal-info-box legal-tldr">
                     <h4>TL;DR</h4>
                     <p>
-                        TradeSwift Pro hjälper dig driva firman: skapa fakturor, skicka faktura-
-                        e-post, skanna kvitton och ta betalt via Stripe Connect.<br />
-                        Betalningen för jobbet är ett avtal mellan dig och din kund, och du ansvarar
-                        för pris, leverans, återbetalningar och support.<br />
+                        TradeSwift PRO hjälper dig skapa fakturor, skicka faktura-e-post, skanna
+                        kvitton och ta betalt via Stripe Connect.<br />
+                        Kortbetalningar behandlas av Stripe, men själva tjänsteavtalet är fortfarande
+                        direkt mellan dig och din kund.<br />
                         Om du prenumererar via Apple App Store hanterar Apple debitering, förnyelser
                         och App Store-återbetalningar.
                     </p>
@@ -315,7 +315,7 @@ function TermsSv() {
                     <h2 id="allmant">1. ALLMÄNT</h2>
                     <p>
                         Dessa användarvillkor ("Villkor") reglerar din användning av TradeSwift
-                        Pro-appen och relaterade tjänster som tillhandahålls av Mikail Yenigün,
+                        PRO-appen och relaterade tjänster som tillhandahålls av Mikail Yenigün,
                         oberoende utvecklare och ansvarig för TradeSwift ("TradeSwift", "jag", "mig").
                     </p>
                     <p>
@@ -323,7 +323,7 @@ function TermsSv() {
                     </p>
 
                     <h2 id="tjanst">2. TJÄNSTEBESKRIVNING</h2>
-                    <p>TradeSwift Pro är en fakturerings- och arbetsflödesapp som innehåller:</p>
+                    <p>TradeSwift PRO är en fakturerings- och arbetsflödesapp som innehåller:</p>
                     <ul>
                         <li>Skapande och hantering av fakturor</li>
                         <li>Kund- och artikelhantering</li>
@@ -336,7 +336,7 @@ function TermsSv() {
                     <h2 id="licens">3. LICENS OCH TILLÅTEN ANVÄNDNING (EULA)</h2>
                     <p>
                         Mikail Yenigün beviljar dig en begränsad, icke-exklusiv, icke-överförbar
-                        och återkallelig licens att använda TradeSwift Pro på enheter du äger
+                        och återkallelig licens att använda TradeSwift PRO på enheter du äger
                         eller kontrollerar, i enlighet med dessa Villkor.
                     </p>
                     <p>Du får inte:</p>
@@ -354,7 +354,7 @@ function TermsSv() {
 
                     <h2 id="konto">4. KONTO OCH REGISTRERING</h2>
                     <p>
-                        För att använda TradeSwift Pro behöver du ett konto. Du ansvarar för att:
+                        För att använda TradeSwift PRO behöver du ett konto. Du ansvarar för att:
                     </p>
                     <ul>
                         <li>Lämna korrekta och aktuella uppgifter</li>
