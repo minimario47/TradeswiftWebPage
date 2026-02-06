@@ -19,7 +19,7 @@ const FAQ_ITEMS = {
         },
         {
             q: 'How secure is it?',
-            a: 'Stripe handles card payments. Data you send to our services uses TLS, and most data stays on your device. We never sell your data.'
+            a: 'Stripe handles card payments. Data sent to TradeSwift services uses TLS, and most data stays on your device. We never sell your data.'
         },
         {
             q: 'Can I export my invoices?',
@@ -65,7 +65,7 @@ const CONTENT = {
         phone: {
             label: 'TRADESWIFT PRO',
             greeting: 'Welcome back,',
-            company: 'YOUR COMPANY LTD',
+            company: 'YOUR BUSINESS',
             outstanding: 'OUTSTANDING',
             overdue: 'OVERDUE',
             actions: ['New invoice', 'Scan receipt', 'Start job']
@@ -114,7 +114,7 @@ const CONTENT = {
         phone: {
             label: 'TRADESWIFT PRO',
             greeting: 'Välkommen tillbaka,',
-            company: 'DITT FÖRETAG AB',
+            company: 'DITT FÖRETAG',
             outstanding: 'UTESTÅENDE',
             overdue: 'FÖRFALLET',
             actions: ['Ny faktura', 'Skanna kvitto', 'Starta jobb']

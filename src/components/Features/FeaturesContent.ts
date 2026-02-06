@@ -230,7 +230,7 @@ export const FEATURES_CONTENT: Record<'en' | 'sv', FeaturesContent> = {
             dashboard: {
                 appName: 'TRADESWIFT PRO',
                 greeting: 'Good afternoon,',
-                company: 'YOUR COMPANY LTD',
+                company: 'YOUR BUSINESS',
                 outstanding: 'OUTSTANDING',
                 overdue: 'OVERDUE',
                 requiresAttention: 'REQUIRES ATTENTION',
@@ -331,7 +331,7 @@ export const FEATURES_CONTENT: Record<'en' | 'sv', FeaturesContent> = {
                 ],
                 balance: { label: 'Available balance', value: '12,400 USD', meta: 'After fees' },
                 info: [
-                    { label: 'Business Name', value: 'TradeSwift Ltd' },
+                    { label: 'Business Name', value: 'Northbridge Plumbing' },
                     { label: 'Email', value: 'invoices@tradeswift.se' },
                     { label: 'Country', value: 'United States' },
                     { label: 'Currency', value: 'USD' }
@@ -473,7 +473,7 @@ export const FEATURES_CONTENT: Record<'en' | 'sv', FeaturesContent> = {
             dashboard: {
                 appName: 'TRADESWIFT PRO',
                 greeting: 'God eftermiddag,',
-                company: 'DITT FÖRETAG AB',
+                company: 'DITT FÖRETAG',
                 outstanding: 'UTESTÅENDE',
                 overdue: 'FÖRFALLET',
                 requiresAttention: 'KRÄVER ÅTGÄRD',
@@ -574,7 +574,7 @@ export const FEATURES_CONTENT: Record<'en' | 'sv', FeaturesContent> = {
                 ],
                 balance: { label: 'Tillgängligt saldo', value: '12 400 SEK', meta: 'Efter avgifter' },
                 info: [
-                    { label: 'Företagsnamn', value: 'TradeSwift AB' },
+                    { label: 'Företagsnamn', value: 'Andersson VVS' },
                     { label: 'E-post', value: 'invoices@tradeswift.se' },
                     { label: 'Land', value: 'Sverige' },
                     { label: 'Valuta', value: 'SEK' }

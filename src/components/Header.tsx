@@ -19,7 +19,7 @@ export function Header() {
         sv: {
             home: 'Hem',
             features: 'Funktioner',
-            about: 'Om oss',
+            about: 'Om appen',
             support: 'Kundtjänst',
             menu: 'Meny',
             language: 'Språk'

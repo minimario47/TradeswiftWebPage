@@ -13,7 +13,7 @@ function PrivacyEn() {
                 <div className="legal-header">
                     <p className="section-label">DOCUMENT</p>
                     <h1>Privacy Policy</h1>
-                    <p className="legal-meta">Last updated: January 2026</p>
+                    <p className="legal-meta">Last updated: February 2026</p>
                 </div>
 
                 <div className="legal-divider" />
@@ -21,170 +21,126 @@ function PrivacyEn() {
                 <div className="legal-info-box legal-tldr">
                     <h4>TL;DR</h4>
                     <p>
-                        Most data (company profile, clients, invoices, receipts, settings) stays on your device.<br />
-                        We only send data when you use features like Apple Sign-In, Stripe payments,
-                        receipt scanning (OpenAI), email sending, or address lookup.<br />
-                        We never sell your data and run no ads.<br />
-                        You can delete local data at any time.
+                        TradeSwift is local-first: your invoices, clients, and receipts stay on your
+                        device unless you choose to connect external services.<br />
+                        If you connect services like Apple iCloud or Stripe, those providers process
+                        data under their own privacy terms.<br />
+                        You can delete your data whenever you want. TradeSwift does not run ads and
+                        never sells personal data.
                     </p>
                 </div>
 
                 <div className="legal-toc">
                     <h4>Contents</h4>
                     <ul>
-                        <li><a href="#introduction">Introduction</a></li>
-                        <li><a href="#data-controller">Data controller</a></li>
-                        <li><a href="#data-collection">What data we collect</a></li>
-                        <li><a href="#data-use">How we use data</a></li>
-                        <li><a href="#legal-basis">Legal basis</a></li>
-                        <li><a href="#data-sharing">Sharing of data</a></li>
-                        <li><a href="#retention">Retention period</a></li>
-                        <li><a href="#rights">Your rights</a></li>
+                        <li><a href="#intro">Introduction</a></li>
+                        <li><a href="#local-first">Local-first storage</a></li>
+                        <li><a href="#connected-services">Connected services</a></li>
+                        <li><a href="#minimal-processing">Minimal operational processing</a></li>
+                        <li><a href="#no-ads">No ads, no sale of data</a></li>
+                        <li><a href="#controls">Your controls and deletion</a></li>
                         <li><a href="#security">Security</a></li>
                         <li><a href="#changes">Changes</a></li>
-                        <li><a href="#contact">Contact and complaints</a></li>
+                        <li><a href="#contact">Contact</a></li>
                     </ul>
                 </div>
 
                 <div className="legal-content">
-                    <h2 id="introduction">1. INTRODUCTION</h2>
+                    <h2 id="intro">1. INTRODUCTION</h2>
                     <p>
-                        TradeSwift AB ("we", "us" or "TradeSwift") values your privacy. This privacy
-                        policy explains how we collect, use, store, and protect your personal data
-                        when you use the TradeSwift Pro app and our services.
+                        TradeSwift is created and operated by Mikail Yenigün ("TradeSwift", "I",
+                        "me"). This policy explains how data is handled when you use TradeSwift Pro.
                     </p>
 
-                    <h2 id="data-controller">2. DATA CONTROLLER</h2>
+                    <h2 id="local-first">2. LOCAL-FIRST STORAGE</h2>
                     <p>
-                        TradeSwift AB is the data controller for the processing of your personal data.
+                        TradeSwift is built so your core business content stays local on your device.
+                        This includes invoices, clients, items, notes, and receipt records.
                     </p>
-                    <div className="legal-info-box">
-                        <h4>Contact details</h4>
-                        <p>
-                            TradeSwift AB<br />
-                            Exempelgatan 123<br />
-                            123 45 Stockholm<br />
-                            Email: support@tradeswift.se
-                        </p>
-                    </div>
-
-                    <h2 id="data-collection">3. WHAT DATA DO WE COLLECT?</h2>
-                    <p>Most data is created by you and stored locally on your device. Depending on the features you use, we may process:</p>
-                    <ul>
-                        <li><strong>Account and authentication:</strong> Apple Sign-In ID, name, and email (if provided by Apple)</li>
-                        <li><strong>Company profile and settings:</strong> company name, organization number, address, phone, email, VAT/ROT settings, language, theme</li>
-                        <li><strong>Clients and invoices:</strong> client contact details, invoices, line items, totals, notes (including optional contact import)</li>
-                        <li><strong>Receipts:</strong> receipt images and extracted data when you scan receipts</li>
-                        <li><strong>Bank details:</strong> bank name and account/IBAN/BIC for invoice footer</li>
-                        <li><strong>Email sending:</strong> recipients and message content when you choose to send invoices by email</li>
-                        <li><strong>Usage data (minimal):</strong> scan/email usage counts for limits and abuse prevention</li>
-                    </ul>
-
-                    <h2 id="data-use">4. HOW DO WE USE YOUR DATA?</h2>
-                    <p>We process your personal data to:</p>
-                    <ul>
-                        <li>Create and manage invoices, clients, items, and receipts on your device</li>
-                        <li>Authenticate you with Apple Sign-In when required</li>
-                        <li>Process card payments and payout setup via Stripe Connect</li>
-                        <li>Scan receipts with AI when you choose to use the scanner</li>
-                        <li>Send invoice emails on your request</li>
-                        <li>Provide address autocomplete</li>
-                        <li>Enforce usage limits and prevent abuse</li>
-                    </ul>
-
-                    <h2 id="legal-basis">5. LEGAL BASIS FOR PROCESSING</h2>
-                    <p>We process your data based on the following legal grounds:</p>
-                    <ul>
-                        <li><strong>Contract:</strong> To provide the service you signed up for</li>
-                        <li><strong>Legal obligation:</strong> To meet legal requirements</li>
-                        <li><strong>Legitimate interest:</strong> To improve and secure our services</li>
-                        <li><strong>Consent:</strong> For marketing (when applicable)</li>
-                    </ul>
-
-                    <h2 id="data-sharing">6. SHARING OF DATA</h2>
-                    <p>We share your data with the following third-party services:</p>
-
-                    <h3>6.1 STRIPE</h3>
                     <p>
-                        Stripe, Inc. is our payment service provider. When you use Stripe Connect
-                        to receive payments, we share the following data with Stripe:
+                        TradeSwift is not an ad network or a data broker and does not build advertising
+                        profiles from your business information.
+                    </p>
+
+                    <h2 id="connected-services">3. CONNECTED SERVICES YOU CHOOSE</h2>
+                    <p>
+                        Some features only work when you connect external services. In those cases,
+                        data is processed by that provider under its own terms and privacy policy.
+                    </p>
+
+                    <h3>3.1 APPLE (SIGN IN, ICLOUD, APP STORE)</h3>
+                    <p>
+                        If you use Sign in with Apple, iCloud sync/restore, or App Store billing,
+                        Apple processes those parts.
                     </p>
                     <ul>
-                        <li>Name and contact details</li>
-                        <li>Email address</li>
-                        <li>Company information (organization number, address)</li>
-                        <li>Bank account details for payouts</li>
-                        <li>Transaction history</li>
+                        <li><a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener noreferrer">apple.com/legal/privacy</a></li>
                     </ul>
-                    <p>
-                        Stripe processes this data according to its own privacy policy:{' '}
-                        <a
-                            href="https://stripe.com/privacy"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            stripe.com/privacy
-                        </a>
-                    </p>
 
-                    <h3>6.2 OTHER SERVICES</h3>
+                    <h3>3.2 STRIPE (CUSTOMER CARD PAYMENTS)</h3>
+                    <p>
+                        If you connect Stripe to accept card payments from your clients, Stripe
+                        processes payment data, onboarding/compliance data, and payout data.
+                    </p>
                     <ul>
-                        <li><strong>Apple:</strong> For authentication via Sign in with Apple</li>
-                        <li><strong>OpenAI:</strong> For receipt image analysis when you use the scanner</li>
-                        <li><strong>OpenStreetMap (Nominatim):</strong> For address search and autocomplete</li>
-                        <li><strong>Email delivery:</strong> For sending invoice emails you initiate</li>
-                        <li><strong>Cloudflare:</strong> For hosting and security of our backend</li>
+                        <li><a href="https://stripe.com/privacy" target="_blank" rel="noopener noreferrer">stripe.com/privacy</a></li>
+                        <li><a href="https://stripe.com/connect-account/legal" target="_blank" rel="noopener noreferrer">Stripe Connected Account Agreement</a></li>
                     </ul>
 
-                    <div className="legal-highlight">
-                        <h4>Important</h4>
-                        <p>We never sell your personal data to third parties.</p>
-                    </div>
-
-                    <h2 id="retention">7. RETENTION PERIOD</h2>
+                    <h3>3.3 OTHER OPTIONAL FEATURE PROVIDERS</h3>
                     <p>
-                        Most data is stored locally on your device and remains until you delete it or
-                        remove the app. Data processed by Stripe, Apple, OpenAI, or email providers is
-                        retained according to their policies. We may retain limited backend logs or
-                        usage records as needed for security, abuse prevention, and legal compliance.
+                        For specific features (for example receipt scanning, email delivery, or push
+                        notifications), relevant data is processed only to provide that feature.
                     </p>
 
-                    <h2 id="rights">8. YOUR RIGHTS</h2>
-                    <p>Under GDPR you have the right to:</p>
+                    <h2 id="minimal-processing">4. MINIMAL OPERATIONAL PROCESSING</h2>
+                    <p>
+                        To run the service reliably, TradeSwift may process limited technical metadata such
+                        as authentication state, usage counters, or payment/email event status.
+                    </p>
+                    <p>
+                        The goal is to keep this processing minimal and avoid storing your core business
+                        documents on TradeSwift servers.
+                    </p>
+
+                    <h2 id="no-ads">5. NO ADS, NO SALE OF DATA</h2>
                     <ul>
-                        <li>Access your personal data</li>
-                        <li>Request correction of inaccurate data</li>
-                        <li>Request deletion of your data</li>
-                        <li>Request restriction of processing</li>
-                        <li>Object to processing</li>
-                        <li>Receive your data in a portable format</li>
+                        <li>TradeSwift does not show third-party ads in TradeSwift Pro</li>
+                        <li>TradeSwift does not sell your personal data</li>
+                        <li>TradeSwift does not trade your business data for ad targeting</li>
                     </ul>
-                    <p>
-                        Contact us at <a href="mailto:support@tradeswift.se">support@tradeswift.se</a> to
-                        exercise your rights.
-                    </p>
 
-                    <h2 id="security">9. SECURITY</h2>
+                    <h2 id="controls">6. YOUR CONTROLS AND DELETION</h2>
                     <p>
-                        We use TLS for traffic to our services. Most data stays on your device and is
-                        protected by your device security. Third-party processors (Stripe, Apple,
-                        OpenAI, email providers) apply their own security measures.
+                        You can delete invoices, clients, and other records inside the app whenever
+                        you want. You can also remove the app to remove local data from your device.
                     </p>
-
-                    <h2 id="changes">10. CHANGES TO THIS POLICY</h2>
                     <p>
-                        We may update this policy as needed. Material changes will be communicated
-                        via the app or email.
+                        If you use connected services, you can disconnect those services (for example
+                        Stripe) and manage related data directly with that provider.
                     </p>
-
-                    <h2 id="contact">11. CONTACT AND COMPLAINTS</h2>
                     <p>
-                        If you have questions or complaints, contact us at{' '}
+                        For privacy requests, contact{' '}
                         <a href="mailto:support@tradeswift.se">support@tradeswift.se</a>.
                     </p>
+
+                    <h2 id="security">7. SECURITY</h2>
                     <p>
-                        You also have the right to submit a complaint to the Swedish Authority for
-                        Privacy Protection (IMY).
+                        TradeSwift uses appropriate safeguards such as encrypted transport (TLS) for network
+                        requests. Connected providers apply their own security controls under their
+                        own terms.
+                    </p>
+
+                    <h2 id="changes">8. CHANGES TO THIS POLICY</h2>
+                    <p>
+                        This policy may be updated as the app evolves. Material updates may be shown
+                        in-app or on the website.
+                    </p>
+
+                    <h2 id="contact">9. CONTACT</h2>
+                    <p>
+                        Questions about privacy can be sent to{' '}
+                        <a href="mailto:support@tradeswift.se">support@tradeswift.se</a>.
                     </p>
                 </div>
             </div>
@@ -199,7 +155,7 @@ function PrivacySv() {
                 <div className="legal-header">
                     <p className="section-label">DOKUMENT</p>
                     <h1>Integritetspolicy</h1>
-                    <p className="legal-meta">Senast uppdaterad: Januari 2026</p>
+                    <p className="legal-meta">Senast uppdaterad: Februari 2026</p>
                 </div>
 
                 <div className="legal-divider" />
@@ -207,170 +163,130 @@ function PrivacySv() {
                 <div className="legal-info-box legal-tldr">
                     <h4>TL;DR</h4>
                     <p>
-                        Det mesta (företagsprofil, kunder, fakturor, kvitton, inställningar) stannar på din enhet.<br />
-                        Vi skickar bara uppgifter när du använder funktioner som Apple-inloggning,
-                        Stripe-betalningar, kvittoskanning (OpenAI), e-postutskick eller adressökning.<br />
-                        Vi säljer aldrig dina uppgifter och har inga annonser.<br />
-                        Du kan radera lokal data när som helst.
+                        TradeSwift är local-first: dina fakturor, kunder och kvitton ligger på din
+                        enhet om du inte själv väljer att koppla externa tjänster.<br />
+                        Om du ansluter tjänster som Apple iCloud eller Stripe behandlar de uppgifter
+                        enligt sina egna villkor och policys.<br />
+                        Du kan radera data när du vill. TradeSwift visar inga annonser och säljer aldrig
+                        personuppgifter.
                     </p>
                 </div>
 
                 <div className="legal-toc">
                     <h4>Innehåll</h4>
                     <ul>
-                        <li><a href="#introduction">Inledning</a></li>
-                        <li><a href="#data-controller">Personuppgiftsansvarig</a></li>
-                        <li><a href="#data-collection">Vilka uppgifter vi samlar in</a></li>
-                        <li><a href="#data-use">Hur vi använder uppgifter</a></li>
-                        <li><a href="#legal-basis">Rättslig grund</a></li>
-                        <li><a href="#data-sharing">Delning av uppgifter</a></li>
-                        <li><a href="#retention">Lagringstid</a></li>
-                        <li><a href="#rights">Dina rättigheter</a></li>
+                        <li><a href="#intro">Inledning</a></li>
+                        <li><a href="#local-first">Local-first lagring</a></li>
+                        <li><a href="#connected-services">Anslutna tjänster</a></li>
+                        <li><a href="#minimal-processing">Minimal driftbehandling</a></li>
+                        <li><a href="#no-ads">Inga annonser, ingen försäljning av data</a></li>
+                        <li><a href="#controls">Dina val och radering</a></li>
                         <li><a href="#security">Säkerhet</a></li>
                         <li><a href="#changes">Ändringar</a></li>
-                        <li><a href="#contact">Kontakt och klagomål</a></li>
+                        <li><a href="#contact">Kontakt</a></li>
                     </ul>
                 </div>
 
                 <div className="legal-content">
-                    <h2 id="introduction">1. INLEDNING</h2>
+                    <h2 id="intro">1. INLEDNING</h2>
                     <p>
-                        TradeSwift AB ("vi", "oss" eller "TradeSwift") värnar om din personliga
-                        integritet. Denna integritetspolicy förklarar hur vi samlar in, använder,
-                        lagrar och skyddar dina personuppgifter när du använder TradeSwift Pro-appen
-                        och våra tjänster.
+                        TradeSwift skapas och drivs av Mikail Yenigün ("TradeSwift", "jag", "mig")
+                        och värnar om din integritet.
+                        Denna policy förklarar hur uppgifter hanteras när du använder TradeSwift Pro.
                     </p>
 
-                    <h2 id="data-controller">2. PERSONUPPGIFTSANSVARIG</h2>
+                    <h2 id="local-first">2. LOCAL-FIRST LAGRING</h2>
                     <p>
-                        TradeSwift AB är personuppgiftsansvarig för behandlingen av dina personuppgifter.
+                        TradeSwift är byggt så att ditt huvudsakliga affärsinnehåll lagras lokalt på
+                        din enhet. Det gäller till exempel fakturor, kunder, artiklar, anteckningar
+                        och kvittouppgifter.
                     </p>
-                    <div className="legal-info-box">
-                        <h4>Kontaktuppgifter</h4>
-                        <p>
-                            TradeSwift AB<br />
-                            Exempelgatan 123<br />
-                            123 45 Stockholm<br />
-                            E-post: support@tradeswift.se
-                        </p>
-                    </div>
-
-                    <h2 id="data-collection">3. VILKA UPPGIFTER SAMLAR VI IN?</h2>
-                    <p>Det mesta skapas av dig och lagras lokalt på din enhet. Beroende på vilka funktioner du använder kan vi behandla:</p>
-                    <ul>
-                        <li><strong>Konto och autentisering:</strong> Apple-ID, namn och e-post (om Apple delar)</li>
-                        <li><strong>Företagsprofil och inställningar:</strong> företagsnamn, organisationsnummer, adress, telefon, e-post, moms/ROT-inställningar, språk, tema</li>
-                        <li><strong>Kunder och fakturor:</strong> kunduppgifter, fakturor, rader, totalsummor, anteckningar (inklusive valfri kontaktimport)</li>
-                        <li><strong>Kvitton:</strong> kvittobilder och extraherad data när du skannar</li>
-                        <li><strong>Bankuppgifter:</strong> banknamn och konto/IBAN/BIC för fakturafot</li>
-                        <li><strong>E-postutskick:</strong> mottagare och innehåll när du väljer att skicka fakturor via e-post</li>
-                        <li><strong>Användningsdata (minimal):</strong> antal skanningar/e-post för begränsningar och missbruksskydd</li>
-                    </ul>
-
-                    <h2 id="data-use">4. HUR ANVÄNDER VI DINA UPPGIFTER?</h2>
-                    <p>Vi behandlar dina personuppgifter för att:</p>
-                    <ul>
-                        <li>Skapa och hantera fakturor, kunder, artiklar och kvitton på din enhet</li>
-                        <li>Autentisera dig via Sign in with Apple när det krävs</li>
-                        <li>Hantera kortbetalningar och utbetalningar via Stripe Connect</li>
-                        <li>Skanna kvitton med AI när du väljer att använda skannern</li>
-                        <li>Skicka fakturor via e-post på din begäran</li>
-                        <li>Erbjuda adressautokomplettering</li>
-                        <li>Sätta begränsningar och förhindra missbruk</li>
-                    </ul>
-
-                    <h2 id="legal-basis">5. RÄTTSLIG GRUND FÖR BEHANDLING</h2>
-                    <p>Vi behandlar dina uppgifter baserat på följande rättsliga grunder:</p>
-                    <ul>
-                        <li><strong>Avtalsfullgörelse:</strong> För att tillhandahålla den tjänst du har registrerat dig för</li>
-                        <li><strong>Rättslig förpliktelse:</strong> För att uppfylla lagkrav</li>
-                        <li><strong>Berättigat intresse:</strong> För att förbättra och säkra våra tjänster</li>
-                        <li><strong>Samtycke:</strong> För marknadsföring (när tillämpligt)</li>
-                    </ul>
-
-                    <h2 id="data-sharing">6. DELNING AV UPPGIFTER</h2>
-                    <p>Vi delar dina uppgifter med följande tredjepartstjänster:</p>
-
-                    <h3>6.1 STRIPE</h3>
                     <p>
-                        Stripe, Inc. är vår betaltjänstleverantör. När du använder Stripe Connect
-                        för att ta emot betalningar delar vi följande uppgifter med Stripe:
+                        TradeSwift är inte ett annonsnätverk och inte en databroker, och bygger inte
+                        annonsprofiler baserat på dina företagsuppgifter.
+                    </p>
+
+                    <h2 id="connected-services">3. ANSLUTNA TJÄNSTER SOM DU VÄLJER</h2>
+                    <p>
+                        Vissa funktioner fungerar bara när du kopplar externa tjänster. I de fallen
+                        behandlas uppgifter av respektive leverantör enligt deras egna villkor och
+                        integritetspolicy.
+                    </p>
+
+                    <h3>3.1 APPLE (INLOGGNING, ICLOUD, APP STORE)</h3>
+                    <p>
+                        Om du använder Logga in med Apple, iCloud-synk/återställning eller App
+                        Store-betalning hanteras den delen av Apple.
                     </p>
                     <ul>
-                        <li>Namn och kontaktuppgifter</li>
-                        <li>E-postadress</li>
-                        <li>Företagsinformation (organisationsnummer, adress)</li>
-                        <li>Bankkontouppgifter för utbetalningar</li>
-                        <li>Transaktionshistorik</li>
+                        <li><a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener noreferrer">apple.com/legal/privacy</a></li>
                     </ul>
-                    <p>
-                        Stripe behandlar dessa uppgifter enligt sin egen integritetspolicy:{' '}
-                        <a
-                            href="https://stripe.com/privacy"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            stripe.com/privacy
-                        </a>
-                    </p>
 
-                    <h3>6.2 ANDRA TJÄNSTER</h3>
+                    <h3>3.2 STRIPE (KUNDBETALNINGAR MED KORT)</h3>
+                    <p>
+                        Om du kopplar Stripe för att ta betalt med kort behandlar Stripe
+                        betalningsdata, onboarding/compliance-data och utbetalningsdata.
+                    </p>
                     <ul>
-                        <li><strong>Apple:</strong> För inloggning via Sign in with Apple</li>
-                        <li><strong>OpenAI:</strong> För analys av kvittobilder när du använder skannern</li>
-                        <li><strong>OpenStreetMap (Nominatim):</strong> För adressökning och autokomplettering</li>
-                        <li><strong>E-postleverans:</strong> För att skicka fakturor du initierar</li>
-                        <li><strong>Cloudflare:</strong> För hosting och säkerhet av vår backend</li>
+                        <li><a href="https://stripe.com/privacy" target="_blank" rel="noopener noreferrer">stripe.com/privacy</a></li>
+                        <li><a href="https://stripe.com/connect-account/legal" target="_blank" rel="noopener noreferrer">Stripe Connected Account Agreement</a></li>
                     </ul>
 
-                    <div className="legal-highlight">
-                        <h4>Viktig information</h4>
-                        <p>Vi säljer aldrig dina personuppgifter till tredje part.</p>
-                    </div>
-
-                    <h2 id="retention">7. LAGRINGSTID</h2>
+                    <h3>3.3 ANDRA VALFRIA FUNKTIONSLEVERANTÖRER</h3>
                     <p>
-                        Det mesta lagras lokalt på din enhet och ligger kvar tills du raderar det
-                        eller tar bort appen. Uppgifter som behandlas av Stripe, Apple, OpenAI eller
-                        e-postleverantörer sparas enligt deras policys. Vi kan spara begränsade
-                        backend-loggar eller användningsdata för säkerhet, missbruksskydd och lagkrav.
+                        För vissa funktioner (till exempel kvittoskanning, e-postleverans eller
+                        pushnotiser) behandlas relevanta uppgifter bara för att leverera funktionen.
                     </p>
 
-                    <h2 id="rights">8. DINA RÄTTIGHETER</h2>
-                    <p>Enligt GDPR har du rätt att:</p>
+                    <h2 id="minimal-processing">4. MINIMAL DRIFTBEHANDLING</h2>
+                    <p>
+                        För att tjänsten ska fungera stabilt kan TradeSwift behandla begränsad teknisk
+                        metadata, till exempel autentiseringsstatus, användningsräknare eller
+                        status för betalning/e-posthändelser.
+                    </p>
+                    <p>
+                        Målet är att hålla denna behandling minimal och undvika att lagra dina
+                        kärndokument för verksamheten på TradeSwifts servrar.
+                    </p>
+
+                    <h2 id="no-ads">5. INGA ANNONSER, INGEN FÖRSÄLJNING AV DATA</h2>
                     <ul>
-                        <li>Få tillgång till dina personuppgifter</li>
-                        <li>Begära rättelse av felaktiga uppgifter</li>
-                        <li>Begära radering av dina uppgifter</li>
-                        <li>Begära begränsning av behandling</li>
-                        <li>Invända mot behandling</li>
-                        <li>Få dina uppgifter i ett portabelt format</li>
+                        <li>TradeSwift visar inga tredjepartsannonser i TradeSwift Pro</li>
+                        <li>TradeSwift säljer inte dina personuppgifter</li>
+                        <li>TradeSwift handlar inte med din företagsdata för annonsmålgrupper</li>
                     </ul>
-                    <p>
-                        Kontakta oss på <a href="mailto:support@tradeswift.se">support@tradeswift.se</a> för
-                        att utöva dina rättigheter.
-                    </p>
 
-                    <h2 id="security">9. SÄKERHET</h2>
+                    <h2 id="controls">6. DINA VAL OCH RADERING</h2>
                     <p>
-                        Vi använder TLS för trafik till våra tjänster. Det mesta ligger på din enhet
-                        och skyddas av enhetens säkerhet. Tredjepartsbehandlare (Stripe, Apple,
-                        OpenAI, e-postleverantörer) har egna säkerhetsåtgärder.
+                        Du kan radera fakturor, kunder och andra poster i appen när du vill. Du kan
+                        också ta bort appen för att radera lokal data från enheten.
                     </p>
-
-                    <h2 id="changes">10. ÄNDRINGAR I POLICYN</h2>
                     <p>
-                        Vi kan uppdatera denna policy vid behov. Väsentliga ändringar meddelas
-                        via appen eller e-post.
+                        Om du använder anslutna tjänster kan du koppla bort dem (till exempel
+                        Stripe) och hantera relaterad data direkt hos leverantören.
                     </p>
-
-                    <h2 id="contact">11. KONTAKT OCH KLAGOMÅL</h2>
                     <p>
-                        Vid frågor eller klagomål, kontakta oss på{' '}
+                        För integritetsfrågor eller begäran, kontakta{' '}
                         <a href="mailto:support@tradeswift.se">support@tradeswift.se</a>.
                     </p>
+
+                    <h2 id="security">7. SÄKERHET</h2>
                     <p>
-                        Du har även rätt att lämna klagomål till Integritetsskyddsmyndigheten (IMY).
+                        TradeSwift använder lämpliga skydd, till exempel krypterad överföring (TLS) för
+                        nätverkstrafik. Anslutna leverantörer tillämpar sina egna säkerhetskontroller
+                        enligt sina villkor.
+                    </p>
+
+                    <h2 id="changes">8. ÄNDRINGAR I DENNA POLICY</h2>
+                    <p>
+                        Policyn kan uppdateras när appen utvecklas. Väsentliga ändringar kan visas
+                        i appen eller på webbplatsen.
+                    </p>
+
+                    <h2 id="contact">9. KONTAKT</h2>
+                    <p>
+                        Frågor om integritet skickas till{' '}
+                        <a href="mailto:support@tradeswift.se">support@tradeswift.se</a>.
                     </p>
                 </div>
             </div>

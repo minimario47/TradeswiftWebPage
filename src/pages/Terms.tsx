@@ -13,7 +13,7 @@ function TermsEn() {
                 <div className="legal-header">
                     <p className="section-label">DOCUMENT</p>
                     <h1>Terms of Service</h1>
-                    <p className="legal-meta">Last updated: January 2026</p>
+                    <p className="legal-meta">Last updated: February 2026</p>
                 </div>
 
                 <div className="legal-divider" />
@@ -21,10 +21,12 @@ function TermsEn() {
                 <div className="legal-info-box legal-tldr">
                     <h4>TL;DR</h4>
                     <p>
-                        TradeSwift Pro helps you create invoices, manage clients, scan receipts, and send
-                        payment links. Stripe Connect handles card payments; you are responsible for customer
-                        refunds and disputes.<br />
-                        Any TradeSwift fees are shown in-app. App Store billing and refunds are handled by Apple.
+                        TradeSwift Pro helps you run your business: create invoices, send invoice
+                        emails, scan receipts, and accept card payments through Stripe Connect.<br />
+                        Your customer agreement is between you and your client, and you stay
+                        responsible for your pricing, delivery, refunds, and support.<br />
+                        If you subscribe through Apple App Store, Apple handles subscription billing,
+                        renewals, and App Store refunds.
                     </p>
                 </div>
 
@@ -33,10 +35,11 @@ function TermsEn() {
                     <ul>
                         <li><a href="#allmant">General</a></li>
                         <li><a href="#tjanst">Service description</a></li>
-                        <li><a href="#licens">License and use</a></li>
+                        <li><a href="#licens">License and acceptable use</a></li>
                         <li><a href="#konto">Account and registration</a></li>
-                        <li><a href="#prenumerationer">Pricing and fees</a></li>
-                        <li><a href="#stripe">Stripe Connect</a></li>
+                        <li><a href="#prenumerationer">Pricing and billing</a></li>
+                        <li><a href="#fair-usage">Fair usage policy</a></li>
+                        <li><a href="#stripe">Stripe Connect and payments</a></li>
                         <li><a href="#ansvar">User responsibilities</a></li>
                         <li><a href="#rattigheter">Intellectual property</a></li>
                     </ul>
@@ -46,26 +49,27 @@ function TermsEn() {
                     <h2 id="allmant">1. GENERAL</h2>
                     <p>
                         These terms of service ("Terms") govern your use of the TradeSwift Pro app
-                        and related services provided by TradeSwift AB, reg. no. 559XXX-XXXX
-                        ("TradeSwift", "we" or "us").
+                        and related services provided by Mikail Yenigün, the independent developer
+                        and operator of TradeSwift ("TradeSwift", "I", "me").
                     </p>
                     <p>
-                        By creating an account or using our services, you accept these Terms.
+                        By creating an account or using the service, you accept these Terms.
                     </p>
 
                     <h2 id="tjanst">2. SERVICE DESCRIPTION</h2>
-                    <p>TradeSwift Pro is an invoicing solution that offers:</p>
+                    <p>TradeSwift Pro is an invoicing and workflow app that includes:</p>
                     <ul>
-                        <li>Creation and management of invoices</li>
+                        <li>Invoice creation and management</li>
                         <li>Client and item management</li>
                         <li>Receipt scanning with AI support</li>
-                        <li>Payment links and processing via Stripe Connect</li>
-                        <li>PDF export and email delivery on request</li>
+                        <li>Email sending and email delivery status tracking</li>
+                        <li>Card payment links and payout setup via Stripe Connect</li>
+                        <li>Optional iCloud sync and restore features</li>
                     </ul>
 
-                    <h2 id="licens">3. LICENSE AND USE (EULA)</h2>
+                    <h2 id="licens">3. LICENSE AND ACCEPTABLE USE (EULA)</h2>
                     <p>
-                        TradeSwift AB grants you a limited, non-exclusive, non-transferable,
+                        Mikail Yenigün grants you a limited, non-exclusive, non-transferable,
                         revocable license to use the TradeSwift Pro app on devices you own or
                         control, in accordance with these Terms.
                     </p>
@@ -76,6 +80,7 @@ function TermsEn() {
                         <li>Remove copyright notices or trademarks</li>
                         <li>Use the app for unlawful purposes</li>
                         <li>Sublicense or transfer your license to third parties</li>
+                        <li>Use bots, scripts, or account sharing to bypass usage controls</li>
                     </ul>
                     <p>
                         This license terminates automatically if you breach these Terms.
@@ -83,38 +88,68 @@ function TermsEn() {
 
                     <h2 id="konto">4. ACCOUNT AND REGISTRATION</h2>
                     <p>
-                        To use TradeSwift Pro you must create an account. You are responsible for:
+                        To use TradeSwift Pro, you need an account. You are responsible for:
                     </p>
                     <ul>
-                        <li>Providing accurate and up-to-date information</li>
-                        <li>Keeping your login credentials secure</li>
-                        <li>Notifying us of unauthorized access to your account</li>
+                        <li>Providing accurate and current information</li>
+                        <li>Keeping your account credentials secure</li>
+                        <li>Notifying TradeSwift if you suspect unauthorized account access</li>
                     </ul>
 
-                    <h2 id="prenumerationer">5. PRICING AND FEES</h2>
+                    <h2 id="prenumerationer">5. PRICING, SUBSCRIPTIONS, AND FEES</h2>
                     <p>
-                        TradeSwift may charge platform fees per transaction and other fees that are
-                        shown in the app before you use the service. You are responsible for reviewing
-                        pricing information and confirming before a payment is completed.
+                        TradeSwift may offer paid plans (for example monthly, yearly, lifetime, or
+                        credits) and may charge a platform fee on Stripe-powered transactions.
+                        Applicable prices and fees are shown in the app before purchase or payment.
                     </p>
                     <p>
-                        If we offer paid plans for iOS access, purchases are made via Apple App Store.
-                        Apple handles billing, renewals, and refunds under its terms. App Store
-                        subscriptions renew automatically unless cancelled.
+                        If purchases are made through Apple App Store, Apple handles billing,
+                        renewals, and App Store refunds under Apple terms. Subscriptions renew
+                        automatically unless cancelled in your Apple subscription settings.
                     </p>
 
-                    <h2 id="stripe">6. STRIPE CONNECT</h2>
+                    <h2 id="fair-usage">6. FAIR USAGE POLICY (ANTI-ABUSE)</h2>
                     <p>
-                        TradeSwift Pro uses Stripe Connect to let you receive payments from your
-                        customers. By connecting a Stripe account via TradeSwift:
+                        Some plans may be marketed as "unlimited" for normal solo contractor use.
+                        To protect platform stability, prevent abuse, and maintain delivery quality,
+                        TradeSwift applies fair usage safeguards.
                     </p>
+
+                    <h3>6.1 RECEIPT SCANS</h3>
+                    <ul>
+                        <li>Soft warning at 200 receipt scans in a calendar month</li>
+                        <li>Hard stop at 300 receipt scans in a calendar month</li>
+                        <li>Hourly safeguard: maximum 50 scans per hour</li>
+                    </ul>
                     <p>
-                        TradeSwift is not a party to the underlying transaction between you and
-                        your customer.
+                        If you hit the monthly cap, scanning is paused until the next month unless
+                        TradeSwift approves higher volume for enterprise use.
+                    </p>
+
+                    <h3>6.2 EMAIL SENDING</h3>
+                    <ul>
+                        <li>Hard stop at 2,000 sent emails in a calendar month</li>
+                    </ul>
+                    <p>
+                        This limit also protects sender reputation and deliverability security.
+                    </p>
+
+                    <h3>6.3 ENFORCEMENT</h3>
+                    <p>
+                        TradeSwift may throttle, pause, or restrict affected features when unusual volume,
+                        account sharing, scripted activity, fraud signals, or other abuse risk is
+                        detected. Repeated abuse may result in suspension or termination.
+                    </p>
+
+                    <h2 id="stripe">7. STRIPE CONNECT AND PAYMENT RELATIONSHIPS</h2>
+                    <p>
+                        TradeSwift integrates Stripe Connect so you can accept customer card payments.
+                        TradeSwift is not the contracting party in the underlying sale of goods or
+                        services between you and your client.
                     </p>
                     <ul>
                         <li>
-                            You agree to Stripe’s connected account terms:{' '}
+                            You agree to the Stripe Connected Account terms:{' '}
                             <a
                                 href="https://stripe.com/connect-account/legal"
                                 target="_blank"
@@ -123,93 +158,112 @@ function TermsEn() {
                                 Stripe Connected Account Agreement
                             </a>
                         </li>
-                        <li>You understand your Stripe account is a separate agreement between you and Stripe</li>
                         <li>
-                            You confirm you are responsible for your relationship with your customers,
-                            including delivery of services, taxes, customer support, and refunds
+                            You must comply with Stripe restrictions, including prohibited/restricted
+                            business rules:{' '}
+                            <a
+                                href="https://stripe.com/legal/restricted-businesses"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                stripe.com/legal/restricted-businesses
+                            </a>
                         </li>
                         <li>
-                            You understand you are normally the merchant of record for customer payments,
-                            unless otherwise explicitly stated in the app
+                            You are responsible for your customer relationship, including service
+                            delivery, invoice accuracy, taxes, VAT, refunds, and support
                         </li>
                         <li>
-                            You accept that Stripe may require identity and business verification before
-                            payouts can be made
+                            You are generally merchant of record for your customer payments, unless
+                            expressly stated otherwise in-app
                         </li>
-                        <li>TradeSwift may charge a platform fee on transactions (shown in the app)</li>
+                        <li>
+                            You are responsible for losses, negative balance, chargebacks, dispute
+                            fees, and fraud-related debits on your Stripe connected account under
+                            Stripe rules
+                        </li>
+                        <li>
+                            Stripe may apply reserves, delayed payouts, or additional verification
+                            checks based on risk and compliance requirements
+                        </li>
+                        <li>
+                            You must provide requested onboarding/compliance information and keep
+                            account details up to date
+                        </li>
+                        <li>
+                            TradeSwift may request additional information or temporarily limit payment
+                            features to support risk mitigation and fraud prevention
+                        </li>
                     </ul>
 
-                    <h3>6.1 PAYOUTS</h3>
+                    <h3>7.1 PAYOUTS</h3>
                     <p>
-                        Payments from your customers are processed by Stripe and paid out to your
-                        designated bank account according to Stripe’s payout schedule, typically
-                        within 2–7 business days depending on your bank and country.
+                        Customer payments are processed by Stripe and paid out according to Stripe's
+                        payout schedule and controls for your connected account.
                     </p>
 
-                    <h3>6.2 FEES</h3>
+                    <h3>7.2 FEES</h3>
                     <p>
-                        Stripe charges transaction fees based on their pricing. TradeSwift may
-                        charge an additional platform fee shown clearly in the app before you
-                        complete transactions.
+                        Stripe charges payment processing and dispute-related fees under Stripe terms.
+                        TradeSwift may charge a separate platform fee shown before payment is created.
                     </p>
 
-                    <h3>6.3 REFUNDS AND DISPUTES</h3>
+                    <h3>7.3 REFUNDS AND DISPUTES</h3>
                     <p>
-                        You are responsible for managing refunds and disputes for payments your
-                        customers make to you. Stripe may debit disputed amounts and dispute fees
-                        from your Stripe balance under Stripe rules. TradeSwift may provide tools
-                        to initiate refunds or submit evidence, but does not decide disputes between
-                        you and your customer.
+                        You manage refunds and disputes with your customer. TradeSwift may provide
+                        tools to initiate refunds or submit evidence, but TradeSwift does not decide
+                        or adjudicate disputes between you and your customer.
                     </p>
 
-                    <h2 id="ansvar">7. USER RESPONSIBILITIES</h2>
+                    <h2 id="ansvar">8. USER RESPONSIBILITIES</h2>
                     <p>You agree to:</p>
                     <ul>
-                        <li>Use the service in accordance with applicable laws</li>
-                        <li>Not misuse the service or disrupt other users</li>
-                        <li>Ensure your invoices comply with legal requirements</li>
-                        <li>Not attempt to bypass security or payment systems</li>
+                        <li>Use the service in accordance with applicable law</li>
+                        <li>Comply with tax, accounting, and invoicing obligations applicable to your business</li>
+                        <li>Not misuse or disrupt the service or other users</li>
+                        <li>Not bypass technical, payment, risk, or usage controls</li>
                     </ul>
 
-                    <h2 id="rattigheter">8. INTELLECTUAL PROPERTY RIGHTS</h2>
+                    <h2 id="rattigheter">9. INTELLECTUAL PROPERTY RIGHTS</h2>
                     <p>
-                        TradeSwift and its content (logos, design, code) are owned by TradeSwift AB
-                        or licensors. The license in section 3 does not grant you ownership of the
-                        app or its content.
+                        TradeSwift and its content (including trademarks, design, and code) are
+                        owned by Mikail Yenigün or licensors. The license in section 3 does not
+                        transfer ownership rights to you.
                     </p>
 
-                    <h2>9. LIMITATION OF LIABILITY</h2>
+                    <h2>10. LIMITATION OF LIABILITY</h2>
                     <p>
-                        TradeSwift is provided "as is". We do not guarantee that the service will
-                        always be available or error-free.
+                        TradeSwift is provided "as is" and "as available". We do not guarantee
+                        uninterrupted or error-free operation.
                     </p>
                     <p>
-                        We are not liable for indirect damages, lost revenue, or data arising from
-                        use of the service, to the extent permitted by law.
-                    </p>
-
-                    <h2>10. TERMINATION</h2>
-                    <p>
-                        You may close your account at any time via the app or by contacting support.
-                        We may suspend or terminate accounts that violate these Terms.
+                        To the extent permitted by law, TradeSwift is not liable for indirect losses,
+                        lost profits, or consequential damages arising from your use of the service.
                     </p>
 
-                    <h2>11. CHANGES TO TERMS</h2>
+                    <h2>11. TERMINATION</h2>
                     <p>
-                        We may update these Terms. Continued use after changes means you accept the
-                        updated terms.
+                        You may stop using the app at any time. We may suspend or terminate accounts
+                        that violate these Terms, applicable law, or payment/risk requirements.
                     </p>
 
-                    <h2>12. GOVERNING LAW AND DISPUTES</h2>
+                    <h2>12. CHANGES TO TERMS</h2>
                     <p>
-                        These Terms are governed by Swedish law. Disputes should first be resolved
-                        through negotiation. If this fails, disputes are decided by Swedish courts,
-                        with Stockholm as the court of first instance.
+                        We may update these Terms from time to time. Material changes may be
+                        communicated in-app or by email. Continued use after updates means you
+                        accept the revised Terms.
                     </p>
 
-                    <h2>13. CONTACT</h2>
+                    <h2>13. GOVERNING LAW AND DISPUTES</h2>
                     <p>
-                        For questions about these Terms, contact us at{' '}
+                        These Terms are governed by Swedish law. Disputes should first be addressed
+                        through good-faith negotiation. If unresolved, disputes are settled by
+                        Swedish courts, with Stockholm District Court as first instance.
+                    </p>
+
+                    <h2>14. CONTACT</h2>
+                    <p>
+                        Questions about these Terms can be sent to{' '}
                         <a href="mailto:support@tradeswift.se">support@tradeswift.se</a>.
                     </p>
                 </div>
@@ -225,7 +279,7 @@ function TermsSv() {
                 <div className="legal-header">
                     <p className="section-label">DOKUMENT</p>
                     <h1>Användarvillkor</h1>
-                    <p className="legal-meta">Senast uppdaterad: Januari 2026</p>
+                    <p className="legal-meta">Senast uppdaterad: Februari 2026</p>
                 </div>
 
                 <div className="legal-divider" />
@@ -233,11 +287,12 @@ function TermsSv() {
                 <div className="legal-info-box legal-tldr">
                     <h4>TL;DR</h4>
                     <p>
-                        TradeSwift Pro hjälper dig skapa fakturor, hantera kunder, skanna kvitton och
-                        skicka betalningslänkar. Stripe Connect hanterar kortbetalningar; du ansvarar
-                        för kunders återbetalningar och tvister.<br />
-                        Eventuella TradeSwift-avgifter visas i appen. App Store-betalning och
-                        återbetalning hanteras av Apple.
+                        TradeSwift Pro hjälper dig driva firman: skapa fakturor, skicka faktura-
+                        e-post, skanna kvitton och ta betalt via Stripe Connect.<br />
+                        Betalningen för jobbet är ett avtal mellan dig och din kund, och du ansvarar
+                        för pris, leverans, återbetalningar och support.<br />
+                        Om du prenumererar via Apple App Store hanterar Apple debitering, förnyelser
+                        och App Store-återbetalningar.
                     </p>
                 </div>
 
@@ -246,10 +301,11 @@ function TermsSv() {
                     <ul>
                         <li><a href="#allmant">Allmänt</a></li>
                         <li><a href="#tjanst">Tjänstebeskrivning</a></li>
-                        <li><a href="#licens">Licens och användningsrätt</a></li>
+                        <li><a href="#licens">Licens och tillåten användning</a></li>
                         <li><a href="#konto">Konto och registrering</a></li>
-                        <li><a href="#prenumerationer">Priser och avgifter</a></li>
-                        <li><a href="#stripe">Stripe Connect</a></li>
+                        <li><a href="#prenumerationer">Priser och debitering</a></li>
+                        <li><a href="#fair-usage">Fair usage-policy</a></li>
+                        <li><a href="#stripe">Stripe Connect och betalningar</a></li>
                         <li><a href="#ansvar">Användarens ansvar</a></li>
                         <li><a href="#rattigheter">Immateriella rättigheter</a></li>
                     </ul>
@@ -258,75 +314,107 @@ function TermsSv() {
                 <div className="legal-content">
                     <h2 id="allmant">1. ALLMÄNT</h2>
                     <p>
-                        Dessa användarvillkor ("Villkor") reglerar din användning av TradeSwift Pro-appen
-                        och relaterade tjänster som tillhandahålls av TradeSwift AB, org.nr 559XXX-XXXX
-                        ("TradeSwift", "vi" eller "oss").
+                        Dessa användarvillkor ("Villkor") reglerar din användning av TradeSwift
+                        Pro-appen och relaterade tjänster som tillhandahålls av Mikail Yenigün,
+                        oberoende utvecklare och ansvarig för TradeSwift ("TradeSwift", "jag", "mig").
                     </p>
                     <p>
-                        Genom att skapa ett konto eller använda våra tjänster accepterar du dessa Villkor.
+                        Genom att skapa konto eller använda tjänsten accepterar du dessa Villkor.
                     </p>
 
                     <h2 id="tjanst">2. TJÄNSTEBESKRIVNING</h2>
-                    <p>TradeSwift Pro är en faktureringslösning som erbjuder:</p>
+                    <p>TradeSwift Pro är en fakturerings- och arbetsflödesapp som innehåller:</p>
                     <ul>
                         <li>Skapande och hantering av fakturor</li>
                         <li>Kund- och artikelhantering</li>
                         <li>Kvittoskanning med AI-stöd</li>
-                        <li>Betalningslänkar och betalningshantering via Stripe Connect</li>
-                        <li>PDF-export och e-postutskick på begäran</li>
+                        <li>E-postutskick och spårning av e-postleverans</li>
+                        <li>Kortbetalningslänkar och utbetalningskoppling via Stripe Connect</li>
+                        <li>Valfri iCloud-synk och återställning</li>
                     </ul>
 
-                    <h2 id="licens">3. LICENS OCH ANVÄNDNINGSRÄTT (EULA)</h2>
+                    <h2 id="licens">3. LICENS OCH TILLÅTEN ANVÄNDNING (EULA)</h2>
                     <p>
-                        TradeSwift AB beviljar dig en begränsad, icke-exklusiv, icke-överförbar,
-                        återkallelig licens att använda TradeSwift Pro-appen på enheter du äger
+                        Mikail Yenigün beviljar dig en begränsad, icke-exklusiv, icke-överförbar
+                        och återkallelig licens att använda TradeSwift Pro på enheter du äger
                         eller kontrollerar, i enlighet med dessa Villkor.
                     </p>
                     <p>Du får inte:</p>
                     <ul>
                         <li>Kopiera, modifiera eller distribuera appen</li>
-                        <li>Reverse-engineera, dekompilera eller demontera appens källkod</li>
-                        <li>Ta bort upphovsrättsmeddelanden eller varumärken</li>
+                        <li>Reverse-engineera, dekompilera eller demontera appen</li>
+                        <li>Ta bort upphovsrätts- eller varumärkesinformation</li>
                         <li>Använda appen för olagliga ändamål</li>
-                        <li>Underlicensiera eller överlåta din licens till tredje part</li>
+                        <li>Underlicensiera eller överlåta licensen till tredje part</li>
+                        <li>Använda botar, script eller kontodelning för att kringgå begränsningar</li>
                     </ul>
                     <p>
-                        Denna licens upphör automatiskt om du bryter mot dessa Villkor.
+                        Licensen upphör automatiskt om du bryter mot dessa Villkor.
                     </p>
 
                     <h2 id="konto">4. KONTO OCH REGISTRERING</h2>
                     <p>
-                        För att använda TradeSwift Pro måste du skapa ett konto. Du ansvarar för att:
+                        För att använda TradeSwift Pro behöver du ett konto. Du ansvarar för att:
                     </p>
                     <ul>
-                        <li>Ange korrekta och aktuella uppgifter</li>
-                        <li>Hålla dina inloggningsuppgifter säkra</li>
-                        <li>Meddela oss om obehörig åtkomst till ditt konto</li>
+                        <li>Lämna korrekta och aktuella uppgifter</li>
+                        <li>Skydda dina kontouppgifter</li>
+                        <li>Meddela TradeSwift vid misstanke om obehörig åtkomst</li>
                     </ul>
 
-                    <h2 id="prenumerationer">5. PRISER OCH AVGIFTER</h2>
+                    <h2 id="prenumerationer">5. PRISER, PRENUMERATIONER OCH AVGIFTER</h2>
                     <p>
-                        TradeSwift kan ta ut plattformsavgifter per transaktion och andra avgifter
-                        som visas i appen innan du använder tjänsten. Du ansvarar för att granska
-                        prisinformation och bekräfta innan en betalning genomförs.
+                        TradeSwift kan erbjuda betalda planer (till exempel månads-, års-, livstids-
+                        eller kreditpaket) och kan ta ut plattformsavgift på Stripe-betalningar.
+                        Aktuella priser och avgifter visas i appen före köp eller betalning.
                     </p>
                     <p>
-                        Om vi erbjuder betalda planer för appåtkomst på iOS sker köp via Apple App Store.
-                        Apple hanterar betalning, förnyelse och återbetalningar enligt sina villkor.
-                        App Store-prenumerationer förnyas automatiskt om de inte sägs upp.
+                        Om köp sker via Apple App Store hanterar Apple betalning, förnyelser och
+                        App Store-återbetalningar enligt Apples villkor. Prenumerationer förnyas
+                        automatiskt om de inte sägs upp i Apple-inställningar.
                     </p>
 
-                    <h2 id="stripe">6. STRIPE CONNECT</h2>
+                    <h2 id="fair-usage">6. FAIR USAGE-POLICY (ANTI-MISSBRUK)</h2>
                     <p>
-                        TradeSwift Pro använder Stripe Connect för att låta dig ta emot betalningar
-                        från dina kunder. Genom att koppla ett Stripe-konto via TradeSwift:
+                        Vissa planer kan marknadsföras som "obegränsade" för normalt enmansbruk.
+                        För att skydda drift, kvalitet och säkerhet tillämpar TradeSwift fair
+                        usage-begränsningar.
                     </p>
+
+                    <h3>6.1 KVITTOSKANNING</h3>
+                    <ul>
+                        <li>Mjuk varning vid 200 kvittoskanningar under en kalendermånad</li>
+                        <li>Hårt stopp vid 300 kvittoskanningar under en kalendermånad</li>
+                        <li>Timskydd: maximalt 50 skanningar per timme</li>
+                    </ul>
                     <p>
-                        TradeSwift är inte part i den underliggande transaktionen mellan dig och din kund.
+                        När månadsgränsen nås pausas skanning till nästa månad, om inte högre volym
+                        har godkänts för enterprise-användning.
+                    </p>
+
+                    <h3>6.2 E-POSTUTSKICK</h3>
+                    <ul>
+                        <li>Hårt stopp vid 2 000 skickade e-post under en kalendermånad</li>
+                    </ul>
+                    <p>
+                        Denna gräns skyddar även avsändarrykte och leveransbarhet.
+                    </p>
+
+                    <h3>6.3 TILLÄMPNING</h3>
+                    <p>
+                        TradeSwift kan strypa, pausa eller begränsa funktioner vid avvikande volym,
+                        kontodelning, automatiserat beteende, bedrägerisignaler eller annan
+                        missbruksrisk. Upprepat missbruk kan leda till avstängning eller uppsägning.
+                    </p>
+
+                    <h2 id="stripe">7. STRIPE CONNECT OCH BETALNINGSRELATIONER</h2>
+                    <p>
+                        TradeSwift integrerar Stripe Connect för att du ska kunna ta emot kortbetalningar.
+                        TradeSwift är inte avtalspart i den underliggande affären mellan dig och din kund.
                     </p>
                     <ul>
                         <li>
-                            Godkänner du Stripes villkor för anslutna konton:{' '}
+                            Du godkänner Stripes villkor för anslutna konton:{' '}
                             <a
                                 href="https://stripe.com/connect-account/legal"
                                 target="_blank"
@@ -335,94 +423,110 @@ function TermsSv() {
                                 Stripe Connected Account Agreement
                             </a>
                         </li>
-                        <li>Förstår du att ditt Stripe-konto är ett separat avtal mellan dig och Stripe</li>
                         <li>
-                            Bekräftar du att du ansvarar för din relation med dina kunder, inklusive
-                            leverans av tjänster, skatter, kundsupport och återbetalningar
+                            Du måste följa Stripes begränsningar, inklusive förbjudna/begränsade
+                            verksamheter:{' '}
+                            <a
+                                href="https://stripe.com/legal/restricted-businesses"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                stripe.com/legal/restricted-businesses
+                            </a>
                         </li>
                         <li>
-                            Förstår du att du normalt är merchant of record för kundbetalningar,
-                            om inget annat uttryckligen anges i appen
+                            Du ansvarar för kundrelationen, inklusive leverans, fakturakorrekthet,
+                            skatter, moms, återbetalningar och kundsupport
                         </li>
                         <li>
-                            Accepterar du att Stripe kan kräva identitets- och företagsverifiering
-                            innan utbetalningar kan göras
+                            Du är normalt merchant of record för kundbetalningar, om inte annat
+                            uttryckligen anges i appen
                         </li>
-                        <li>Godkänner du att TradeSwift kan ta ut en plattformsavgift på transaktioner (anges i appen)</li>
+                        <li>
+                            Du ansvarar för förluster, negativt saldo, chargebacks, tvistavgifter
+                            och bedrägerirelaterade debiteringar på ditt Stripe-konto enligt
+                            Stripes regler
+                        </li>
+                        <li>
+                            Stripe kan använda reserver, fördröjda utbetalningar eller extra
+                            verifieringskrav baserat på risk och regelefterlevnad
+                        </li>
+                        <li>
+                            Du måste lämna begärd onboarding-/compliance-information och hålla
+                            kontouppgifter uppdaterade
+                        </li>
+                        <li>
+                            TradeSwift kan begära kompletterande information eller tillfälligt
+                            begränsa betalningsfunktioner för risk- och bedrägeriminskning
+                        </li>
                     </ul>
 
-                    <h3>6.1 UTBETALNINGAR</h3>
+                    <h3>7.1 UTBETALNINGAR</h3>
                     <p>
-                        Betalningar från dina kunder behandlas av Stripe och betalas ut till ditt
-                        angivna bankkonto enligt Stripes utbetalningsschema, vanligtvis inom 2-7 arbetsdagar
-                        beroende på din bank och land.
+                        Kundbetalningar behandlas av Stripe och betalas ut enligt Stripes schema
+                        och kontroller för ditt anslutna konto.
                     </p>
 
-                    <h3>6.2 AVGIFTER</h3>
+                    <h3>7.2 AVGIFTER</h3>
                     <p>
-                        Stripe tar ut transaktionsavgifter enligt deras prislista. TradeSwift kan
-                        ta ut en ytterligare plattformsavgift som visas tydligt i appen innan du
-                        genomför transaktioner.
+                        Stripe tar ut betal- och tvistrelaterade avgifter enligt Stripe-villkor.
+                        TradeSwift kan ta ut separat plattformsavgift som visas före betalning.
                     </p>
 
-                    <h3>6.3 ÅTERBETALNINGAR OCH TVISTER</h3>
+                    <h3>7.3 ÅTERBETALNINGAR OCH TVISTER</h3>
                     <p>
-                        Du ansvarar för att hantera återbetalningar och tvister för betalningar
-                        som dina kunder gör till dig. Stripe kan dra omtvistade belopp och
-                        tvistavgifter från ditt Stripe-saldo enligt Stripes regler. TradeSwift
-                        kan tillhandahålla verktyg för att initiera återbetalningar eller lämna
-                        bevis, men fattar inte beslut i tvister mellan dig och din kund.
+                        Du hanterar återbetalningar och tvister med din kund. TradeSwift kan
+                        tillhandahålla verktyg för återbetalning eller bevisuppladdning, men
+                        TradeSwift avgör inte tvister mellan dig och din kund.
                     </p>
 
-                    <h2 id="ansvar">7. ANVÄNDARENS ANSVAR</h2>
+                    <h2 id="ansvar">8. ANVÄNDARENS ANSVAR</h2>
                     <p>Du förbinder dig att:</p>
                     <ul>
-                        <li>Använda tjänsten i enlighet med gällande lagar</li>
+                        <li>Använda tjänsten i enlighet med gällande lag</li>
+                        <li>Uppfylla skatte-, bokförings- och faktureringskrav för din verksamhet</li>
                         <li>Inte missbruka tjänsten eller störa andra användare</li>
-                        <li>Ansvara för att dina fakturor uppfyller lagkrav</li>
-                        <li>Inte försöka kringgå säkerhets- eller betalningssystem</li>
+                        <li>Inte kringgå tekniska, betalnings-, risk- eller användningskontroller</li>
                     </ul>
 
-                    <h2 id="rattigheter">8. IMMATERIELLA RÄTTIGHETER</h2>
+                    <h2 id="rattigheter">9. IMMATERIELLA RÄTTIGHETER</h2>
                     <p>
-                        TradeSwift och dess innehåll (logotyper, design, kod) ägs av TradeSwift AB
-                        eller licensgivare. Licensen i avsnitt 3 ger dig inte äganderätt till appen
-                        eller dess innehåll.
+                        TradeSwift och dess innehåll (inklusive varumärken, design och kod) ägs av
+                        Mikail Yenigün eller licensgivare. Licensen i avsnitt 3 överför inte äganderätt.
                     </p>
 
-                    <h2>9. ANSVARSBEGRÄNSNING</h2>
+                    <h2>10. ANSVARSBEGRÄNSNING</h2>
                     <p>
-                        TradeSwift tillhandahålls "i befintligt skick". Vi garanterar inte att
-                        tjänsten alltid är tillgänglig eller felfri.
+                        TradeSwift tillhandahålls i "befintligt skick" och "i mån av tillgänglighet".
+                        Vi garanterar inte oavbruten eller felfri drift.
                     </p>
                     <p>
-                        Vi ansvarar inte för indirekta skador, förlorade intäkter eller data
-                        som uppstår genom användning av tjänsten, i den utsträckning lagen tillåter.
-                    </p>
-
-                    <h2>10. UPPSÄGNING</h2>
-                    <p>
-                        Du kan säga upp ditt konto när som helst via appen eller genom att
-                        kontakta support. Vi kan stänga av eller avsluta konton som bryter
-                        mot dessa Villkor.
+                        I den mån lag tillåter ansvarar TradeSwift inte för indirekta skador,
+                        utebliven vinst eller följdskador som uppstår genom användning av tjänsten.
                     </p>
 
-                    <h2>11. ÄNDRINGAR AV VILLKOREN</h2>
+                    <h2>11. UPPSÄGNING</h2>
                     <p>
-                        Vi kan uppdatera dessa Villkor. Fortsatt användning efter ändringar
-                        innebär att du accepterar de uppdaterade villkoren.
+                        Du kan när som helst sluta använda appen. Vi kan stänga av eller avsluta
+                        konton som bryter mot Villkoren, gällande lag eller betalnings-/riskkrav.
                     </p>
 
-                    <h2>12. TILLÄMPLIG LAG OCH TVISTER</h2>
+                    <h2>12. ÄNDRINGAR AV VILLKOREN</h2>
                     <p>
-                        Dessa Villkor regleras av svensk lag. Tvister ska i första hand lösas
-                        genom förhandling. Om detta inte lyckas avgörs tvisten av svensk domstol
-                        med Stockholm som första instans.
+                        Vi kan uppdatera Villkoren löpande. Väsentliga ändringar kan meddelas i appen
+                        eller via e-post. Fortsatt användning efter uppdatering innebär accept.
                     </p>
 
-                    <h2>13. KONTAKT</h2>
+                    <h2>13. TILLÄMPLIG LAG OCH TVISTER</h2>
                     <p>
-                        Vid frågor om dessa Villkor, kontakta oss på{' '}
+                        Dessa Villkor regleras av svensk lag. Tvister ska först hanteras genom
+                        förhandling i god tro. Om tvisten kvarstår avgörs den av svensk domstol
+                        med Stockholms tingsrätt som första instans.
+                    </p>
+
+                    <h2>14. KONTAKT</h2>
+                    <p>
+                        Frågor om Villkoren skickas till{' '}
                         <a href="mailto:support@tradeswift.se">support@tradeswift.se</a>.
                     </p>
                 </div>

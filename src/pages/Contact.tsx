@@ -10,23 +10,24 @@ const CONTENT = {
     en: {
         sectionLabel: 'SUPPORT',
         title: 'Customer Support',
-        intro: 'Have questions or need help? Our team is here to support you.',
+        intro: 'Have questions or need help? You can contact me directly.',
         cards: {
             email: {
                 label: 'Email',
-                description: 'Write to us for general questions or support requests.'
+                description: 'Write to me for support, billing, or technical questions.'
             },
-            phone: {
-                label: 'Phone',
-                description: 'Available weekdays 09:00 – 17:00'
+            creator: {
+                label: 'Developer',
+                description: 'Mikail Yenigün'
             },
-            address: {
-                label: 'Address'
+            response: {
+                label: 'Response time',
+                description: 'Usually within 1–2 business days'
             }
         },
         form: {
             title: 'SEND A MESSAGE',
-            success: "Thanks for your message! We'll get back to you soon.",
+            success: "Thanks for your message! I'll get back to you soon.",
             error: 'Something went wrong. Please try again.',
             name: 'Name',
             email: 'Email',
@@ -39,23 +40,24 @@ const CONTENT = {
     sv: {
         sectionLabel: 'SUPPORT',
         title: 'Kundtjänst',
-        intro: 'Har du frågor eller behöver hjälp? Vårt team finns här för att stötta dig.',
+        intro: 'Har du frågor eller behöver hjälp? Du kan kontakta mig direkt.',
         cards: {
             email: {
                 label: 'E-post',
-                description: 'Skriv till oss för allmänna frågor eller supportärenden.'
+                description: 'Skriv till mig för support, fakturafrågor eller tekniska frågor.'
             },
-            phone: {
-                label: 'Telefon',
-                description: 'Tillgänglig vardagar 09:00 – 17:00'
+            creator: {
+                label: 'Utvecklare',
+                description: 'Mikail Yenigün'
             },
-            address: {
-                label: 'Adress'
+            response: {
+                label: 'Svarstid',
+                description: 'Vanligtvis inom 1–2 arbetsdagar'
             }
         },
         form: {
             title: 'SKICKA ETT MEDDELANDE',
-            success: 'Tack för ditt meddelande! Vi återkommer så snart som möjligt.',
+            success: 'Tack för ditt meddelande! Jag återkommer så snart som möjligt.',
             error: 'Något gick fel. Försök igen.',
             name: 'Namn',
             email: 'E-post',
@@ -127,19 +129,13 @@ export function Contact() {
                         </div>
 
                         <div className="contact-card">
-                            <div className="contact-card-label">{content.cards.phone.label}</div>
-                            <p>{content.cards.phone.description}</p>
-                            <a href="tel:+46812345678">08-123 456 78</a>
+                            <div className="contact-card-label">{content.cards.creator.label}</div>
+                            <p>{content.cards.creator.description}</p>
                         </div>
 
                         <div className="contact-card">
-                            <div className="contact-card-label">{content.cards.address.label}</div>
-                            <p>
-                                TradeSwift AB<br />
-                                Exempelgatan 123<br />
-                                123 45 Stockholm<br />
-                                Sverige
-                            </p>
+                            <div className="contact-card-label">{content.cards.response.label}</div>
+                            <p>{content.cards.response.description}</p>
                         </div>
                     </div>
 
