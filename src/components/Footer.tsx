@@ -2,6 +2,8 @@ import { Link } from 'react-router-dom';
 import { useLanguage } from '../i18n/LanguageContext';
 import './Footer.css';
 
+const APP_STORE_URL = 'https://apps.apple.com/app/id6758308884';
+
 export function Footer() {
     const currentYear = new Date().getFullYear();
     const { language } = useLanguage();
@@ -88,7 +90,7 @@ export function Footer() {
                             <li><Link to="/">{t.product.pricing}</Link></li>
                             <li>
                                 <a
-                                    href="https://apps.apple.com"
+                                    href={APP_STORE_URL}
                                     target="_blank"
                                     rel="noopener noreferrer"
                                 >

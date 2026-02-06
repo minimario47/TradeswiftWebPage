@@ -6,11 +6,71 @@ const API_BASE = 'https://tradeswift-backend.xaco47.workers.dev';
 
 type FormStatus = 'idle' | 'submitting' | 'success' | 'error';
 
+const FAQ_ITEMS = {
+    en: [
+        {
+            q: 'Where is my data stored?',
+            a: 'TradeSwift PRO is local-first. Invoices, clients, items, and receipt records stay on your device. If you enable iCloud sync, Apple stores synced copies in your iCloud account. If you connect Stripe, Stripe processes payment and payout data for those transactions.'
+        },
+        {
+            q: 'Can I work without internet?',
+            a: 'Yes for core workflow. Creating and editing invoices, clients, and items works on-device. Internet is needed for connected features like AI receipt scanning, email sending/tracking, Stripe payments, and address lookup.'
+        },
+        {
+            q: 'How do subscriptions and billing work?',
+            a: 'TradeSwift PRO plans are managed through Apple App Store billing. You can restore purchases and manage or cancel subscriptions from TradeSwift PRO or iOS subscription settings.'
+        },
+        {
+            q: 'How do client card payments work?',
+            a: 'Card payments run through Stripe Connect. Your client pays via Stripe checkout and payouts go to your connected Stripe account. The service agreement remains between you and your client.'
+        },
+        {
+            q: 'Can I send and track invoice emails?',
+            a: 'Yes. You can send invoice emails directly in the app and view delivery/open status for sent emails.'
+        },
+        {
+            q: 'What if I reach a monthly usage limit?',
+            a: 'You can always check remaining usage in the subscription screen. When a limit is reached, the app shows options to add credits or upgrade your plan.'
+        }
+    ],
+    sv: [
+        {
+            q: 'Var lagras min data?',
+            a: 'TradeSwift PRO är local-first. Fakturor, kunder, artiklar och kvittodata ligger på din enhet. Om du aktiverar iCloud-synk lagras synkade kopior i ditt iCloud-konto hos Apple. Om du kopplar Stripe hanterar Stripe betalnings- och utbetalningsdata för dessa transaktioner.'
+        },
+        {
+            q: 'Kan jag arbeta utan internet?',
+            a: 'Ja för kärnflödet. Att skapa och redigera fakturor, kunder och artiklar fungerar lokalt på enheten. Internet krävs för anslutna funktioner som AI-kvittoskanning, e-postutskick/spårning, Stripe-betalningar och adressökning.'
+        },
+        {
+            q: 'Hur fungerar prenumeration och debitering?',
+            a: 'TradeSwift PRO-planer hanteras via Apple App Store-debitering. Du kan återställa köp samt hantera eller avsluta prenumeration i TradeSwift PRO eller i iOS prenumerationsinställningar.'
+        },
+        {
+            q: 'Hur fungerar kunders kortbetalningar?',
+            a: 'Kortbetalningar går via Stripe Connect. Din kund betalar via Stripe Checkout och utbetalningar går till ditt anslutna Stripe-konto. Själva tjänsteavtalet är mellan dig och din kund.'
+        },
+        {
+            q: 'Kan jag skicka och spåra fakturamejl?',
+            a: 'Ja. Du kan skicka fakturamejl direkt i appen och se leverans- och öppningsstatus för skickade mejl.'
+        },
+        {
+            q: 'Vad händer om jag når en månadsgräns?',
+            a: 'Du kan alltid se kvarvarande användning i prenumerationsvyn. När en gräns nås visar appen alternativ för att lägga till krediter eller uppgradera planen.'
+        }
+    ]
+};
+
 const CONTENT = {
     en: {
         sectionLabel: 'SUPPORT',
         title: 'Customer Support',
         intro: 'Have questions or need help? You can contact me directly.',
+        faq: {
+            label: 'QUICK ANSWERS',
+            title: 'Most asked questions',
+            intro: 'Updated answers based on the current TradeSwift PRO app.'
+        },
         cards: {
             email: {
                 label: 'Email',
@@ -41,6 +101,11 @@ const CONTENT = {
         sectionLabel: 'SUPPORT',
         title: 'Kundtjänst',
         intro: 'Har du frågor eller behöver hjälp? Du kan kontakta mig direkt.',
+        faq: {
+            label: 'SNABBA SVAR',
+            title: 'Vanliga frågor',
+            intro: 'Uppdaterade svar utifrån nuvarande funktioner i TradeSwift PRO.'
+        },
         cards: {
             email: {
                 label: 'E-post',
@@ -72,11 +137,13 @@ const CONTENT = {
 export function Contact() {
     const { language } = useLanguage();
     const content = CONTENT[language];
+    const faqItems = FAQ_ITEMS[language];
 
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [subject, setSubject] = useState('');
     const [message, setMessage] = useState('');
+    const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null);
     const [status, setStatus] = useState<FormStatus>('idle');
     const [errorMessage, setErrorMessage] = useState('');
 
@@ -119,6 +186,40 @@ export function Contact() {
                 </div>
 
                 <div className="contact-divider" />
+
+                <section className="contact-faq-section">
+                    <div className="contact-faq-header">
+                        <p className="section-label">{content.faq.label}</p>
+                        <h2>{content.faq.title}</h2>
+                        <p>{content.faq.intro}</p>
+                    </div>
+
+                    <div className="contact-faq-list">
+                        {faqItems.map((item, index) => {
+                            const isOpen = openFaqIndex === index;
+                            return (
+                                <div key={item.q} className={`contact-faq-item ${isOpen ? 'open' : ''}`}>
+                                    <button
+                                        type="button"
+                                        className="contact-faq-question"
+                                        onClick={() => setOpenFaqIndex(isOpen ? null : index)}
+                                        aria-expanded={isOpen}
+                                    >
+                                        <span>{item.q}</span>
+                                        <span className="contact-faq-toggle">{isOpen ? '−' : '+'}</span>
+                                    </button>
+                                    {isOpen && (
+                                        <div className="contact-faq-answer">
+                                            <p>{item.a}</p>
+                                        </div>
+                                    )}
+                                </div>
+                            );
+                        })}
+                    </div>
+                </section>
+
+                <div className="contact-divider contact-divider-thin" />
 
                 <div className="contact-grid">
                     <div className="contact-info">

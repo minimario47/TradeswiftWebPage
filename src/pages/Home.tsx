@@ -3,52 +3,7 @@ import { useLanguage } from '../i18n/LanguageContext';
 import { FeatureStack } from '../components/FeatureReel';
 import './Home.css';
 
-const FAQ_ITEMS = {
-    en: [
-        {
-            q: 'Are my invoices compliant for tax reporting?',
-            a: 'Yes. Invoices include required fields like company details, VAT/tax info, payment terms, and invoice number.'
-        },
-        {
-            q: 'Does it work without internet?',
-            a: 'Yes for core invoicing. Your data is stored on your device, so you can create invoices offline. Internet is required for receipt scanning (AI), Stripe payments, address lookup, and sending emails.'
-        },
-        {
-            q: 'What happens if I change phones?',
-            a: 'Your data lives on the device. There is no account-based cloud sync right now, so use an iOS device backup or export PDFs before switching.'
-        },
-        {
-            q: 'How secure is it?',
-            a: 'Stripe handles card payments. Data sent to TradeSwift services uses TLS, and most data stays on your device. We never sell your data.'
-        },
-        {
-            q: 'Can I export my invoices?',
-            a: 'Yes. Export invoices as PDF for accounting or send directly by email.'
-        }
-    ],
-    sv: [
-        {
-            q: 'Är mina fakturor giltiga för Skatteverket?',
-            a: 'Ja. Fakturorna följer svensk lag och innehåller alla obligatoriska uppgifter: organisationsnummer, momsredovisning, betalningsvillkor och fakturanummer.'
-        },
-        {
-            q: 'Fungerar det utan internet?',
-            a: 'Ja, för själva faktureringen. Din data lagras på enheten, så du kan skapa fakturor offline. Internet krävs för kvittoskanning (AI), Stripe-betalningar, adressökning och e-postutskick.'
-        },
-        {
-            q: 'Vad händer om jag byter telefon?',
-            a: 'Din data ligger på enheten. Det finns ingen kontobaserad molnsynk just nu, så använd iOS-enhetsbackup eller exportera PDF:er innan du byter.'
-        },
-        {
-            q: 'Hur säkert är det?',
-            a: 'Stripe hanterar kortbetalningar. Data som skickas till våra tjänster går via TLS och det mesta ligger på din enhet. Vi säljer aldrig dina uppgifter.'
-        },
-        {
-            q: 'Kan jag exportera mina fakturor?',
-            a: 'Ja. Exportera fakturor som PDF för bokföring eller skicka direkt via e-post.'
-        }
-    ]
-};
+const APP_STORE_URL = 'https://apps.apple.com/app/id6758308884';
 
 const CONTENT = {
     en: {
@@ -82,10 +37,6 @@ const CONTENT = {
             { label: 'GDPR', description: 'Data protection' },
             { label: 'GLOBAL', description: 'Built for pros' }
         ],
-        faq: {
-            label: 'COMMON QUESTIONS',
-            title: 'Quick answers'
-        },
         newsletter: {
             label: 'STAY UPDATED',
             title: 'Tips for smarter invoicing',
@@ -131,10 +82,6 @@ const CONTENT = {
             { label: 'GDPR', description: 'Dataskydd' },
             { label: 'SVENSKT', description: 'Utvecklat i Sverige' }
         ],
-        faq: {
-            label: 'VANLIGA FRÅGOR',
-            title: 'Snabba svar'
-        },
         newsletter: {
             label: 'HÅLL DIG UPPDATERAD',
             title: 'Tips för smartare fakturering',
@@ -154,13 +101,11 @@ const CONTENT = {
 export function Home() {
     const { language } = useLanguage();
     const content = CONTENT[language];
-    const faqItems = FAQ_ITEMS[language];
 
     const [outstanding] = useState(36450);
     const [overdue] = useState(15200);
 
 
-    const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null);
     const [email, setEmail] = useState('');
     const [emailStatus, setEmailStatus] = useState<'idle' | 'success'>('idle');
 
@@ -219,12 +164,23 @@ export function Home() {
                         <p className="hero-subtitle">{content.hero.subtitle}</p>
                         <div className="hero-actions">
                             <a
-                                href="https://apps.apple.com"
+                                href={APP_STORE_URL}
                                 className="btn btn-primary"
                                 target="_blank"
                                 rel="noopener noreferrer"
                             >
-                                {content.hero.primaryCta}
+                                <svg
+                                    className="btn-apple-icon"
+                                    viewBox="0 0 384 512"
+                                    aria-hidden="true"
+                                    focusable="false"
+                                >
+                                    <path
+                                        fill="currentColor"
+                                        d="M318.7 268.7c-.2-47.6 39.1-70.4 40.8-71.5-22.3-32.6-56.8-37.1-68.9-37.6-29.4-3-57.4 17.3-72.3 17.3-14.9 0-38-16.8-62.5-16.4-32.1.5-61.8 18.7-78.4 47.6-33.5 58-8.6 143.9 24.1 191.2 16 23 35 48.9 60 47.9 24-.9 33.1-15.5 62.1-15.5s37.2 15.5 62.6 15c25.9-.4 42.3-23.5 58.2-46.6 18.4-26.8 26-52.8 26.4-54.1-.6-.2-50.5-19.4-50.9-76.9zm-47.3-140.6c13.3-16.1 22.3-38.5 19.8-60.8-19.2.8-42.3 12.8-56 28.9-12.3 14.2-23.1 36.9-20.2 58.6 21.5 1.7 43.1-10.9 56.4-26.7z"
+                                    />
+                                </svg>
+                                <span>{content.hero.primaryCta}</span>
                             </a>
                             <a href="#features" className="btn btn-secondary">
                                 {content.hero.secondaryCta}
@@ -310,34 +266,8 @@ export function Home() {
                 </div>
             </section>
 
-            <section className="faq-section">
-                <div className="faq-container">
-                    <div className="faq-header" ref={setRevealRef(5)}>
-                        <p className="section-label">{content.faq.label}</p>
-                        <h2>{content.faq.title}</h2>
-                    </div>
-                    <div className="faq-list">
-                        {faqItems.map((item, index) => (
-                            <div
-                                key={item.q}
-                                className={`faq-item ${openFaqIndex === index ? 'open' : ''}`}
-                                onClick={() => setOpenFaqIndex(openFaqIndex === index ? null : index)}
-                            >
-                                <div className="faq-question">
-                                    <span>{item.q}</span>
-                                    <span className="faq-toggle">{openFaqIndex === index ? '−' : '+'}</span>
-                                </div>
-                                {openFaqIndex === index && (
-                                    <div className="faq-answer">{item.a}</div>
-                                )}
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            </section>
-
             <section className="newsletter-section">
-                <div className="newsletter-container" ref={setRevealRef(6)}>
+                <div className="newsletter-container" ref={setRevealRef(5)}>
                     <div className="newsletter-content">
                         <p className="section-label">{content.newsletter.label}</p>
                         <h2>{content.newsletter.title}</h2>
@@ -369,7 +299,7 @@ export function Home() {
                     <h2>{content.cta.title}</h2>
                     <p>{content.cta.description}</p>
                     <a
-                        href="https://apps.apple.com"
+                        href={APP_STORE_URL}
                         className="btn"
                         target="_blank"
                         rel="noopener noreferrer"
