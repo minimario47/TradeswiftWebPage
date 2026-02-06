@@ -1,23 +1,25 @@
 import { useState } from 'react';
 import { useLanguage } from '../i18n/LanguageContext';
 import mikailImg from '../assets/team/mikail.png';
+import hienImg from '../assets/team/hien.png';
+import waelImg from '../assets/team/wael.png';
 import './About.css';
 
-type TeamMemberId = 'mikail';
+type TeamMemberId = 'mikail' | 'hien' | 'wael';
 
 const CONTENT = {
     en: {
         sectionLabel: 'ABOUT',
-        title: 'TradeSwift is built by one developer',
-        intro: 'I built TradeSwift to help tradespeople spend less time on admin and more time on paid work.',
+        title: 'TradeSwift is built by Mikail, with help from friends',
+        intro: 'I built TradeSwift to help tradespeople spend less time on admin and more time on paid work. Hien and Wael help me run and improve the app.',
         missionTitle: 'WHY I BUILT THIS',
         missionParagraphs: [
             'I watched friends lose time and money because generic invoicing tools did not fit how real trade work happens day to day.',
             'TradeSwift focuses on speed, clarity, and getting paid. The goal is simple: less paperwork, fewer payment delays, and more control.',
             'No bloated workflows. No feature clutter. Just the tools that actually help independent professionals move faster.'
         ],
-        teamTitle: 'THE MAKER',
-        teamIntro: 'TradeSwift is designed, built, and maintained by one developer.',
+        teamTitle: 'THE CREW',
+        teamIntro: 'TradeSwift is creator-led by Mikail, with hands-on help from Hien and Wael.',
         members: {
             mikail: {
                 id: 'mikail',
@@ -27,6 +29,26 @@ const CONTENT = {
                 bio: [
                     "I hold a Bachelor of Science, but my real education came from working directly with people and seeing how much time gets lost to unnecessary admin.",
                     "I built TradeSwift because hard work should not be punished with paperwork. My focus is building a fast, reliable app that helps you invoice better and get paid sooner."
+                ]
+            },
+            hien: {
+                id: 'hien',
+                name: 'HIEN NGUYEN',
+                role: 'Helper · Support & QA',
+                image: hienImg,
+                bio: [
+                    'I support TradeSwift with product feedback, testing, and support quality so real users get clear answers and stable releases.',
+                    "I'm focused on practical details, workflow clarity, and catching friction points before they become problems."
+                ]
+            },
+            wael: {
+                id: 'wael',
+                name: 'WAEL HABOUSH',
+                role: 'Helper · Product & Ops',
+                image: waelImg,
+                bio: [
+                    'I help with day-to-day app operations, feature feedback, and release checks so TradeSwift stays useful in real work situations.',
+                    'My focus is reliability, better execution, and keeping the app practical for contractors under pressure.'
                 ]
             }
         },
@@ -60,22 +82,24 @@ const CONTENT = {
         details: {
             companyLabel: 'Creator',
             companyValue: 'Mikail Yenigün',
+            contactLabel2: 'Helpers',
+            contactValue2: 'Hien Nguyen · Wael Haboush',
             contactLabel: 'Contact',
             contactValue: 'support@tradeswift.se'
         }
     },
     sv: {
         sectionLabel: 'OM',
-        title: 'TradeSwift byggs av en utvecklare',
-        intro: 'Jag byggde TradeSwift för att hjälpa hantverkare lägga mindre tid på administration och mer tid på betalt arbete.',
+        title: 'TradeSwift byggs av Mikail, med hjälp av vänner',
+        intro: 'Jag byggde TradeSwift för att hjälpa hantverkare lägga mindre tid på administration och mer tid på betalt arbete. Hien och Wael hjälper mig att driva och förbättra appen.',
         missionTitle: 'VARFÖR JAG BYGGDE DETTA',
         missionParagraphs: [
             'Jag såg vänner förlora tid och pengar eftersom generiska fakturaverktyg inte passade hur hantverksjobb faktiskt fungerar i vardagen.',
             'TradeSwift fokuserar på snabbhet, tydlighet och att du får betalt. Målet är enkelt: mindre pappersjobb, färre betalningsförseningar och mer kontroll.',
             'Ingen onödig komplexitet. Ingen funktionsstök. Bara verktyg som faktiskt hjälper egenföretagare att jobba snabbare.'
         ],
-        teamTitle: 'SKAPAREN',
-        teamIntro: 'TradeSwift designas, byggs och underhålls av en utvecklare.',
+        teamTitle: 'TEAMET',
+        teamIntro: 'TradeSwift leds av Mikail som skapare, med praktisk hjälp av Hien och Wael.',
         members: {
             mikail: {
                 id: 'mikail',
@@ -85,6 +109,26 @@ const CONTENT = {
                 bio: [
                     'Jag är teknologie kandidat, men min verkliga utbildning kom från arbete nära människor och att se hur mycket tid som försvinner i onödig administration.',
                     'Jag byggde TradeSwift eftersom hårt arbete inte ska straffas med pappersarbete. Mitt fokus är en snabb och pålitlig app som hjälper dig fakturera bättre och få betalt snabbare.'
+                ]
+            },
+            hien: {
+                id: 'hien',
+                name: 'HIEN NGUYEN',
+                role: 'Hjälper till · Support & QA',
+                image: hienImg,
+                bio: [
+                    'Jag hjälper TradeSwift med produktfeedback, testning och supportkvalitet så användare får tydliga svar och stabila releaser.',
+                    'Mitt fokus är praktiska detaljer, tydliga flöden och att hitta friktion innan det blir problem.'
+                ]
+            },
+            wael: {
+                id: 'wael',
+                name: 'WAEL HABOUSH',
+                role: 'Hjälper till · Produkt & Drift',
+                image: waelImg,
+                bio: [
+                    'Jag hjälper till med daglig appdrift, feature-feedback och releasekontroller så TradeSwift fungerar i verkliga arbetssituationer.',
+                    'Mitt fokus är stabilitet, bättre genomförande och att appen känns praktisk för entreprenörer under press.'
                 ]
             }
         },
@@ -118,6 +162,8 @@ const CONTENT = {
         details: {
             companyLabel: 'Skapare',
             companyValue: 'Mikail Yenigün',
+            contactLabel2: 'Hjälper till',
+            contactValue2: 'Hien Nguyen · Wael Haboush',
             contactLabel: 'Kontakt',
             contactValue: 'support@tradeswift.se'
         }
@@ -238,6 +284,12 @@ export function About() {
                             <span className="detail-label">{content.details.companyLabel}</span>
                             <span className="detail-value">{content.details.companyValue}</span>
                         </div>
+                        {'contactLabel2' in content.details && 'contactValue2' in content.details && (
+                            <div className="detail-item">
+                                <span className="detail-label">{content.details.contactLabel2}</span>
+                                <span className="detail-value">{content.details.contactValue2}</span>
+                            </div>
+                        )}
                         <div className="detail-item">
                             <span className="detail-label">{content.details.contactLabel}</span>
                             <a href={`mailto:${content.details.contactValue}`} className="detail-value link">
