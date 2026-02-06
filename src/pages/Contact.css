@@ -35,7 +35,7 @@
 .contact-faq-section {
     margin-bottom: var(--spacing-xl);
     padding: var(--spacing-lg);
-    border: 2px dashed var(--color-primary);
+    border: 2px solid var(--color-primary);
     background: var(--color-surface);
 }
 
@@ -77,15 +77,35 @@
 }
 
 .contact-faq-question {
-    margin-bottom: var(--spacing-sm);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: var(--spacing-md);
+    text-align: left;
+    padding: var(--spacing-sm) 0;
     font-size: var(--font-size-base);
     font-weight: var(--font-weight-semibold);
     color: var(--color-text-primary);
     line-height: 1.4;
 }
 
+.contact-faq-toggle {
+    width: 24px;
+    text-align: center;
+    font-family: var(--font-family-mono);
+    font-size: 24px;
+    line-height: 1;
+    color: var(--color-text-secondary);
+    flex-shrink: 0;
+}
+
+.contact-faq-item.open .contact-faq-toggle {
+    color: var(--color-primary);
+}
+
 .contact-faq-answer {
-    margin: 0 0 0 var(--spacing-sm);
+    margin: 0 0 var(--spacing-sm) var(--spacing-sm);
     padding-left: var(--spacing-md);
     border-left: 2px solid var(--color-primary);
 }

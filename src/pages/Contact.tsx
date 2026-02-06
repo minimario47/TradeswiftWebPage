@@ -29,8 +29,20 @@ const FAQ_ITEMS = {
             a: 'Use iCloud sync or an iOS device backup before switching. That is the safest way to bring your TradeSwift PRO data to your new phone.'
         },
         {
+            q: 'Does TradeSwift PRO support Sign in with Apple?',
+            a: 'Yes. TradeSwift PRO supports Sign in with Apple for account-based features.'
+        },
+        {
+            q: 'Do I need to sign in for everything?',
+            a: 'No. Core local work can be done on-device, but account-based features like subscriptions, Stripe connection, and backend-powered sending/tracking require sign-in.'
+        },
+        {
             q: 'How do subscriptions and billing work?',
             a: 'TradeSwift PRO subscriptions are billed and managed by Apple App Store. You can manage, cancel, or restore purchases from iOS subscription settings or through the app’s subscription management flow.'
+        },
+        {
+            q: 'Can I restore purchases after reinstalling or changing device?',
+            a: 'Yes. Use the Restore Purchases action in the subscription area to recover your active entitlements.'
         },
         {
             q: 'What plans are available?',
@@ -45,16 +57,44 @@ const FAQ_ITEMS = {
             a: 'The app stops that specific action until reset or until you add credits/upgrade. In-app prompts guide you to the available options.'
         },
         {
+            q: 'Do I need Stripe to send invoices?',
+            a: 'No for regular invoice email or PDF sharing. Stripe is only required for sending invoices with payment links and tracking card payments through Stripe.'
+        },
+        {
             q: 'How do client card payments work?',
             a: 'Card payments run through Stripe Connect. Your client pays in Stripe Checkout and payouts go to your connected Stripe account. The service relationship remains between you and your client.'
+        },
+        {
+            q: 'Can I connect or disconnect Stripe later?',
+            a: 'Yes. You can connect Stripe in settings, complete onboarding, open Stripe dashboard access, or disconnect whenever needed.'
+        },
+        {
+            q: 'Who handles refunds and disputes for card payments?',
+            a: 'Refund and dispute responsibilities are between you, your client, and Stripe under Stripe terms.'
         },
         {
             q: 'Can I send and track invoice emails?',
             a: 'Yes. You can send invoice emails from the app and track delivery events such as sent, delivered, opened, and clicked.'
         },
         {
+            q: 'Which email statuses are tracked?',
+            a: 'TradeSwift PRO supports tracking states like sent, delivered, opened, and clicked for invoice emails.'
+        },
+        {
             q: 'Can I export or share invoices as PDF?',
             a: 'Yes. TradeSwift PRO can generate invoice PDFs so you can share or print them directly from your device.'
+        },
+        {
+            q: 'Can I customize invoice design?',
+            a: 'Yes. The app includes multiple invoice design templates and lets you choose and set a default design.'
+        },
+        {
+            q: 'Does TradeSwift PRO support address autocomplete?',
+            a: 'Yes. Address lookup is available as an online feature to speed up client and address entry.'
+        },
+        {
+            q: 'Can I receive notifications about invoice activity?',
+            a: 'Yes. With notifications enabled, you can get updates such as invoice view/payment activity on supported devices.'
         },
         {
             q: 'Does TradeSwift PRO show ads or sell data?',
@@ -87,8 +127,20 @@ const FAQ_ITEMS = {
             a: 'Använd iCloud-synk eller en iOS-enhetsbackup innan du byter telefon. Det är säkraste sättet att flytta TradeSwift PRO-data till ny enhet.'
         },
         {
+            q: 'Stöder TradeSwift PRO Sign in with Apple?',
+            a: 'Ja. TradeSwift PRO stöder Sign in with Apple för kontobaserade funktioner.'
+        },
+        {
+            q: 'Måste jag vara inloggad för allt?',
+            a: 'Nej. Kärnflödet fungerar lokalt, men kontobaserade funktioner som prenumerationer, Stripe-koppling och backend-baserad sändning/spårning kräver inloggning.'
+        },
+        {
             q: 'Hur fungerar prenumeration och debitering?',
             a: 'TradeSwift PRO-prenumerationer hanteras och debiteras av Apple App Store. Du kan hantera, avsluta och återställa köp via iOS prenumerationsinställningar eller appens prenumerationsflöde.'
+        },
+        {
+            q: 'Kan jag återställa köp efter ominstallation eller enhetsbyte?',
+            a: 'Ja. Använd Återställ köp i prenumerationsvyn för att hämta aktiva rättigheter.'
         },
         {
             q: 'Vilka planer finns?',
@@ -103,16 +155,44 @@ const FAQ_ITEMS = {
             a: 'Appen stoppar den funktionen tills reset eller tills du lägger till krediter/uppgraderar. Du får tydliga alternativ direkt i appen.'
         },
         {
+            q: 'Behöver jag Stripe för att skicka fakturor?',
+            a: 'Nej, inte för vanlig fakturamejl eller PDF-delning. Stripe krävs bara för fakturor med betalningslänk och spårning av kortbetalning via Stripe.'
+        },
+        {
             q: 'Hur fungerar kunders kortbetalningar?',
             a: 'Kortbetalningar går via Stripe Connect. Din kund betalar i Stripe Checkout och utbetalningar går till ditt anslutna Stripe-konto. Själva kundrelationen är mellan dig och kunden.'
+        },
+        {
+            q: 'Kan jag koppla in eller koppla bort Stripe senare?',
+            a: 'Ja. Du kan koppla Stripe i inställningar, slutföra onboarding, öppna Stripe-dashboard och koppla bort vid behov.'
+        },
+        {
+            q: 'Vem hanterar återbetalningar och tvister för kortbetalningar?',
+            a: 'Ansvar för återbetalningar och tvister ligger mellan dig, din kund och Stripe enligt Stripes villkor.'
         },
         {
             q: 'Kan jag skicka och spåra fakturamejl?',
             a: 'Ja. Du kan skicka fakturamejl från appen och spåra status som skickad, levererad, öppnad och klickad.'
         },
         {
+            q: 'Vilka mejlstatusar spåras?',
+            a: 'TradeSwift PRO stöder spårning av statusar som skickad, levererad, öppnad och klickad för fakturamejl.'
+        },
+        {
             q: 'Kan jag exportera eller dela fakturor som PDF?',
             a: 'Ja. TradeSwift PRO kan skapa faktura-PDF så du kan dela eller skriva ut direkt från enheten.'
+        },
+        {
+            q: 'Kan jag anpassa fakturadesign?',
+            a: 'Ja. Appen har flera fakturadesigner och låter dig välja samt sätta en standarddesign.'
+        },
+        {
+            q: 'Har TradeSwift PRO adress-autocomplete?',
+            a: 'Ja. Adressökning finns som onlinefunktion för snabbare kund- och adressinmatning.'
+        },
+        {
+            q: 'Kan jag få notiser om fakturaaktivitet?',
+            a: 'Ja. Med notiser aktiverade kan du få uppdateringar om till exempel visning/betalning av fakturor på enheter som stöds.'
         },
         {
             q: 'Visar TradeSwift PRO annonser eller säljer data?',
@@ -133,7 +213,7 @@ const CONTENT = {
         faq: {
             label: 'QUICK ANSWERS',
             title: 'Most asked questions',
-            intro: 'Updated answers based on the current TradeSwift PRO app.',
+            intro: 'Questions and answers for TradeSwift PRO.',
             scrollHint: 'Scroll inside this panel to read all questions.'
         },
         cards: {
@@ -169,7 +249,7 @@ const CONTENT = {
         faq: {
             label: 'SNABBA SVAR',
             title: 'Vanliga frågor',
-            intro: 'Uppdaterade svar utifrån nuvarande funktioner i TradeSwift PRO.',
+            intro: 'Frågor och svar för TradeSwift PRO.',
             scrollHint: 'Skrolla i rutan för att läsa alla frågor.'
         },
         cards: {
@@ -209,6 +289,7 @@ export function Contact() {
     const [email, setEmail] = useState('');
     const [subject, setSubject] = useState('');
     const [message, setMessage] = useState('');
+    const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null);
     const [status, setStatus] = useState<FormStatus>('idle');
     const [errorMessage, setErrorMessage] = useState('');
 
@@ -261,14 +342,27 @@ export function Contact() {
 
                     <div className="contact-faq-scroll">
                         <div className="contact-faq-list">
-                            {faqItems.map((item) => (
-                                <article key={item.q} className="contact-faq-item">
-                                    <h3 className="contact-faq-question">{item.q}</h3>
-                                    <div className="contact-faq-answer">
-                                        <p>{item.a}</p>
-                                    </div>
-                                </article>
-                            ))}
+                            {faqItems.map((item, index) => {
+                                const isOpen = openFaqIndex === index;
+                                return (
+                                    <article key={item.q} className={`contact-faq-item ${isOpen ? 'open' : ''}`}>
+                                        <button
+                                            type="button"
+                                            className="contact-faq-question"
+                                            onClick={() => setOpenFaqIndex(isOpen ? null : index)}
+                                            aria-expanded={isOpen}
+                                        >
+                                            <span>{item.q}</span>
+                                            <span className="contact-faq-toggle">{isOpen ? '−' : '+'}</span>
+                                        </button>
+                                        {isOpen && (
+                                            <div className="contact-faq-answer">
+                                                <p>{item.a}</p>
+                                            </div>
+                                        )}
+                                    </article>
+                                );
+                            })}
                         </div>
                     </div>
                     <p className="contact-faq-scroll-hint">{content.faq.scrollHint}</p>
