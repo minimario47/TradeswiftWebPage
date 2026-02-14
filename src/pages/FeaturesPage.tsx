@@ -1,21 +1,26 @@
-import { useEffect } from 'react';
 import { useLanguage } from '../i18n/LanguageContext';
 import { FeatureSelector } from '../components/FeatureReel';
 import { FEATURE_REEL_CONTENT } from '../components/FeatureReel';
+import { SEO } from '../components/SEO';
+import { softwareApplicationSchema, breadcrumbSchema } from '../seo/schemas';
 import './FeaturesPage.css';
 
 export function FeaturesPage() {
     const { language } = useLanguage();
     const content = FEATURE_REEL_CONTENT[language];
 
-    useEffect(() => {
-        document.title = language === 'sv'
-            ? 'Funktioner | TradeSwift Pro'
-            : 'Features | TradeSwift Pro';
-    }, [language]);
-
     return (
-        <main className="features-page">
+        <section className="features-page">
+            <SEO
+                path="/funktioner"
+                jsonLd={[
+                    softwareApplicationSchema(),
+                    breadcrumbSchema([
+                        { name: 'TradeSwift Pro', url: 'https://tradeswift.se/' },
+                        { name: language === 'sv' ? 'Funktioner' : 'Features', url: 'https://tradeswift.se/funktioner' },
+                    ]),
+                ]}
+            />
             <div className="features-page-intro">
                 <div className="features-page-intro-content">
                     <span className="section-label">{content.page.label}</span>
@@ -24,6 +29,6 @@ export function FeaturesPage() {
                 </div>
             </div>
             <FeatureSelector outstanding={36450} overdue={15200} />
-        </main>
+        </section>
     );
 }

@@ -1,6 +1,8 @@
 import { useEffect, useState, useRef, type FormEvent } from 'react';
 import { useLanguage } from '../i18n/LanguageContext';
 import { FeatureStack } from '../components/FeatureReel';
+import { SEO } from '../components/SEO';
+import { organizationSchema, softwareApplicationSchema, breadcrumbSchema, webSiteSchema } from '../seo/schemas';
 import './Home.css';
 
 const APP_STORE_URL = 'https://apps.apple.com/app/id6758308884';
@@ -151,6 +153,15 @@ export function Home() {
     };
     return (
         <>
+            <SEO
+                path="/"
+                jsonLd={[
+                    webSiteSchema(),
+                    organizationSchema(),
+                    softwareApplicationSchema(),
+                    breadcrumbSchema([{ name: 'TradeSwift Pro', url: 'https://tradeswift.se/' }]),
+                ]}
+            />
             <section className="hero">
                 <div className="hero-container">
                     <div className="hero-content">

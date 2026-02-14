@@ -1,9 +1,25 @@
 import { useLanguage } from '../i18n/LanguageContext';
+import { SEO } from '../components/SEO';
+import { breadcrumbSchema } from '../seo/schemas';
 import './Legal.css';
 
 export function Terms() {
     const { language } = useLanguage();
-    return language === 'sv' ? <TermsSv /> : <TermsEn />;
+    return (
+        <>
+            <SEO
+                path="/villkor"
+                noindex
+                jsonLd={[
+                    breadcrumbSchema([
+                        { name: 'TradeSwift Pro', url: 'https://tradeswift.se/' },
+                        { name: language === 'sv' ? 'Användarvillkor' : 'Terms of Service', url: 'https://tradeswift.se/villkor' },
+                    ]),
+                ]}
+            />
+            {language === 'sv' ? <TermsSv /> : <TermsEn />}
+        </>
+    );
 }
 
 function TermsEn() {

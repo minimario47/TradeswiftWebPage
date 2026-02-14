@@ -1,9 +1,25 @@
 import { useLanguage } from '../i18n/LanguageContext';
+import { SEO } from '../components/SEO';
+import { breadcrumbSchema } from '../seo/schemas';
 import './Legal.css';
 
 export function Privacy() {
     const { language } = useLanguage();
-    return language === 'sv' ? <PrivacySv /> : <PrivacyEn />;
+    return (
+        <>
+            <SEO
+                path="/integritetspolicy"
+                noindex
+                jsonLd={[
+                    breadcrumbSchema([
+                        { name: 'TradeSwift Pro', url: 'https://tradeswift.se/' },
+                        { name: language === 'sv' ? 'Integritetspolicy' : 'Privacy Policy', url: 'https://tradeswift.se/integritetspolicy' },
+                    ]),
+                ]}
+            />
+            {language === 'sv' ? <PrivacySv /> : <PrivacyEn />}
+        </>
+    );
 }
 
 function PrivacyEn() {

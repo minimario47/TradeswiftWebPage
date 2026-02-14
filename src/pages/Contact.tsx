@@ -1,5 +1,7 @@
 import { useState, type FormEvent } from 'react';
 import { useLanguage } from '../i18n/LanguageContext';
+import { SEO } from '../components/SEO';
+import { faqPageSchema, breadcrumbSchema } from '../seo/schemas';
 import './Contact.css';
 
 const API_BASE = 'https://tradeswift-backend.xaco47.workers.dev';
@@ -324,6 +326,16 @@ export function Contact() {
 
     return (
         <div className="contact-page">
+            <SEO
+                path="/kontakt"
+                jsonLd={[
+                    faqPageSchema(faqItems),
+                    breadcrumbSchema([
+                        { name: 'TradeSwift Pro', url: 'https://tradeswift.se/' },
+                        { name: language === 'sv' ? 'Kontakt' : 'Contact', url: 'https://tradeswift.se/kontakt' },
+                    ]),
+                ]}
+            />
             <div className="contact-container">
                 <div className="contact-header">
                     <p className="section-label">{content.sectionLabel}</p>

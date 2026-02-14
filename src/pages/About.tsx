@@ -1,9 +1,12 @@
 import { useState } from 'react';
 import { useLanguage } from '../i18n/LanguageContext';
-import mikailImg from '../assets/team/mikail.png';
-import hienImg from '../assets/team/hien.png';
-import waelImg from '../assets/team/wael.png';
+import { SEO } from '../components/SEO';
+import { organizationSchema, breadcrumbSchema, personSchema } from '../seo/schemas';
 import './About.css';
+
+const mikailImg = '/team/mikail.png';
+const hienImg = '/team/hien.png';
+const waelImg = '/team/wael.png';
 
 type TeamMemberId = 'mikail' | 'hien' | 'wael';
 
@@ -11,7 +14,7 @@ const CONTENT = {
     en: {
         sectionLabel: 'ABOUT',
         title: 'TradeSwift is built by Mikail, with help from friends',
-        intro: 'I built TradeSwift to help tradespeople spend less time on admin and more time on paid work. Hien and Wael are my childhood friends and both mechanical engineers, and they help me run and improve the app.',
+        intro: 'I built TradeSwift to help tradespeople spend less time on admin and more time on paid work. Hien and Wael help me run and improve the app.',
         missionTitle: 'WHY I BUILT THIS',
         missionParagraphs: [
             'I watched friends lose time and money because generic invoicing tools did not fit how real trade work happens day to day.',
@@ -19,7 +22,7 @@ const CONTENT = {
             'No bloated workflows. No feature clutter. Just the tools that actually help independent professionals move faster.'
         ],
         teamTitle: 'THE CREW',
-        teamIntro: 'TradeSwift is creator-led by Mikail, with hands-on help from childhood friends Hien and Wael, both mechanical engineers.',
+        teamIntro: 'TradeSwift is creator-led by Mikail, with hands-on help from Hien and Wael.',
         members: {
             mikail: {
                 id: 'mikail',
@@ -34,20 +37,20 @@ const CONTENT = {
             hien: {
                 id: 'hien',
                 name: 'HIEN NGUYEN',
-                role: 'Mechanical Engineer · Support & QA',
+                role: 'Helper · Support & QA',
                 image: hienImg,
                 bio: [
-                    "As one of Mikail's childhood friends and a mechanical engineer, I support TradeSwift with product feedback, testing, and support quality so real users get clear answers and stable releases.",
+                    "I'm one of Mikail's childhood friends, and I'm a mechanical engineer. I help TradeSwift with product feedback, testing, and support quality so real users get clear answers and stable releases.",
                     "I'm focused on practical details, workflow clarity, and catching friction points before they become problems."
                 ]
             },
             wael: {
                 id: 'wael',
                 name: 'WAEL HABOUSH',
-                role: 'Mechanical Engineer · Product & Ops',
+                role: 'Helper · Product & Ops',
                 image: waelImg,
                 bio: [
-                    "As one of Mikail's childhood friends and a mechanical engineer, I help with day-to-day app operations, feature feedback, and release checks so TradeSwift stays useful in real work situations.",
+                    "I'm one of Mikail's childhood friends, and I'm a mechanical engineer. I help with day-to-day app operations, feature feedback, and release checks so TradeSwift stays useful in real work situations.",
                     'My focus is reliability, better execution, and keeping the app practical for contractors under pressure.'
                 ]
             }
@@ -91,7 +94,7 @@ const CONTENT = {
     sv: {
         sectionLabel: 'OM',
         title: 'TradeSwift byggs av Mikail, med hjälp av vänner',
-        intro: 'Jag byggde TradeSwift för att hjälpa hantverkare lägga mindre tid på administration och mer tid på betalt arbete. Hien och Wael är mina barndomsvänner och båda är maskiningenjörer, och de hjälper mig att driva och förbättra appen.',
+        intro: 'Jag byggde TradeSwift för att hjälpa hantverkare lägga mindre tid på administration och mer tid på betalt arbete. Hien och Wael hjälper mig att driva och förbättra appen.',
         missionTitle: 'VARFÖR JAG BYGGDE DETTA',
         missionParagraphs: [
             'Jag såg vänner förlora tid och pengar eftersom generiska fakturaverktyg inte passade hur hantverksjobb faktiskt fungerar i vardagen.',
@@ -99,7 +102,7 @@ const CONTENT = {
             'Ingen onödig komplexitet. Ingen funktionsstök. Bara verktyg som faktiskt hjälper egenföretagare att jobba snabbare.'
         ],
         teamTitle: 'TEAMET',
-        teamIntro: 'TradeSwift leds av Mikail som skapare, med praktisk hjälp av barndomsvännerna Hien och Wael, båda maskiningenjörer.',
+        teamIntro: 'TradeSwift leds av Mikail som skapare, med praktisk hjälp av Hien och Wael.',
         members: {
             mikail: {
                 id: 'mikail',
@@ -114,20 +117,20 @@ const CONTENT = {
             hien: {
                 id: 'hien',
                 name: 'HIEN NGUYEN',
-                role: 'Maskiningenjör · Support & QA',
+                role: 'Hjälper till · Support & QA',
                 image: hienImg,
                 bio: [
-                    'Som en av Mikails barndomsvänner och maskiningenjör hjälper jag TradeSwift med produktfeedback, testning och supportkvalitet så användare får tydliga svar och stabila releaser.',
+                    'Jag är en av Mikails barndomsvänner och är maskiningenjör. Jag hjälper TradeSwift med produktfeedback, testning och supportkvalitet så användare får tydliga svar och stabila releaser.',
                     'Mitt fokus är praktiska detaljer, tydliga flöden och att hitta friktion innan det blir problem.'
                 ]
             },
             wael: {
                 id: 'wael',
                 name: 'WAEL HABOUSH',
-                role: 'Maskiningenjör · Produkt & Drift',
+                role: 'Hjälper till · Produkt & Drift',
                 image: waelImg,
                 bio: [
-                    'Som en av Mikails barndomsvänner och maskiningenjör hjälper jag till med daglig appdrift, feature-feedback och releasekontroller så TradeSwift fungerar i verkliga arbetssituationer.',
+                    'Jag är en av Mikails barndomsvänner och är maskiningenjör. Jag hjälper till med daglig appdrift, feature-feedback och releasekontroller så TradeSwift fungerar i verkliga arbetssituationer.',
                     'Mitt fokus är stabilitet, bättre genomförande och att appen känns praktisk för entreprenörer under press.'
                 ]
             }
@@ -180,6 +183,19 @@ export function About() {
 
     return (
         <div className="about-page">
+            <SEO
+                path="/om-oss"
+                jsonLd={[
+                    organizationSchema(),
+                    personSchema('Mikail Yenigün', 'Creator & Developer', 'https://tradeswift.se/team/mikail.png'),
+                    personSchema('Hien Nguyen', 'Support & QA', 'https://tradeswift.se/team/hien.png'),
+                    personSchema('Wael Haboush', 'Product & Ops', 'https://tradeswift.se/team/wael.png'),
+                    breadcrumbSchema([
+                        { name: 'TradeSwift Pro', url: 'https://tradeswift.se/' },
+                        { name: language === 'sv' ? 'Om oss' : 'About', url: 'https://tradeswift.se/om-oss' },
+                    ]),
+                ]}
+            />
             <div className="about-container">
                 <div className="about-header animate-fade-in">
                     <p className="section-label">{content.sectionLabel}</p>
@@ -202,7 +218,7 @@ export function About() {
 
                                 <div className="member-bio-header">
                                     <div className="member-portrait">
-                                        <img src={selectedMember.image} alt={selectedMember.name} />
+                                        <img src={selectedMember.image} alt={`${selectedMember.name} - ${selectedMember.role} at TradeSwift`} />
                                     </div>
                                     <div className="member-info-header">
                                         <h2>{selectedMember.name}</h2>

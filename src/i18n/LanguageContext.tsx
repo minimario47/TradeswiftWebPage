@@ -8,7 +8,7 @@ type LanguageContextValue = {
 };
 
 const STORAGE_KEY = 'tradeswift-language';
-const DEFAULT_LANGUAGE: Language = 'en';
+const DEFAULT_LANGUAGE: Language = 'sv';
 
 const LanguageContext = createContext<LanguageContextValue | undefined>(undefined);
 

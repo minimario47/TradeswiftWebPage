@@ -1,9 +1,25 @@
 import { useLanguage } from '../i18n/LanguageContext';
+import { SEO } from '../components/SEO';
+import { breadcrumbSchema } from '../seo/schemas';
 import './Legal.css';
 
 export function Refund() {
     const { language } = useLanguage();
-    return language === 'sv' ? <RefundSv /> : <RefundEn />;
+    return (
+        <>
+            <SEO
+                path="/aterbetalning"
+                noindex
+                jsonLd={[
+                    breadcrumbSchema([
+                        { name: 'TradeSwift Pro', url: 'https://tradeswift.se/' },
+                        { name: language === 'sv' ? 'Återbetalningspolicy' : 'Refund Policy', url: 'https://tradeswift.se/aterbetalning' },
+                    ]),
+                ]}
+            />
+            {language === 'sv' ? <RefundSv /> : <RefundEn />}
+        </>
+    );
 }
 
 function RefundEn() {
