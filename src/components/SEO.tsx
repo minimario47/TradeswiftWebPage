@@ -8,7 +8,7 @@ type SEOProps = {
   noindex?: boolean;
 };
 
-const SITE_URL = 'https://tradeswift.se';
+const SITE_URL = 'https://www.tradeswift.se';
 const OG_IMAGE = `${SITE_URL}/logo.svg`;
 
 export function SEO({ path, jsonLd, noindex }: SEOProps) {
@@ -17,7 +17,8 @@ export function SEO({ path, jsonLd, noindex }: SEOProps) {
 
   if (!data) return null;
 
-  const canonical = `${SITE_URL}${path === '/' ? '' : path}`;
+  const normalizedPath = path === '/' ? '/' : `${path.replace(/\/+$/, '')}/`;
+  const canonical = `${SITE_URL}${normalizedPath}`;
   const ogLocale = language === 'sv' ? 'sv_SE' : 'en_US';
 
   return (

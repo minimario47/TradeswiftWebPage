@@ -9,11 +9,10 @@ export function Terms() {
         <>
             <SEO
                 path="/villkor"
-                noindex
                 jsonLd={[
                     breadcrumbSchema([
-                        { name: 'TradeSwift Pro', url: 'https://tradeswift.se/' },
-                        { name: language === 'sv' ? 'Användarvillkor' : 'Terms of Service', url: 'https://tradeswift.se/villkor' },
+                        { name: 'TradeSwift Pro', url: 'https://www.tradeswift.se/' },
+                        { name: language === 'sv' ? 'Användarvillkor' : 'Terms of Service', url: 'https://www.tradeswift.se/villkor/' },
                     ]),
                 ]}
             />

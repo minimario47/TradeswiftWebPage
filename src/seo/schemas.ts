@@ -1,10 +1,12 @@
+const SITE_URL = 'https://www.tradeswift.se';
+
 export function organizationSchema() {
   return {
     '@context': 'https://schema.org',
     '@type': 'Organization',
     name: 'TradeSwift',
-    url: 'https://tradeswift.se',
-    logo: 'https://tradeswift.se/logo.svg',
+    url: SITE_URL,
+    logo: `${SITE_URL}/logo.svg`,
     founder: {
       '@type': 'Person',
       name: 'Mikail Yenigün',
@@ -69,11 +71,11 @@ export function personSchema(
     name,
     jobTitle,
     image,
-    url: 'https://tradeswift.se/om-oss',
+    url: `${SITE_URL}/om-oss/`,
     worksFor: {
       '@type': 'Organization',
       name: 'TradeSwift',
-      url: 'https://tradeswift.se',
+      url: SITE_URL,
     },
   };
 }
@@ -83,7 +85,7 @@ export function webSiteSchema() {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
     name: 'TradeSwift Pro',
-    url: 'https://tradeswift.se',
+    url: SITE_URL,
   };
 }
 

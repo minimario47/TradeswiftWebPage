@@ -9,11 +9,10 @@ export function Privacy() {
         <>
             <SEO
                 path="/integritetspolicy"
-                noindex
                 jsonLd={[
                     breadcrumbSchema([
-                        { name: 'TradeSwift Pro', url: 'https://tradeswift.se/' },
-                        { name: language === 'sv' ? 'Integritetspolicy' : 'Privacy Policy', url: 'https://tradeswift.se/integritetspolicy' },
+                        { name: 'TradeSwift Pro', url: 'https://www.tradeswift.se/' },
+                        { name: language === 'sv' ? 'Integritetspolicy' : 'Privacy Policy', url: 'https://www.tradeswift.se/integritetspolicy/' },
                     ]),
                 ]}
             />

@@ -187,12 +187,12 @@ export function About() {
                 path="/om-oss"
                 jsonLd={[
                     organizationSchema(),
-                    personSchema('Mikail Yenigün', 'Creator & Developer', 'https://tradeswift.se/team/mikail.png'),
-                    personSchema('Hien Nguyen', 'Support & QA', 'https://tradeswift.se/team/hien.png'),
-                    personSchema('Wael Haboush', 'Product & Ops', 'https://tradeswift.se/team/wael.png'),
+                    personSchema('Mikail Yenigün', 'Creator & Developer', 'https://www.tradeswift.se/team/mikail.png'),
+                    personSchema('Hien Nguyen', 'Support & QA', 'https://www.tradeswift.se/team/hien.png'),
+                    personSchema('Wael Haboush', 'Product & Ops', 'https://www.tradeswift.se/team/wael.png'),
                     breadcrumbSchema([
-                        { name: 'TradeSwift Pro', url: 'https://tradeswift.se/' },
-                        { name: language === 'sv' ? 'Om oss' : 'About', url: 'https://tradeswift.se/om-oss' },
+                        { name: 'TradeSwift Pro', url: 'https://www.tradeswift.se/' },
+                        { name: language === 'sv' ? 'Om oss' : 'About', url: 'https://www.tradeswift.se/om-oss/' },
                     ]),
                 ]}
             />

@@ -159,7 +159,7 @@ export function Home() {
                     webSiteSchema(),
                     organizationSchema(),
                     softwareApplicationSchema(),
-                    breadcrumbSchema([{ name: 'TradeSwift Pro', url: 'https://tradeswift.se/' }]),
+                    breadcrumbSchema([{ name: 'TradeSwift Pro', url: 'https://www.tradeswift.se/' }]),
                 ]}
             />
             <section className="hero">

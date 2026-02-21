@@ -331,8 +331,8 @@ export function Contact() {
                 jsonLd={[
                     faqPageSchema(faqItems),
                     breadcrumbSchema([
-                        { name: 'TradeSwift Pro', url: 'https://tradeswift.se/' },
-                        { name: language === 'sv' ? 'Kontakt' : 'Contact', url: 'https://tradeswift.se/kontakt' },
+                        { name: 'TradeSwift Pro', url: 'https://www.tradeswift.se/' },
+                        { name: language === 'sv' ? 'Kontakt' : 'Contact', url: 'https://www.tradeswift.se/kontakt/' },
                     ]),
                 ]}
             />

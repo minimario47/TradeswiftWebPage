@@ -16,8 +16,8 @@ export function FeaturesPage() {
                 jsonLd={[
                     softwareApplicationSchema(),
                     breadcrumbSchema([
-                        { name: 'TradeSwift Pro', url: 'https://tradeswift.se/' },
-                        { name: language === 'sv' ? 'Funktioner' : 'Features', url: 'https://tradeswift.se/funktioner' },
+                        { name: 'TradeSwift Pro', url: 'https://www.tradeswift.se/' },
+                        { name: language === 'sv' ? 'Funktioner' : 'Features', url: 'https://www.tradeswift.se/funktioner/' },
                     ]),
                 ]}
             />

@@ -9,11 +9,10 @@ export function Refund() {
         <>
             <SEO
                 path="/aterbetalning"
-                noindex
                 jsonLd={[
                     breadcrumbSchema([
-                        { name: 'TradeSwift Pro', url: 'https://tradeswift.se/' },
-                        { name: language === 'sv' ? 'Återbetalningspolicy' : 'Refund Policy', url: 'https://tradeswift.se/aterbetalning' },
+                        { name: 'TradeSwift Pro', url: 'https://www.tradeswift.se/' },
+                        { name: language === 'sv' ? 'Återbetalningspolicy' : 'Refund Policy', url: 'https://www.tradeswift.se/aterbetalning/' },
                     ]),
                 ]}
             />

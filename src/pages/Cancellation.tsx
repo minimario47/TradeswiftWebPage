@@ -9,11 +9,10 @@ export function Cancellation() {
         <>
             <SEO
                 path="/avbestallning"
-                noindex
                 jsonLd={[
                     breadcrumbSchema([
-                        { name: 'TradeSwift Pro', url: 'https://tradeswift.se/' },
-                        { name: language === 'sv' ? 'Avbeställningspolicy' : 'Cancellation Policy', url: 'https://tradeswift.se/avbestallning' },
+                        { name: 'TradeSwift Pro', url: 'https://www.tradeswift.se/' },
+                        { name: language === 'sv' ? 'Avbeställningspolicy' : 'Cancellation Policy', url: 'https://www.tradeswift.se/avbestallning/' },
                     ]),
                 ]}
             />
